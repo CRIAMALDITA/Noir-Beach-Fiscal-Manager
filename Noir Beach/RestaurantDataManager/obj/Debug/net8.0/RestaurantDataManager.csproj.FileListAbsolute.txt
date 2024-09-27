@@ -1,0 +1,17 @@
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\bin\Debug\net8.0\RestaurantDataManager.deps.json
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\bin\Debug\net8.0\RestaurantDataManager.runtimeconfig.json
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\bin\Debug\net8.0\RestaurantDataManager.dll
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\bin\Debug\net8.0\RestaurantDataManager.pdb
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\bin\Debug\net8.0\RestaurantData.dll
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\bin\Debug\net8.0\RestaurantData.pdb
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\obj\Debug\net8.0\RestaurantDataManager.csproj.AssemblyReference.cache
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\obj\Debug\net8.0\RestaurantDataManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\obj\Debug\net8.0\RestaurantDataManager.AssemblyInfoInputs.cache
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\obj\Debug\net8.0\RestaurantDataManager.AssemblyInfo.cs
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\obj\Debug\net8.0\RestaurantDataManager.csproj.CoreCompileInputs.cache
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\obj\Debug\net8.0\Restaura.40407B3C.Up2Date
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\obj\Debug\net8.0\RestaurantDataManager.dll
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\obj\Debug\net8.0\refint\RestaurantDataManager.dll
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\obj\Debug\net8.0\RestaurantDataManager.pdb
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\obj\Debug\net8.0\RestaurantDataManager.genruntimeconfig.cache
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantDataManager\obj\Debug\net8.0\ref\RestaurantDataManager.dll

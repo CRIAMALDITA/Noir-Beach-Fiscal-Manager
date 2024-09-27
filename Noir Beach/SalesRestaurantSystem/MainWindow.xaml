@@ -1,0 +1,27 @@
+﻿<Window x:Class="SalesRestaurantSystem.Login_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SalesRestaurantSystem"
+        mc:Ignorable="d"
+        Title="Log In" Height="376" Width="344" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,-26">
+        <Viewbox Height="360" Width="313">
+            <Grid Height="360" Width="313">
+                <Image Source="Images/User Login.png" Margin="98,10,99,222"/>
+                <TextBlock Text="ID: " HorizontalAlignment="Left" FontSize="15" Margin="24,133,0,207" Width="25" Foreground="Black"/>
+                <StackPanel Margin="24,153,25,175">
+                    <TextBox x:Name="IDLoginField" Height="30" Background="GhostWhite"  KeyDown="Login_KeyDown" FontSize="15" VerticalContentAlignment="Center" Padding="5, 0, 0, 0"/>
+                </StackPanel>
+                <TextBlock Text="Password: " HorizontalAlignment="Left" FontSize="15" Margin="24,190,0,150" Width="87" Foreground="Black"/>
+                <StackPanel Margin="23,215,26,110">
+                    <PasswordBox x:Name="PasswordLoginField" Height="30" Background="GhostWhite" KeyDown="Login_KeyDown" VerticalAlignment="Center" FontSize="15" VerticalContentAlignment="Center" Padding="5, 0, 0, 0"/>
+                </StackPanel>
+                <Button Margin="23,272,26,47" Background="lightSlateGray" Click="OnClickLogin_BTN">
+                    <TextBlock Text="Log in" Height="22" VerticalAlignment="Center" Width="43" Foreground="White" FontSize="15"/>
+                </Button>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>

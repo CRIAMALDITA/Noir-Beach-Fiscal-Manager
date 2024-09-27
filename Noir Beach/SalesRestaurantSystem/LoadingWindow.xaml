@@ -1,0 +1,21 @@
+﻿<Window x:Class="SalesRestaurantSystem.LoadingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SalesRestaurantSystem"
+        mc:Ignorable="d"
+        Title="LoadingWindow" x:Name="WindowName" ResizeMode="NoResize" Height="105" Width="375">
+    <Grid>
+        <Grid>
+            <Viewbox>
+                <Border Background="White" CornerRadius="10" Padding="0" Width="327">
+                    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="65" Width="328">
+                        <TextBlock x:Name="LoadingText" Text="Loading, please wait..." FontSize="12" FontWeight="Bold" Margin="10,10,10,39"/>
+                        <ProgressBar IsIndeterminate="True" Margin="10,31,10,20"/>
+                    </Grid>
+                </Border>
+            </Viewbox>
+        </Grid>
+    </Grid>
+</Window>

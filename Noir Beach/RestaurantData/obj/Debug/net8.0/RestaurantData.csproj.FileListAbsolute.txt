@@ -1,0 +1,14 @@
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantData\bin\Debug\net8.0\RestaurantData.deps.json
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantData\bin\Debug\net8.0\RestaurantData.runtimeconfig.json
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantData\bin\Debug\net8.0\RestaurantData.dll
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantData\bin\Debug\net8.0\RestaurantData.pdb
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantData\obj\Debug\net8.0\RestaurantData.csproj.AssemblyReference.cache
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantData\obj\Debug\net8.0\RestaurantData.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantData\obj\Debug\net8.0\RestaurantData.AssemblyInfoInputs.cache
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantData\obj\Debug\net8.0\RestaurantData.AssemblyInfo.cs
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantData\obj\Debug\net8.0\RestaurantData.csproj.CoreCompileInputs.cache
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantData\obj\Debug\net8.0\RestaurantData.dll
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantData\obj\Debug\net8.0\refint\RestaurantData.dll
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantData\obj\Debug\net8.0\RestaurantData.pdb
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantData\obj\Debug\net8.0\RestaurantData.genruntimeconfig.cache
+C:\Users\Penit\source\repos\SalesRestaurantSystem\RestaurantData\obj\Debug\net8.0\ref\RestaurantData.dll
