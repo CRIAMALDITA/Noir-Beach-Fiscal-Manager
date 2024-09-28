@@ -16,8 +16,8 @@
         <Grid MinHeight="720" MinWidth="1280">
             <Image Source="Images/wallpaper.png" Width="1000" Margin="280,29,0,-8"/>
             <Grid x:Name="Header" VerticalAlignment="Top" Height="100" Margin="305,0,0,0">
-                <Rectangle Fill="lightSlateGray" />
-                <TextBlock Text="Point of Sale" TextAlignment="Center" Foreground="White" FontSize="48" VerticalAlignment="Center" Height="50" Margin="10,0,10,0" FontFamily="Tahoma" FontStyle="Italic" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+                <Rectangle Fill="#FF262A2D" />
+                <TextBlock Text="Noir Beach" TextAlignment="Center" Foreground="#FFBBBBBB" FontSize="48" VerticalAlignment="Center" Height="50" Margin="10,0,10,0" FontFamily="Tahoma" FontStyle="Italic" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
                     <TextBlock.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -525,7 +525,7 @@
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid Name="Interface_Sales" Margin="305,100,0,0"  Visibility="Hidden">
+            <Grid Name="Interface_Sales" Margin="305,100,0,0"  Visibility="Visible">
                 <Grid x:Name="Interface_Sale"  HorizontalAlignment="Center" Margin="0,0,0,21" Width="975">
                     <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
                     <Grid Margin="10">
@@ -583,6 +583,17 @@
                                         </TransformGroup>
                                     </TextBlock.RenderTransform><Run Language="en-gb" Text=" "/><Run Text="Product"/><Run Language="en-gb" Text="s"/></TextBlock>
                                 <ListView ItemsSource="{Binding}" FontSize="14" x:Name="Interface_Sale_Products_ProductList" Margin="0,0,0,61">
+                                    <ListView.Resources>
+                                        <Style TargetType="ListViewItem">
+                                            <Setter Property="FontFamily" Value="Ms PGothic" />
+                                            <Setter Property="FontSize" Value="14" />
+                                        </Style>
+                                        <Style TargetType="GridViewColumnHeader">
+                                            <Setter Property="FontFamily" Value="Ms PGothic"/>
+                                            <Setter Property="FontSize" Value="14"/>
+                                            <Setter Property="Foreground" Value="Black"/>
+                                        </Style>
+                                    </ListView.Resources>
                                     <ListView.View>
                                         <GridView>
                                             <GridViewColumn Width="30" DisplayMemberBinding="{Binding IdProduct}" Header="ID"/>
@@ -594,8 +605,8 @@
                                             <GridViewColumn Width="25">
                                                 <GridViewColumn.CellTemplate>
                                                     <DataTemplate>
-                                                        <Button Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListView}}, Path=DataContext.OnItemButtonPressedCommand}" CommandParameter="{Binding}">
-                                                            <TextBlock Text=">" Width="402" HorizontalAlignment="Center" TextAlignment="Center"/>
+                                                        <Button Background="#FF262A2D" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListView}}, Path=DataContext.OnItemButtonPressedCommand}" CommandParameter="{Binding}">
+                                                            <TextBlock Text=">" Width="402" HorizontalAlignment="Center" TextAlignment="Center" Foreground="#FFBBBBBB"/>
                                                         </Button>
                                                     </DataTemplate>
                                                 </GridViewColumn.CellTemplate>
@@ -607,8 +618,8 @@
                                 <StackPanel Margin="0,381,44,7" HorizontalAlignment="Right" Width="402">
                                     <TextBox x:Name="Interface_Sale_Products_SearchField" Height="24" Background="GhostWhite"/>
                                 </StackPanel>
-                                <Button x:Name="Interface_Sale_Products_SearchBtn" Margin="407,381,0,11" Background="Transparent">
-                                    <Image Source="Images/Search.png" Height="20"/>
+                                <Button x:Name="Interface_Sale_Products_SearchBtn" Margin="407,381,0,11" Background="#FF262A2D" Foreground="#FFBBBBBB" BorderBrush="#FF262A2D">
+                                    <Image Source="Images/Search.png" Height="20" OpacityMask="#FFFFE8E8"/>
                                 </Button>
 
                             </Grid>
@@ -639,8 +650,8 @@
                                 <StackPanel Margin="345,340,10,46">
                                     <TextBox x:Name="Interface_Sale_Resume_ChangeField" Height="24" Background="GhostWhite" IsReadOnly="True"/>
                                 </StackPanel>
-                                <Button x:Name="Interface_Sale_Resume_MakeSale" Margin="-1,372,0,10" Background="Transparent">
-                                    <TextBlock Text="Make Sale" Width="402" HorizontalAlignment="Center" TextAlignment="Center"/>
+                                <Button x:Name="Interface_Sale_Resume_MakeSale" Margin="-1,372,0,10" Background="#FF262A2D">
+                                    <TextBlock Text="Make Sale" Width="402" HorizontalAlignment="Center" TextAlignment="Center" Foreground="#FFBBBBBB" FontSize="20" FontFamily="Tahoma"/>
                                 </Button>
                                 <ListView ItemsSource="{Binding}" FontSize="14" x:Name="Interface_Sale_Resume_Listview" Margin="-1,0,0,97">
                                     <ListView.View>
@@ -648,8 +659,8 @@
                                             <GridViewColumn Width="30">
                                                 <GridViewColumn.CellTemplate>
                                                     <DataTemplate>
-                                                        <Button Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListView}}, Path=DataContext.OnItemButtonPressedCommand}" CommandParameter="{Binding}">
-                                                            <TextBlock Text="&lt;" HorizontalAlignment="Center" TextAlignment="Center"/>
+                                                        <Button Background="#FF262A2D" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListView}}, Path=DataContext.OnItemButtonPressedCommand}" CommandParameter="{Binding}">
+                                                            <TextBlock Text="&lt;" HorizontalAlignment="Center" TextAlignment="Center" Foreground="#FFBBBBBB"/>
                                                         </Button>
                                                     </DataTemplate>
                                                 </GridViewColumn.CellTemplate>
