@@ -65,8 +65,9 @@ namespace SalesRestaurantSystem
         {
             List<ProductData> list = new List<ProductData>();
             list = Items.ToList();
-            if(filter != "")
+            if (filter != "")
             {
+                FilterSetted = true;
                 foreach (var item in Items.ToList())
                 {
                     switch (type)
@@ -75,11 +76,12 @@ namespace SalesRestaurantSystem
                         case "Code": if (!item.Code.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                         case "Name": if (!item.ProductName.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                         case "Category": if (!item.CategoryData.CategoryName.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
-                        case "State": if (!((item.ProductState ? "Active" : "Inactive").ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", "")))) list.Remove(item); break;                   
+                        case "State": if (!((item.ProductState ? "Active" : "Inactive").ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", "")))) list.Remove(item); break;
                         case "CreationDate": if (!item.CreationDate.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                     }
                 }
             }
+            else FilterSetted = false;
             SearchedItems.Clear();
             for (int i = 0; i < list.Count; i++)
             {

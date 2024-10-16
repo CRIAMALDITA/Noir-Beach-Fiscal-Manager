@@ -28,6 +28,8 @@ namespace SalesRestaurantSystem
         public ObservableCollection<T> Items { get; private set; } = new ObservableCollection<T>();
         public List<int> SearchedItems = new();
         public List<T> SelectedItems = new();
+        public bool FilterSetted;
+
 
         public Action OnItemAdded;
         public Action OnItemRemoved;
@@ -73,7 +75,7 @@ namespace SalesRestaurantSystem
                 _listView.ItemsSource = null;
                 _listView.Items.Clear();
                 var visibleItems = new List<T>();
-                if (SearchedItems.Count == 0) visibleItems = Items.ToList();
+                if (!FilterSetted) visibleItems = Items.ToList();
                 else
                     for (int i = 0; i < SearchedItems.Count; i++)
                     {
