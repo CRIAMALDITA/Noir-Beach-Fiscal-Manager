@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Penit\\OneDrive\\Documentos\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj": {}
+    "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Penit\\OneDrive\\Documentos\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj": {
+    "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Penit\\OneDrive\\Documentos\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj",
+        "projectUniqueName": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj",
         "projectName": "RestaurantData",
-        "projectPath": "C:\\Users\\Penit\\OneDrive\\Documentos\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj",
+        "projectPath": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj",
         "packagesPath": "C:\\Users\\Penit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Penit\\OneDrive\\Documentos\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\obj\\",
+        "outputPath": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -74,6 +74,10 @@
             "Microsoft.Identity.Client": {
               "target": "Package",
               "version": "[4.64.0, )"
+            },
+            "Microsoft.Office.Interop.Word": {
+              "target": "Package",
+              "version": "[15.0.4797.1004, )"
             }
           },
           "imports": [

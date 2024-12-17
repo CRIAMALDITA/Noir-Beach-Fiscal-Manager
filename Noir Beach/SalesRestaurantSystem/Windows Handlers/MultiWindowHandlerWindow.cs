@@ -75,6 +75,7 @@ namespace SalesRestaurantSystem
         public void ShowUI()
         {
             _backButtonController.ShowButton(true);
+            ResetbackButton();
             _mainGrid.Visibility = Visibility.Visible;
         }
 
@@ -86,6 +87,7 @@ namespace SalesRestaurantSystem
         }
         public void GoBack()
         {
+            _currentGridOpen?.HideUI();
             HideUI();
             _backButtonController.ShowButton(false);
             onBackButtonPressed?.Invoke();

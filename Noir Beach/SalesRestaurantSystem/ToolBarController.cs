@@ -41,7 +41,7 @@ namespace SalesRestaurantSystem
         {
             if(_optionSelected == null) return;
             _optionSelected.SelectOption(false);
-            _optionSelected = null;
+            //_optionSelected = null;
         }
     }
     public class ToolBarOption

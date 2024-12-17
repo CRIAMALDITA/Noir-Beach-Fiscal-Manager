@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Penit\OneDrive\Documentos\Noir-Beach-Fiscal-Manager\Noir Beach\SalesRestaurantSystem\obj\Debug\net8.0-windows\
+C:\Users\Penit\Documents\GitHub\Noir-Beach-Fiscal-Manager\Noir Beach\SalesRestaurantSystem\obj\Debug\net8.0-windows\
 SalesRestaurantSystem
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Penit\OneDrive\Documentos\Noir-Beach-Fiscal-Manager\Noir Beach\SalesRestaurantSystem\App.xaml
+C:\Users\Penit\Documents\GitHub\Noir-Beach-Fiscal-Manager\Noir Beach\SalesRestaurantSystem\App.xaml
 7841682905
 
 38-799040979
-244-120529529
+256-263752066
 ConfirmPasswordMessageBox.xaml;LoadingWindow.xaml;MainWindow.xaml;PurchaseDetailsWindow.xaml;SaleDetailsWindow.xaml;SearchClientsWindow.xaml;SystemWindow.xaml;
 
-True
+False
 

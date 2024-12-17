@@ -93,7 +93,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
                 decimal pays = 0;
                 decimal.TryParse(_paysWithField.Text.TrimStart('$'), out pays);
                 change = total - pays;
-                change = change < 0 ? change * -1 : change;
+                change = change < 0 ? change * -1 : 0;
                 _paysWithField.Text = decimal.Parse(_paysWithField.Text).ToString("C", new System.Globalization.CultureInfo("en-US"));
                 _changeField.Text = change.ToString("C", new System.Globalization.CultureInfo("en-US"));
             }

@@ -13,6 +13,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
         protected TextBox _nameField;
         protected TextBox _idField;
         protected Button _searchBtn;
+        public bool EntityFinded;
 
         public void SetSearchField(TextBox searchField)
         {

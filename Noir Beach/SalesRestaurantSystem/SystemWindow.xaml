@@ -9,12 +9,12 @@
         Title="Restaurant Fiscal Manager" 
         Height="740" 
         Width="1290"
-        MinHeight="740" 
+        MinHeight="760" 
         MinWidth="1280"
         Background="#FF353535">
-    <Viewbox MinHeight="750" MinWidth="1280">
+    <Viewbox MinHeight="720" MinWidth="1280">
         <Grid MinHeight="720" MinWidth="1280">
-            <Image Source="Images/wallpaper.png" Width="1000" Margin="280,29,0,-8"/>
+            <Image Source="Images/wallpaper.png" Width="1000" Margin="280,29,0,-69"/>
             <Grid x:Name="Header" VerticalAlignment="Top" Height="100" Margin="305,0,0,0">
                 <Rectangle Fill="#FF262A2D" />
                 <TextBlock Text="Noir Beach" TextAlignment="Center" Foreground="#FFBBBBBB" FontSize="48" VerticalAlignment="Center" Height="50" Margin="10,0,10,0" FontFamily="Tahoma" FontStyle="Italic" FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
@@ -32,7 +32,7 @@
                 </Button>
             </Grid>
             <Grid Width="305" HorizontalAlignment="Left" x:Name="ToolBar">
-                <Rectangle Fill="#353535" IsHitTestVisible="False" Margin="0,0,0,20"/>
+                <Rectangle Fill="#353535" IsHitTestVisible="False" Margin="0,0,0,-9"/>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Height="100" Width="305" Visibility="Visible" x:Name="ToolBar_UserGrid">
 
                     <Image Source="Images/User.png" Margin="39,16,186,16"/>
@@ -525,8 +525,8 @@
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid Name="Interface_Sales" Margin="305,100,0,0"  Visibility="Visible">
-                <Grid x:Name="Interface_Sale"  HorizontalAlignment="Center" Margin="0,0,0,21" Width="975">
+            <Grid Name="Interface_Sales" Margin="305,100,0,0"  Visibility="Hidden">
+                <Grid x:Name="Interface_Sale"  HorizontalAlignment="Center" Margin="0,0,0,-1" Width="975">
                     <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
                     <Grid Margin="10">
                         <Border Padding="10" BorderThickness="1" BorderBrush="Black" Background="White" Margin="0,0,0,0"/>

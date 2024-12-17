@@ -82,7 +82,11 @@ namespace SalesRestaurantSystem
             clientsFinded.ForEach(clients.Add);
             SearchEntitiesWindow.ElementsList.View = gridView;
             SearchEntitiesWindow.ElementsList.ItemsSource = clients;
-            SearchEntitiesWindow.CancelBTN.Click += (o, e) => SearchEntitiesWindow.Close();;
+            SearchEntitiesWindow.CancelBTN.Click += (o, e) =>
+            {
+                EntityFinded = false;
+                SearchEntitiesWindow.Close();
+            };
             SearchEntitiesWindow.AcceptBTN.Click += (o, e) => 
             { 
                 clientData = SearchEntitiesWindow.ElementsList.SelectedItem as ClientData;
@@ -96,6 +100,7 @@ namespace SalesRestaurantSystem
                 newData.ForEach(clients.Add);
             };
             SearchEntitiesWindow.ShowDialog();
+            EntityFinded = clientData != null;
             return clientData;
         }
     }

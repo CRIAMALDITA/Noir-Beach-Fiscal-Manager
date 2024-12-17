@@ -13,8 +13,6 @@ using System.Windows.Shapes;
 using RestaurantDataManager;
 using RestaurantData.TablesDataClasses;
 using SalesRestaurantSystem.WindowsHandlers;
-using SalesRestaurantSystem.WindowsHandlers;
-using SalesRestaurantSystem.WindowsHandlers;
 
 
 namespace Point_of_sale_for_Restaurant
@@ -232,6 +230,7 @@ namespace Point_of_sale_for_Restaurant
                     Interface_Sale_Resume_ChangeField,
                     Interface_Sale_Resume_MakeSale
                 );
+            Sales.OnBackButtonPressed(Interface_ToolBar.UnSelectCurrent);
             //-------------------------------------------------------------------------------------------------
 
             //Purchase Grid -----------------------------------------------------------------------------------
@@ -266,7 +265,7 @@ namespace Point_of_sale_for_Restaurant
 
         public void ActiveUI(IUIPanel currentUIActive)
         {
-            if(_currentUIActive != null) _currentUIActive.HideUI();
+            if(_currentUIActive != null) _currentUIActive.GoBack();
             _currentUIActive = currentUIActive;
             _currentUIActive.ShowUI();
         }
