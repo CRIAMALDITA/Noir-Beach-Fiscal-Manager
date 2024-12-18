@@ -13,7 +13,7 @@
     <Compile Update="LoadingWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="SearchClientsWindow.xaml.cs">
+    <Compile Update="SearchEntitiesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -27,7 +27,7 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="SearchClientsWindow.xaml">
+    <Page Update="SearchEntitiesWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

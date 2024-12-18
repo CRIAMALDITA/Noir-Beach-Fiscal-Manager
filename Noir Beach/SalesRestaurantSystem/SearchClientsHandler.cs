@@ -16,7 +16,7 @@ namespace SalesRestaurantSystem
     {
         public List<ClientData> ClientData { get; set; }
 
-        public SearchClientsWindow SearchEntitiesWindow { get; set; }
+        public SearchEntitiesWindow SearchEntitiesWindow { get; set; }
 
 
         public SearchClientsHandler(){}
@@ -50,7 +50,7 @@ namespace SalesRestaurantSystem
         public ClientData OpenSearchWindow(List<ClientData> clientsFinded, string id)
         {
             ClientData clientData = null;
-            SearchEntitiesWindow = new SearchClientsWindow();
+            SearchEntitiesWindow = new SearchEntitiesWindow();
             SearchEntitiesWindow.IDField.Text = id;
             GridView gridView = new GridView();
             gridView.Columns.Add(new GridViewColumn

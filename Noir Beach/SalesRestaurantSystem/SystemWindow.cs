@@ -33,6 +33,9 @@ namespace Point_of_sale_for_Restaurant
         //Sell
         public SalesMakerWindowHandler Sales;
 
+        //Clients
+        public ClientsDataHandlerWindow Clients;
+
         public BackButtonController Interface_BackButton;
 
         public SystemWindow(UserData user)
@@ -81,8 +84,8 @@ namespace Point_of_sale_for_Restaurant
                 (
                     this, ToolBar_Clients,
                     ToolBar_Clients_Shadow,
-                    ToolBar_Clients_Selected, null
-                //() => ActiveUI(Interface_Clients)
+                    ToolBar_Clients_Selected,
+                () => ActiveUI(Clients)
                 );
             options.Add(ClientsOption);
 
@@ -234,8 +237,32 @@ namespace Point_of_sale_for_Restaurant
             //-------------------------------------------------------------------------------------------------
 
             //Purchase Grid -----------------------------------------------------------------------------------
+            Clients = new ClientsDataHandlerWindow(this);
+            Clients.SetPanel(Interface_Clients, Interface_BackButton);
+            Clients.SetSearchField(Interface_Clients_SearchClientField);
+            Clients.SetSearchButton(Interface_Clients_SearchBtn);
+            Clients.SetAddItem(Interface_Clients_ClientsControlPanel_AddItem);
+            Clients.SetRemoveItem(Interface_Clients_ClientsControlPanel_RemoveItem, Interface_Maintenance_Products_RemovedBottom_RemoveBTN);
+            Clients.SetExportItem(Interface_Maintenance_Products_MainBottom_ExportBTN);
+            Clients.SetMainListView(Interface_Maintenance_Products_ListView, Interface_Maintenance_Products_MainBottom);
+            Clients.SetRecoveryItem(Interface_Maintenance_Products_RemovedBottom_RecoveryBTN);
+            Clients.SetRemovedListView(Interface_Maintenance_Products_RemovedListView, Interface_Maintenance_Products_RemovedBottom);
+            Clients.SetRemoveHistory(Interface_Maintenance_Products_MainBottom_ViewRemovedElemets, Interface_Maintenance_Products_RemovedBottom_ViewMainElemets);
+            Clients.SetCategories(Interface_Maintenance_Products_CategoryBox);
+            Clients.SetFields(
+            [
+                Interface_Maintenance_Products_ControlPanel_CodeField,
+                Interface_Maintenance_Products_ControlPanel_NameField,
+                Interface_Maintenance_Products_ControlPanel_DescriptionField,
+                Interface_Maintenance_Products_ControlPanel_CategoryBox,
+                Interface_Maintenance_Products_ControlPanel_SellPrice,
+                Interface_Maintenance_Products_ControlPanel_PurchasePrice,
+                Interface_Maintenance_Products_ControlPanel_Stock,
+                Interface_Maintenance_Products_ControlPanel_StatusBox
+            ]);
             //-------------------------------------------------------------------------------------------------
             //Clients Grid ------------------------------------------------------------------------------------
+
             //-------------------------------------------------------------------------------------------------
             //Suppliers Grid ----------------------------------------------------------------------------------
             //-------------------------------------------------------------------------------------------------

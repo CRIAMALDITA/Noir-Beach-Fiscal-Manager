@@ -678,13 +678,13 @@
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid x:Name="Interface_Purchase" Margin="305,100,0,0" Visibility="Hidden">
-                <Grid HorizontalAlignment="Center" Margin="0,0,0,22" Height="604" Width="975" Visibility="Visible">
+            <Grid Name="Interface_Purchase" Margin="305,100,0,0"  Visibility="Hidden">
+                <Grid  HorizontalAlignment="Center" Margin="0,0,0,-1" Width="975">
                     <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
                     <Grid Margin="10">
                         <Border Padding="10" BorderThickness="1" BorderBrush="Black" Background="White" Margin="0,0,0,0"/>
-                        <TextBlock Text="Make a Pruchase" FontSize="30" Foreground="Black" Margin="10,10,695,519" FontFamily="Arial"/>
-                        <Border Padding="10" BorderThickness="1" BorderBrush="Gray" Margin="10,65,581,445">
+                        <TextBlock Text="Make a Purchase" FontSize="30" Foreground="Black" Margin="10,10,724,557" FontFamily="MS PGothic"/>
+                        <Border Padding="10" BorderThickness="1" BorderBrush="Gray" Margin="10,65,581,466">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="5*"/>
@@ -693,90 +693,145 @@
                                     <ColumnDefinition Width="50*"/>
                                     <ColumnDefinition Width="233*"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Text=" Pruchase Information " Background="White" Foreground="Black" FontSize="14" Margin="-1,-22,206,53" Grid.ColumnSpan="5"/>
+                                <TextBlock Text=" Purchase Information " Background="White" Foreground="Black" FontSize="14" Margin="-1,-19,209,56" Grid.ColumnSpan="5" FontFamily="MS PGothic"/>
 
-                                <TextBlock Text="Date:" Margin="5,3,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Grid.ColumnSpan="3" Width="26" />
+                                <TextBlock Text="Date:" Margin="5,3,0,0" VerticalAlignment="Top" FontSize="12" HorizontalAlignment="Left" Grid.ColumnSpan="3" Width="26" FontFamily="MS PGothic" />
                                 <StackPanel Margin="5,18,212,10" Grid.ColumnSpan="5">
-                                    <TextBox Height="24" Background="GhostWhite"/>
+                                    <TextBox x:Name="Interface_Purchase_DateField" Tag="CreationDate" Height="24" Background="GhostWhite"/>
                                 </StackPanel>
-                                <TextBlock Text="ID Type:" Margin="59,3,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Height="15" Width="48" Grid.Column="4" />
-                                <ComboBox Margin="59,18,0,10" SelectedIndex="0" Grid.Column="4">
+                                <TextBlock Text="ID Type:" Margin="59,3,0,0" VerticalAlignment="Top" FontSize="12" HorizontalAlignment="Left" Height="14" Width="48" Grid.Column="4" FontFamily="MS PGothic" />
+                                <ComboBox x:Name="Interface_Purchase_TypeBox" Margin="59,18,0,10" SelectedIndex="0" Grid.Column="4" FontFamily="MS PGothic" VerticalContentAlignment="Center">
                                     <ComboBoxItem Content="Active"/>
                                     <ComboBoxItem Content="Inactive"/>
                                 </ComboBox>
                             </Grid>
                         </Border>
-                        <Border Padding="10" BorderThickness="1" BorderBrush="Gray" Margin="392,65,10,445">
+                        <Border Padding="10" BorderThickness="1" BorderBrush="Gray" Margin="392,65,10,466">
                             <Grid>
-                                <TextBlock Text=" Supplier Information " Background="White" Foreground="Black" FontSize="14" Margin="-1,-22,394,53"/>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="35*"/>
+                                    <ColumnDefinition Width="496*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text=" Supplier Information " Background="White" Foreground="Black" FontSize="14" Margin="-1,-20,409,58" FontFamily="MS PGothic" Grid.ColumnSpan="2"/>
 
-                                <TextBlock Text="ID Number:" Margin="0,3,76,35" FontSize="11" Grid.ColumnSpan="2" Grid.Column="2"/>
-                                <StackPanel Margin="0,18,335,10">
-                                    <TextBox Height="24" Background="GhostWhite"/>
+                                <TextBlock Text="ID Number:" Margin="0,3,471,35" FontSize="12" FontFamily="MS PGothic" Grid.ColumnSpan="2"/>
+                                <StackPanel Margin="0,18,335,10" Grid.ColumnSpan="2">
+                                    <TextBox x:Name="Interface_Purchase_Search_IDField" Tag="Document" Height="24" Background="GhostWhite"/>
                                 </StackPanel>
-                                <TextBlock Text="Company Name:" Margin="254,3,194,35" FontSize="11"/>
-                                <StackPanel Margin="254,18,10,10">
-                                    <TextBox Height="24" Background="GhostWhite"/>
+                                <TextBlock Text="Full Name:" Margin="219,3,222,35" FontSize="12" FontFamily="MS PGothic" Grid.Column="1"/>
+                                <StackPanel Margin="219,18,10,10" Grid.Column="1">
+                                    <TextBox x:Name="Interface_Purchase_Search_FullName" Tag="FullNameFied" Height="24" Background="GhostWhite"/>
                                 </StackPanel>
-                                <Button Margin="201,18,282,10" Background="Transparent">
+                                <Button x:Name="Interface_Purchase_Search_SearchBTN" Tag="SearchBtn" Margin="166,18,282,10" Background="Transparent" Grid.Column="1">
                                     <Image Source="Images/Search.png" Height="20"/>
                                 </Button>
 
                             </Grid>
                         </Border>
-                        <Border Padding="10" BorderThickness="1" BorderBrush="Gray" Margin="10,490,711,10">
+                        <Border Padding="10" BorderThickness="1" BorderBrush="Gray" Margin="10,157,477,10">
                             <Grid>
-                                <TextBlock Text="Search Product" Background="White" Foreground="Black" FontSize="14" Margin="-1,-22,111,52"/>
-
-                                <TextBlock Text="Search:" Margin="10,10,76,32" FontSize="11"/>
-                                <StackPanel Margin="10,26,60,1">
-                                    <TextBox Height="24" Background="GhostWhite"/>
+                                <TextBlock Background="White" Foreground="Black" FontSize="14" Margin="-1,-19,382,414" FontFamily="MS PGothic" RenderTransformOrigin="0.5,0.5">
+                                    <TextBlock.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform/>
+                                            <SkewTransform/>
+                                            <RotateTransform Angle="-0.107"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </TextBlock.RenderTransform><Run Language="en-gb" Text=" "/><Run Text="Product"/><Run Language="en-gb" Text="s"/></TextBlock>
+                                <ListView ItemsSource="{Binding}" FontSize="14" x:Name="Interface_Purchase_Products_ProductList" Margin="0,0,0,61">
+                                    <ListView.Resources>
+                                        <Style TargetType="ListViewItem">
+                                            <Setter Property="FontFamily" Value="Ms PGothic" />
+                                            <Setter Property="FontSize" Value="14" />
+                                        </Style>
+                                        <Style TargetType="GridViewColumnHeader">
+                                            <Setter Property="FontFamily" Value="Ms PGothic"/>
+                                            <Setter Property="FontSize" Value="14"/>
+                                            <Setter Property="Foreground" Value="Black"/>
+                                        </Style>
+                                    </ListView.Resources>
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Width="30" DisplayMemberBinding="{Binding IdProduct}" Header="ID"/>
+                                            <GridViewColumn Width="70" DisplayMemberBinding="{Binding Code}" Header="Code"/>
+                                            <GridViewColumn Width="100" DisplayMemberBinding="{Binding ProductName}" Header="Product"/>
+                                            <GridViewColumn Width="100" DisplayMemberBinding="{Binding Category}" Header="Category"/>
+                                            <GridViewColumn Width="110" DisplayMemberBinding="{Binding SellPrice}" Header="Price"/>
+                                            <GridViewColumn Width="25">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Button Background="#FF262A2D" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListView}}, Path=DataContext.OnItemButtonPressedCommand}" CommandParameter="{Binding}">
+                                                            <TextBlock Text=">" Width="402" HorizontalAlignment="Center" TextAlignment="Center" Foreground="#FFBBBBBB"/>
+                                                        </Button>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                                <TextBlock Text="Search:" Margin="0,360,410,40" FontSize="11"/>
+                                <StackPanel Margin="0,381,44,7" HorizontalAlignment="Right" Width="402">
+                                    <TextBox x:Name="Interface_Purchase_Products_SearchField" Height="24" Background="GhostWhite"/>
                                 </StackPanel>
-                                <Button Margin="157,26,18,10" Background="Transparent">
-                                    <Image Source="Images/Search.png" Height="20"/>
+                                <Button x:Name="Interface_Purchase_Products_SearchBtn" Margin="407,381,0,11" Background="#FF262A2D" Foreground="#FFBBBBBB" BorderBrush="#FF262A2D">
+                                    <Image Source="Images/Search.png" Height="20" OpacityMask="#FFFFE8E8"/>
                                 </Button>
 
                             </Grid>
                         </Border>
-                        <Border Padding="10" BorderThickness="1" BorderBrush="Gray" Margin="249,490,477,10">
+                        <Border Padding="10" BorderThickness="1" BorderBrush="Gray" Margin="491,157,10,10">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="5*"/>
-                                    <ColumnDefinition Width="22*"/>
+                                    <ColumnDefinition Width="139*"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Text=" Pruchase Total " Background="White" Foreground="Black" FontSize="14" Margin="-1,-22,113,52" Grid.ColumnSpan="2"/>
-                                <TextBlock Text="Total:" Margin="10,10,76,32" FontSize="11" Grid.ColumnSpan="2"/>
-                                <StackPanel Margin="10,26,84,1" Grid.ColumnSpan="2">
-                                    <TextBox Height="24" Background="GhostWhite" Width="100"/>
+                                <TextBlock Text=" Purchase " Background="White" Foreground="Black" FontSize="14" Margin="-1,-19,369,418" FontFamily="MS PGothic" Grid.ColumnSpan="2"/>
+                                <TextBlock Text="SubTotal:" Margin="0,324,386,73" FontSize="11" FontFamily="MS PGothic" Grid.ColumnSpan="2"/>
+                                <StackPanel Margin="0,340,355,49" Grid.ColumnSpan="2">
+                                    <TextBox x:Name="Interface_Purchase_Resume_SubTotalField" Height="24" Background="GhostWhite" Width="77" IsReadOnly="True"/>
                                 </StackPanel>
-                                <Button Margin="86,5,10,5" Background="Transparent" Grid.Column="1">
-                                    <TextBlock Text="Make &#x0d;&#x0a; Sale"/>
+                                <TextBlock Text="OFF:" Margin="67,324,296,73" FontSize="11" FontFamily="MS PGothic" Grid.Column="1"/>
+                                <StackPanel Margin="67,340,273,45" Grid.Column="1">
+                                    <TextBox x:Name="Interface_Purchase_Resume_OffField" Height="24" Background="GhostWhite"/>
+                                </StackPanel>
+                                <TextBlock Text="Total:" Margin="149,324,220,73" FontSize="11" FontFamily="MS PGothic" Grid.Column="1"/>
+                                <StackPanel Margin="149,340,191,47" Grid.Column="1">
+                                    <TextBox x:Name="Interface_Purchase_Resume_TotalField" Height="24" Background="GhostWhite" IsReadOnly="True"/>
+                                </StackPanel>
+                                <TextBlock Text="Pays with:" Margin="248,324,116,77" FontSize="11" FontFamily="MS PGothic" Grid.Column="1"/>
+                                <StackPanel Margin="248,340,92,46" Grid.Column="1">
+                                    <TextBox x:Name="Interface_Purchase_Resume_PaysWithField" Height="24" Background="GhostWhite"/>
+                                </StackPanel>
+                                <TextBlock Text="Change:" Margin="330,324,49,77" FontSize="11" FontFamily="MS PGothic" Grid.Column="1"/>
+                                <StackPanel Margin="330,340,10,46" Grid.Column="1">
+                                    <TextBox x:Name="Interface_Purchase_Resume_ChangeField" Height="24" Background="GhostWhite" IsReadOnly="True"/>
+                                </StackPanel>
+                                <Button x:Name="Interface_Purchase_Resume_MakePurchase" Margin="-1,372,0,10" Background="#FF262A2D" Grid.ColumnSpan="2">
+                                    <TextBlock Text="Make Purchase" Width="402" HorizontalAlignment="Center" TextAlignment="Center" Foreground="#FFBBBBBB" FontSize="20" FontFamily="Tahoma"/>
                                 </Button>
+                                <ListView ItemsSource="{Binding}" FontSize="14" x:Name="Interface_Purchase_Resume_Listview" Margin="-1,0,0,97" Grid.ColumnSpan="2">
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Width="30">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <Button Background="#FF262A2D" Command="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListView}}, Path=DataContext.OnItemButtonPressedCommand}" CommandParameter="{Binding}">
+                                                            <TextBlock Text="&lt;" HorizontalAlignment="Center" TextAlignment="Center" Foreground="#FFBBBBBB"/>
+                                                        </Button>
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+                                            <GridViewColumn Width="120" DisplayMemberBinding="{Binding Name}" Header="Product"/>
+                                            <GridViewColumn Width="100" DisplayMemberBinding="{Binding Price}" Header="Price"/>
+                                            <GridViewColumn Width="70" DisplayMemberBinding="{Binding Amount}" Header="Amount"/>
+                                            <GridViewColumn Width="100" DisplayMemberBinding="{Binding SubTotal}" Header="SubTotal"/>
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
 
                             </Grid>
                         </Border>
-                        <ListView ItemsSource="{Binding DataCollection}" FontSize="14"  Margin="10,144,477,114">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn Width="70" DisplayMemberBinding="{Binding Code}" Header="Code"/>
-                                    <GridViewColumn Width="115" DisplayMemberBinding="{Binding Name}" Header="Name"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Category}" Header="Category"/>
-                                    <GridViewColumn Width="50" DisplayMemberBinding="{Binding Stock}" Header="Stock"/>
-                                    <GridViewColumn Width="70" DisplayMemberBinding="{Binding SellPrice}" Header="Price"/>
-                                    <GridViewColumn Width="57" DisplayMemberBinding="{Binding SellPrice}" Header="Amount"/>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                        <ListView ItemsSource="{Binding DataCollection}" FontSize="14" Margin="491,144,10,10">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding Code}" Header="Product"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Name}" Header="Price"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Category}" Header="Amount"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Stock}" Header="SubTotal"/>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
                     </Grid>
                 </Grid>
             </Grid>
@@ -875,80 +930,74 @@
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid x:Name="Interface_Clients"  HorizontalAlignment="Left" Margin="305,100,0,22" Height="604" Width="975" Visibility="Hidden">
+            <Grid x:Name="Interface_Clients"  HorizontalAlignment="Left" Margin="305,100,0,22" Height="604" Width="975" Visibility="Visible">
                 <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
                 <Grid VerticalAlignment="Top" Height="70" Visibility="Visible" x:Name="Interface_Clients_Header" Margin="10,10,10,0">
                     <Rectangle Fill="Black"/>
                     <Rectangle Fill="White" Margin="2,2,2,2"/>
                     <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="35" Margin="22,0,0,0" Height="50" Text="Client List:"/>
                     <StackPanel Margin="668,20,47,20">
-                        <TextBox x:Name="SearchClientField" Height="30" Background="GhostWhite"/>
+                        <TextBox x:Name="Interface_Clients_SearchClientField" Height="30" Background="GhostWhite" Tag="SearchField"/>
                     </StackPanel>
-                    <Button Margin="913,20,10,20" Background="Transparent">
+                    <Button x:Name="Interface_Clients_SearchBtn" Margin="913,20,10,20" Background="Transparent"  Tag="SearchBtn">
                         <Image Source="Images/Search.png" Height="20"/>
                     </Button>
                     <TextBlock Text="Search By" Margin="334,24,546,24" FontSize="15"/>
-                    <ComboBox Margin="414,20,292,20">
+                    <ComboBox x:Name="Interface_Clients_CategorySearch" Margin="414,20,292,20"  Tag="SearchCategory">
                     </ComboBox>
                 </Grid>
                 <Grid Margin="10,92,266,10">
                     <Rectangle Fill="Black"/>
                     <Rectangle Fill="White" Margin="2,2,2,2"/>
                     <Grid>
-                        <ListView ItemsSource="{Binding DataCollection}" FontSize="14" x:Name="ClientListViewReference">
+                        <ListView ItemsSource="{Binding DataCollection}" FontSize="14" x:Name="Interface_Clients_ClientListView"  Tag="ClientsList">
                             <ListView.View>
                                 <GridView>
-                                    <GridViewColumn Width="80" DisplayMemberBinding="{Binding ID}" Header="ID"/>
-                                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding Name}" Header="Name"/>
+                                    <GridViewColumn Width="80" DisplayMemberBinding="{Binding Document}" Header="ID"/>
+                                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding FullName}" Header="Name"/>
                                     <GridViewColumn Width="150" DisplayMemberBinding="{Binding Email}" Header="Email"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Role}" Header="Cellphone"/>
-                                    <GridViewColumn Width="60" DisplayMemberBinding="{Binding Role}" Header="Account"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Role}" Header="Balance"/>
-                                    <GridViewColumn Width="50" DisplayMemberBinding="{Binding Status}" Header="Status"/>
+                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Tel}" Header="Telephone"/>
+                                    <GridViewColumn Width="60" DisplayMemberBinding="{Binding Account}" Header="Account"/>
+                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Balance}" Header="Balance"/>
                                 </GridView>
                             </ListView.View>
                         </ListView>
                     </Grid>
                 </Grid>
-                <Grid x:Name="ClientsControlPanel" Margin="714,92,10,10">
+                <Grid x:Name="Interface_Clients_ClientsControlPanel" Margin="714,92,10,10">
                     <Border Padding="10" BorderThickness="1" BorderBrush="Black" Background="White"/>
                     <TextBlock Margin="10,10,10,0" VerticalAlignment="Top" FontSize="22" HorizontalAlignment="Center" Text="Client Control Panel"/>
                     <TextBlock Text="ID:" Margin="10,50,10,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" />
                     <StackPanel Margin="10,108,10,368">
-                        <TextBox x:Name="CodeClientField" Height="24" Background="GhostWhite"/>
+                        <TextBox  Tag="FullName" x:Name="Interface_Clients_ClientsControlPanel_FullNameClientField" Height="24" Background="GhostWhite"/>
                     </StackPanel>
                     <TextBlock Text="Full Name:" Margin="10,93,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" />
                     <StackPanel Margin="10,65,10,413">
-                        <TextBox x:Name="NameClientField" Height="24" Background="GhostWhite"/>
+                        <TextBox  Tag="Document" x:Name="Interface_Clients_ClientsControlPanel_DocumentClientField" Height="24" Background="GhostWhite"/>
                     </StackPanel>
                     <TextBlock Text="Email:" Margin="10,136,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Height="12" />
                     <StackPanel Margin="10,151,10,327">
-                        <TextBox x:Name="ClientField" Height="23" Background="GhostWhite"/>
+                        <TextBox  Tag="Email" x:Name="Interface_Clients_ClientsControlPanel_EmailField" Height="23" Background="GhostWhite"/>
                     </StackPanel>
                     <TextBlock Text="Telephone:" Margin="10,180,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Height="13" />
                     <StackPanel Margin="10,196,10,282">
-                        <TextBox x:Name="ClientPasswordField" Height="23" Background="GhostWhite"/>
+                        <TextBox  Tag="Telephone" x:Name="Interface_Clients_ClientsControlPanel_TelephoneField" Height="23" Background="GhostWhite"/>
                     </StackPanel>
                     <TextBlock Text="Client Balance:" Margin="150,222,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Height="12" Width="77" />
                     <StackPanel Margin="150,237,10,236">
-                        <TextBox x:Name="ClientAmountPasswordField" Height="25" Background="GhostWhite"/>
+                        <TextBox  Tag="Balance" x:Name="Interface_Clients_ClientsControlPanel_BalanceField" Height="25" Background="GhostWhite"/>
                     </StackPanel>
-                    <TextBlock Text="Status:" Margin="10,338,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" />
-                    <ComboBox Margin="10,353,10,125" SelectedIndex="0">
-                        <ComboBoxItem Content="Active"/>
-                        <ComboBoxItem Content="Inactive"/>
-                    </ComboBox>
-                    <Button Margin="10,386,10,83" Background="#FF5ABB51">
+                    <Button x:Name="Interface_Clients_ClientsControlPanel_AddItem" Margin="10,386,10,83" Background="#FF5ABB51">
                         <TextBlock Text="Add Item to List" Foreground="#FF005400" FontWeight="Bold" FontSize="16"></TextBlock>
                     </Button>
-                    <Button Margin="10,424,10,48" Background="#FFC34343">
+                    <Button x:Name="Interface_Clients_ClientsControlPanel_RemoveItem" Margin="10,424,10,48" Background="#FFC34343">
                         <TextBlock Text="Remove Elements" Foreground="#FF540000" FontWeight="Bold" FontSize="16"/>
                     </Button>
-                    <Button Margin="10,459,10,13" Background="#FF43B4C3">
+                    <Button x:Name="Interface_Clients_ClientsControlPanel_Export" Margin="10,459,10,13" Background="#FF43B4C3">
                         <TextBlock Text="Quick Export Excel" Foreground="#FF004754" FontWeight="Bold" FontSize="16"/>
                     </Button>
                     <TextBlock Text="Create Account:" Margin="10,222,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Height="15" />
-                    <ComboBox Margin="10,237,106,240" SelectedIndex="0">
+                    <ComboBox  Tag="Account" x:Name="Interface_Clients_ClientsControlPanel_AccountBox" Margin="10,237,106,240" SelectedIndex="0">
                     </ComboBox>
                 </Grid>
             </Grid>

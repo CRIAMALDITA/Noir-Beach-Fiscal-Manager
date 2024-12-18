@@ -25,6 +25,7 @@ namespace RestaurantDataManager
         public SellDetailsController SellDetails;
         public SellController Sell;
         public BussinessController Bussiness;
+        public SupplierController Supplier;
 
         public DataManager()
         {
@@ -37,6 +38,7 @@ namespace RestaurantDataManager
             SellDetails = new(dataContext);
             Sell = new(dataContext);
             Bussiness = new();
+            Supplier = new(dataContext);
         }
 
         public async Task<string> CheckConnection()

@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace RestaurantData.TablesDataClasses
 {
-    [Table("SELL_DETAILS")]
-    public class SellDetailsData
+    [Table("PURCHASE_DETAILS")]
+    public class PurchaseDetailsData
     {
         [SQLKey(KeyType.PK, typeof(CategoryData))][Key][DatabaseGenerated(DatabaseGeneratedOption.Identity)] public int IdSellDetails { get; set; }
         [SQLKey(KeyType.FK, typeof(RoleData))] public int IdSell { get; set; }

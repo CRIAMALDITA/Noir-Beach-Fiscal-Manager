@@ -3,8 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdata\\tablesdataclasses\\purchasedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|solutionrelative:restaurantdata\\tablesdataclasses\\purchasedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\systemwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\systemwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\systemwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\systemwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\clientsdatahandlerwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\clientsdatahandlerwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\productdatahandlerwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\productdatahandlerwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdata\\tablesdataclasses\\clientdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|solutionrelative:restaurantdata\\tablesdataclasses\\clientdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\listview handlers\\clientslistviewhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\listview handlers\\clientslistviewhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}|RestaurantDataManager\\RestaurantDataManager.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdatamanager\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}|RestaurantDataManager\\RestaurantDataManager.csproj|solutionrelative:restaurantdatamanager\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\purchasesmakerwindowhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\purchasesmakerwindowhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\salesmakerwindowhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\salesmakerwindowhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\searchentitieswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\searchentitieswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\searchentitieswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\searchentitieswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\searchsuppliershandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\searchsuppliershandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\searchclientshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\searchclientshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\searchentityhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\searchentityhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdata\\tablesdataclasses\\purchasedetailsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|solutionrelative:restaurantdata\\tablesdataclasses\\purchasedetailsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}|RestaurantDataManager\\RestaurantDataManager.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdatamanager\\repositories\\supplierrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}|RestaurantDataManager\\RestaurantDataManager.csproj|solutionrelative:restaurantdatamanager\\repositories\\supplierrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdata\\tablesdataclasses\\selldetailsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|solutionrelative:restaurantdata\\tablesdataclasses\\selldetailsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\receiptcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\receiptcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdata\\tablesdataclasses\\selldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,28 +87,12 @@
       "RelativeMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|solutionrelative:restaurantdata\\bussinessdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\salesmakerwindowhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\salesmakerwindowhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\receiptcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\receiptcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\systemwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\systemwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdata\\receiptdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|solutionrelative:restaurantdata\\receiptdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdata\\ticketdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|solutionrelative:restaurantdata\\ticketdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\searchentityhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\searchentityhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\loadingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,60 +103,20 @@
       "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\businessdetaillswindowhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}|RestaurantDataManager\\RestaurantDataManager.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdatamanager\\bussinesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}|RestaurantDataManager\\RestaurantDataManager.csproj|solutionrelative:restaurantdatamanager\\bussinesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\systemwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\systemwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}|RestaurantDataManager\\RestaurantDataManager.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdatamanager\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}|RestaurantDataManager\\RestaurantDataManager.csproj|solutionrelative:restaurantdatamanager\\datacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}|RestaurantDataManager\\RestaurantDataManager.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdatamanager\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}|RestaurantDataManager\\RestaurantDataManager.csproj|solutionrelative:restaurantdatamanager\\datamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\listview handlers\\listviewpanelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\listview handlers\\listviewpanelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}|RestaurantDataManager\\RestaurantDataManager.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdatamanager\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}|RestaurantDataManager\\RestaurantDataManager.csproj|solutionrelative:restaurantdatamanager\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}|RestaurantDataManager\\RestaurantDataManager.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdatamanager\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}|RestaurantDataManager\\RestaurantDataManager.csproj|solutionrelative:restaurantdatamanager\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\listview handlers\\productslistviewhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\listview handlers\\productslistviewhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\uiinterfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\uiinterfaces.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\listview handlers\\productscartlistviewhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\listview handlers\\productscartlistviewhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\restaurantdata\\tablesdataclasses\\clientdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C57FCD0A-960C-455D-909C-2FBD4E4050D3}|RestaurantData\\RestaurantData.csproj|solutionrelative:restaurantdata\\tablesdataclasses\\clientdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\listview handlers\\userslistviewhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\listview handlers\\userslistviewhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\listview handlers\\clientslistviewhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\windows handlers\\listview handlers\\clientslistviewhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\searchclientswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|solutionrelative:salesrestaurantsystem\\searchclientswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}|SalesRestaurantSystem\\SalesRestaurantSystem.csproj|c:\\users\\penit\\documents\\github\\noir-beach-fiscal-manager\\noir beach\\salesrestaurantsystem\\windows handlers\\productscartpanelhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -129,38 +141,188 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 139,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PurchaseData.cs",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TablesDataClasses\\PurchaseData.cs",
-              "RelativeDocumentMoniker": "RestaurantData\\TablesDataClasses\\PurchaseData.cs",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TablesDataClasses\\PurchaseData.cs",
-              "RelativeToolTip": "RestaurantData\\TablesDataClasses\\PurchaseData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "DocumentIndex": 4,
+              "Title": "ClientData.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TablesDataClasses\\ClientData.cs",
+              "RelativeDocumentMoniker": "RestaurantData\\TablesDataClasses\\ClientData.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TablesDataClasses\\ClientData.cs",
+              "RelativeToolTip": "RestaurantData\\TablesDataClasses\\ClientData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T01:13:52.123Z",
+              "WhenOpened": "2024-09-25T11:57:01.604Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SellData.cs",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TablesDataClasses\\SellData.cs",
-              "RelativeDocumentMoniker": "RestaurantData\\TablesDataClasses\\SellData.cs",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TablesDataClasses\\SellData.cs",
-              "RelativeToolTip": "RestaurantData\\TablesDataClasses\\SellData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA2AAAA",
+              "DocumentIndex": 5,
+              "Title": "ClientsListViewHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ClientsListViewHandler.cs",
+              "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ClientsListViewHandler.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ClientsListViewHandler.cs",
+              "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ClientsListViewHandler.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAIwFYAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T00:37:08.028Z",
+              "WhenOpened": "2024-09-25T11:54:49.538Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ClientsDataHandlerWindow.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\ClientsDataHandlerWindow.cs",
+              "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\ClientsDataHandlerWindow.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\ClientsDataHandlerWindow.cs",
+              "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\ClientsDataHandlerWindow.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T19:34:14.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SystemWindow.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SystemWindow.cs",
+              "RelativeDocumentMoniker": "SalesRestaurantSystem\\SystemWindow.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SystemWindow.cs",
+              "RelativeToolTip": "SalesRestaurantSystem\\SystemWindow.cs",
+              "ViewState": "AQIAANoAAAAAAAAAAAAqwOUAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T20:34:06.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductDataHandlerWindow.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\ProductDataHandlerWindow.cs",
+              "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\ProductDataHandlerWindow.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\ProductDataHandlerWindow.cs",
+              "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\ProductDataHandlerWindow.cs",
+              "ViewState": "AQIAANYAAAAAAAAAAAAYwA8AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T19:33:03.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SearchClientsHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SearchClientsHandler.cs",
+              "RelativeDocumentMoniker": "SalesRestaurantSystem\\SearchClientsHandler.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SearchClientsHandler.cs",
+              "RelativeToolTip": "SalesRestaurantSystem\\SearchClientsHandler.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAcwA4AAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T20:41:45.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SearchEntitiesWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SearchEntitiesWindow.xaml",
+              "RelativeDocumentMoniker": "SalesRestaurantSystem\\SearchEntitiesWindow.xaml",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SearchEntitiesWindow.xaml",
+              "RelativeToolTip": "SalesRestaurantSystem\\SearchEntitiesWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-25T11:20:09.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PurchasesMakerWindowHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\PurchasesMakerWindowHandler.cs",
+              "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\PurchasesMakerWindowHandler.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\PurchasesMakerWindowHandler.cs",
+              "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\PurchasesMakerWindowHandler.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAA1wC8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T19:33:36.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DataManager.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\DataManager.cs",
+              "RelativeDocumentMoniker": "RestaurantDataManager\\DataManager.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\DataManager.cs",
+              "RelativeToolTip": "RestaurantDataManager\\DataManager.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAgwBoAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T12:42:31.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SalesMakerWindowHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\SalesMakerWindowHandler.cs",
+              "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\SalesMakerWindowHandler.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\SalesMakerWindowHandler.cs",
+              "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\SalesMakerWindowHandler.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAcwHEAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-19T19:42:08.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SearchEntityHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\SearchEntityHandler.cs",
+              "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\SearchEntityHandler.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\SearchEntityHandler.cs",
+              "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\SearchEntityHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T10:42:58.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SearchEntitiesWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SearchEntitiesWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SalesRestaurantSystem\\SearchEntitiesWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SearchEntitiesWindow.xaml.cs",
+              "RelativeToolTip": "SalesRestaurantSystem\\SearchEntitiesWindow.xaml.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAwwA8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T20:57:59.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SearchSuppliersHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SearchSuppliersHandler.cs",
+              "RelativeDocumentMoniker": "SalesRestaurantSystem\\SearchSuppliersHandler.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SearchSuppliersHandler.cs",
+              "RelativeToolTip": "SalesRestaurantSystem\\SearchSuppliersHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGQAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T20:58:17.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SupplierRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\Repositories\\SupplierRepository.cs",
+              "RelativeDocumentMoniker": "RestaurantDataManager\\Repositories\\SupplierRepository.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\Repositories\\SupplierRepository.cs",
+              "RelativeToolTip": "RestaurantDataManager\\Repositories\\SupplierRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T19:30:00.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "TransactionsWindowHandler.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\TransactionsWindowHandler.cs",
               "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\TransactionsWindowHandler.cs",
@@ -168,38 +330,59 @@
               "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\TransactionsWindowHandler.cs",
               "ViewState": "AQIAAF8AAAAAAAAAAAAvwI0AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T00:08:40.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-17T00:08:40.064Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SystemWindow.cs",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SystemWindow.cs",
-              "RelativeDocumentMoniker": "SalesRestaurantSystem\\SystemWindow.cs",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SystemWindow.cs",
-              "RelativeToolTip": "SalesRestaurantSystem\\SystemWindow.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAcwB4AAAAPAAAA",
+              "DocumentIndex": 14,
+              "Title": "PurchaseDetailsData.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TablesDataClasses\\PurchaseDetailsData.cs",
+              "RelativeDocumentMoniker": "RestaurantData\\TablesDataClasses\\PurchaseDetailsData.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TablesDataClasses\\PurchaseDetailsData.cs",
+              "RelativeToolTip": "RestaurantData\\TablesDataClasses\\PurchaseDetailsData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T20:34:06.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-17T15:56:47.58Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 16,
+              "Title": "SellDetailsData.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TablesDataClasses\\SellDetailsData.cs",
+              "RelativeDocumentMoniker": "RestaurantData\\TablesDataClasses\\SellDetailsData.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TablesDataClasses\\SellDetailsData.cs",
+              "RelativeToolTip": "RestaurantData\\TablesDataClasses\\SellDetailsData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T15:56:34.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SellData.cs",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TablesDataClasses\\SellData.cs",
+              "RelativeDocumentMoniker": "RestaurantData\\TablesDataClasses\\SellData.cs",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TablesDataClasses\\SellData.cs",
+              "RelativeToolTip": "RestaurantData\\TablesDataClasses\\SellData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T00:37:08.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "ReceiptController.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\ReceiptController.cs",
               "RelativeDocumentMoniker": "SalesRestaurantSystem\\ReceiptController.cs",
               "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\ReceiptController.cs",
               "RelativeToolTip": "SalesRestaurantSystem\\ReceiptController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAiwCoAAABcAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIAAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T11:49:50.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T11:49:50.017Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 20,
               "Title": "BussinessData.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\BussinessData.cs",
               "RelativeDocumentMoniker": "RestaurantData\\BussinessData.cs",
@@ -207,12 +390,11 @@
               "RelativeToolTip": "RestaurantData\\BussinessData.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T19:52:03.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T19:52:03.976Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 24,
               "Title": "BusinessDetaillsWindowHandler.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\BusinessDetaillsWindowHandler.cs",
               "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\BusinessDetaillsWindowHandler.cs",
@@ -220,12 +402,11 @@
               "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\BusinessDetaillsWindowHandler.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAAAI0AAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T17:06:01.081Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T17:06:01.081Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 23,
               "Title": "LoadingWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\LoadingWindow.xaml.cs",
               "RelativeDocumentMoniker": "SalesRestaurantSystem\\LoadingWindow.xaml.cs",
@@ -233,25 +414,11 @@
               "RelativeToolTip": "SalesRestaurantSystem\\LoadingWindow.xaml.cs",
               "ViewState": "AQIAAE0AAAAAAAAAAAAlwGcAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T20:22:17.179Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-13T20:22:17.179Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SearchEntityHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\SearchEntityHandler.cs",
-              "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\SearchEntityHandler.cs",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\SearchEntityHandler.cs",
-              "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\SearchEntityHandler.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwB0AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T10:42:58.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 21,
               "Title": "ReceiptData.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\ReceiptData.cs",
               "RelativeDocumentMoniker": "RestaurantData\\ReceiptData.cs",
@@ -259,37 +426,11 @@
               "RelativeToolTip": "RestaurantData\\ReceiptData.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T21:41:06.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T21:41:06.492Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "SystemWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SystemWindow.xaml",
-              "RelativeDocumentMoniker": "SalesRestaurantSystem\\SystemWindow.xaml",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SystemWindow.xaml",
-              "RelativeToolTip": "SalesRestaurantSystem\\SystemWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-19T20:34:07.637Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SalesMakerWindowHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\SalesMakerWindowHandler.cs",
-              "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\SalesMakerWindowHandler.cs",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\SalesMakerWindowHandler.cs",
-              "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\SalesMakerWindowHandler.cs",
-              "ViewState": "AQIAAF0AAAAAAAAAAIA6wHEAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T19:42:08.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 22,
               "Title": "TicketData.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TicketData.cs",
               "RelativeDocumentMoniker": "RestaurantData\\TicketData.cs",
@@ -297,64 +438,11 @@
               "RelativeToolTip": "RestaurantData\\TicketData.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T20:53:04.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T20:53:04.699Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "BussinessController.cs",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\BussinessController.cs",
-              "RelativeDocumentMoniker": "RestaurantDataManager\\BussinessController.cs",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\BussinessController.cs",
-              "RelativeToolTip": "RestaurantDataManager\\BussinessController.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAowDcAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-13T20:01:57.049Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DataManager.cs",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\DataManager.cs",
-              "RelativeDocumentMoniker": "RestaurantDataManager\\DataManager.cs",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\DataManager.cs",
-              "RelativeToolTip": "RestaurantDataManager\\DataManager.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAowCYAAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T12:42:31.431Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "DataController.cs",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\DataController.cs",
-              "RelativeDocumentMoniker": "RestaurantDataManager\\DataController.cs",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\DataController.cs",
-              "RelativeToolTip": "RestaurantDataManager\\DataController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T03:59:46.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ProductsListViewHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ProductsListViewHandler.cs",
-              "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ProductsListViewHandler.cs",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ProductsListViewHandler.cs",
-              "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ProductsListViewHandler.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAwwFQAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T11:11:43.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 25,
               "Title": "ListViewPanelController.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ListViewPanelController.cs",
               "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ListViewPanelController.cs",
@@ -362,25 +450,11 @@
               "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ListViewPanelController.cs",
               "ViewState": "AQIAAEMAAAAAAAAAAAApwFkAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T11:13:15.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T11:13:15.727Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\DataContext.cs",
-              "RelativeDocumentMoniker": "RestaurantDataManager\\DataContext.cs",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\DataContext.cs",
-              "RelativeToolTip": "RestaurantDataManager\\DataContext.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAIAwwB8AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T12:43:01.146Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 26,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "RestaurantDataManager\\Repositories\\ProductRepository.cs",
@@ -388,12 +462,11 @@
               "RelativeToolTip": "RestaurantDataManager\\Repositories\\ProductRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T03:59:59.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T03:59:59.533Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "UIInterfaces.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\UIInterfaces.cs",
               "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\UIInterfaces.cs",
@@ -401,51 +474,11 @@
               "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\UIInterfaces.cs",
               "ViewState": "AQIAAE0AAAAAAAAAAIAywFgAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T03:53:36.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T03:53:36.12Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ProductsCartListViewHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ProductsCartListViewHandler.cs",
-              "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ProductsCartListViewHandler.cs",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ProductsCartListViewHandler.cs",
-              "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ProductsCartListViewHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAwAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T19:23:09.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "ClientsListViewHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ClientsListViewHandler.cs",
-              "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ClientsListViewHandler.cs",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ClientsListViewHandler.cs",
-              "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\ClientsListViewHandler.cs",
-              "ViewState": "AQIAADsAAAAAAAAAAAAwwF4AAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T11:54:49.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ClientData.cs",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TablesDataClasses\\ClientData.cs",
-              "RelativeDocumentMoniker": "RestaurantData\\TablesDataClasses\\ClientData.cs",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\TablesDataClasses\\ClientData.cs",
-              "RelativeToolTip": "RestaurantData\\TablesDataClasses\\ClientData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T11:57:01.604Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "UsersListViewHandler.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\UsersListViewHandler.cs",
               "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\UsersListViewHandler.cs",
@@ -453,24 +486,11 @@
               "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\UsersListViewHandler.cs",
               "ViewState": "AQIAADsAAAAAAAAAAAAIwFsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T13:13:28.164Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T13:13:28.164Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "SearchClientsWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SearchClientsWindow.xaml",
-              "RelativeDocumentMoniker": "SalesRestaurantSystem\\SearchClientsWindow.xaml",
-              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SearchClientsWindow.xaml",
-              "RelativeToolTip": "SalesRestaurantSystem\\SearchClientsWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-25T11:20:09.037Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 29,
               "Title": "ProductsCartPanelHandler.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\ProductsCartPanelHandler.cs",
               "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\ProductsCartPanelHandler.cs",
@@ -478,12 +498,11 @@
               "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\ProductsCartPanelHandler.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T19:41:25.507Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T19:41:25.507Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 30,
               "Title": "CartPanelHanlder.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\CartPanelHanlder.cs",
               "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\CartPanelHanlder.cs",
@@ -491,12 +510,11 @@
               "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\CartPanelHanlder.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwA4AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T20:49:08.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T20:49:08.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 31,
               "Title": "CartListViewHandler.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\CartListViewHandler.cs",
               "RelativeDocumentMoniker": "SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\CartListViewHandler.cs",
@@ -504,12 +522,11 @@
               "RelativeToolTip": "SalesRestaurantSystem\\Windows Handlers\\Listview Handlers\\CartListViewHandler.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-19T19:19:51.379Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-19T19:19:51.379Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\RelayCommand.cs",
               "RelativeDocumentMoniker": "SalesRestaurantSystem\\RelayCommand.cs",
@@ -517,7 +534,24 @@
               "RelativeToolTip": "SalesRestaurantSystem\\RelayCommand.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T17:07:49.077Z",
+              "WhenOpened": "2024-09-23T17:07:49.077Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 184,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SystemWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SystemWindow.xaml",
+              "RelativeDocumentMoniker": "SalesRestaurantSystem\\SystemWindow.xaml",
+              "ToolTip": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SystemWindow.xaml",
+              "RelativeToolTip": "SalesRestaurantSystem\\SystemWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-19T20:34:07.637Z",
               "EditorCaption": ""
             }
           ]

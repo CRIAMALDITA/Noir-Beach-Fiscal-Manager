@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace SalesRestaurantSystem
 {
 
-    public partial class SearchClientsWindow: Window
+    public partial class SearchEntitiesWindow: Window
     {
         public ListView ElementsList;
         public TextBox IDField;
@@ -23,7 +23,7 @@ namespace SalesRestaurantSystem
         public Button CancelBTN;
         public Button AcceptBTN;
 
-        public SearchClientsWindow()
+        public SearchEntitiesWindow()
         {
             InitializeComponent();
             ElementsList = SearchEntities_List;
