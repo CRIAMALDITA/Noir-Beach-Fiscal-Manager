@@ -498,3 +498,4 @@ C:\Users\Penit\Documents\GitHub\Noir-Beach-Fiscal-Manager\Noir Beach\SalesRestau
 C:\Users\Penit\Documents\GitHub\Noir-Beach-Fiscal-Manager\Noir Beach\SalesRestaurantSystem\bin\Debug\net8.0-windows\bc-fips-1.0.2.dll
 C:\Users\Penit\Documents\GitHub\Noir-Beach-Fiscal-Manager\Noir Beach\SalesRestaurantSystem\bin\Debug\net8.0-windows\bcpkix-fips-1.0.2.dll
 C:\Users\Penit\Documents\GitHub\Noir-Beach-Fiscal-Manager\Noir Beach\SalesRestaurantSystem\bin\Debug\net8.0-windows\itext.bouncy-castle-fips-adapter.dll
+C:\Users\Penit\Documents\GitHub\Noir-Beach-Fiscal-Manager\Noir Beach\SalesRestaurantSystem\obj\Debug\net8.0-windows\SearchEntitiesWindow.g.cs

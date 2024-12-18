@@ -930,75 +930,150 @@
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid x:Name="Interface_Clients"  HorizontalAlignment="Left" Margin="305,100,0,22" Height="604" Width="975" Visibility="Visible">
+            <Grid x:Name="Interface_Clients"  HorizontalAlignment="Left" Margin="305,99,0,21" Width="975" Visibility="Visible">
                 <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
-                <Grid VerticalAlignment="Top" Height="70" Visibility="Visible" x:Name="Interface_Clients_Header" Margin="10,10,10,0">
+                <Grid VerticalAlignment="Top" Height="71" Visibility="Visible" x:Name="Interface_Clients_Header" Margin="10,10,10,0">
                     <Rectangle Fill="Black"/>
                     <Rectangle Fill="White" Margin="2,2,2,2"/>
-                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="35" Margin="22,0,0,0" Height="50" Text="Client List:"/>
-                    <StackPanel Margin="668,20,47,20">
-                        <TextBox x:Name="Interface_Clients_SearchClientField" Height="30" Background="GhostWhite" Tag="SearchField"/>
+                    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="35" Margin="22,18,0,0" Height="32" FontFamily="MS PGothic" FontStyle="Italic" Width="272"><Run Language="en-gb" Text="PRODUCTS"/><Run Text=" LIST"/><Run Text=":"/></TextBlock>
+                    <ComboBox x:Name="Interface_Clients_CategoryBox" Margin="483,24,328,24" SelectedIndex="0"  VerticalContentAlignment="Center" FontFamily="MS PGothic" >
+                        <ComboBoxItem Content="Active"/>
+                        <ComboBoxItem Content="Inactive"/>
+                    </ComboBox>
+                    <TextBlock Text="Search by:" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" Margin="408,0,0,0" Height="17" Width="70" FontStyle="Italic" FontFamily="MS PGothic"/>
+                    <StackPanel Margin="632,20,47,20">
+                        <TextBox Padding="5,0,0,0" x:Name="Interface_Clients_SearchField" Height="30" Background="GhostWhite" VerticalContentAlignment="Center" FontSize="15" Margin="0,0,-1,0" FontFamily="MS PGothic"/>
                     </StackPanel>
-                    <Button x:Name="Interface_Clients_SearchBtn" Margin="913,20,10,20" Background="Transparent"  Tag="SearchBtn">
+                    <Button Margin="913,20,10,20" Background="Transparent" x:Name="Interface_Clients_Header_SearchButton">
                         <Image Source="Images/Search.png" Height="20"/>
                     </Button>
-                    <TextBlock Text="Search By" Margin="334,24,546,24" FontSize="15"/>
-                    <ComboBox x:Name="Interface_Clients_CategorySearch" Margin="414,20,292,20"  Tag="SearchCategory">
-                    </ComboBox>
                 </Grid>
-                <Grid Margin="10,92,266,10">
-                    <Rectangle Fill="Black"/>
-                    <Rectangle Fill="White" Margin="2,2,2,2"/>
+                <Grid Margin="10,92,306,81">
                     <Grid>
-                        <ListView ItemsSource="{Binding DataCollection}" FontSize="14" x:Name="Interface_Clients_ClientListView"  Tag="ClientsList">
+                        <ListView FontSize="14" x:Name="Interface_Clients_ListView">
+                            <ListView.Resources>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="FontFamily" Value="Ms PGothic" />
+                                    <Setter Property="FontSize" Value="14" />
+                                </Style>
+                                <Style TargetType="GridViewColumnHeader">
+                                    <Setter Property="FontFamily" Value="Ms PGothic"/>
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="Foreground" Value="Black"/>
+                                </Style>
+                            </ListView.Resources>
                             <ListView.View>
                                 <GridView>
-                                    <GridViewColumn Width="80" DisplayMemberBinding="{Binding Document}" Header="ID"/>
-                                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding FullName}" Header="Name"/>
-                                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding Email}" Header="Email"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Tel}" Header="Telephone"/>
-                                    <GridViewColumn Width="60" DisplayMemberBinding="{Binding Account}" Header="Account"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Balance}" Header="Balance"/>
+                                    <GridViewColumn Width="30" DisplayMemberBinding="{Binding IdProduct}" Header="ID"/>
+                                    <GridViewColumn Width="80" DisplayMemberBinding="{Binding Code}" Header="Code"/>
+                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding ProductName}" Header="Product"/>
+                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Category}" Header="Category"/>
+                                    <GridViewColumn Width="50" DisplayMemberBinding="{Binding Stock}" Header="Stock"/>
+                                    <GridViewColumn Width="80" DisplayMemberBinding="{Binding PurchasePrice}" Header="Purchase"/>
+                                    <GridViewColumn Width="80" DisplayMemberBinding="{Binding SellPrice}" Header="Sell"/>
+                                    <GridViewColumn Width="80" DisplayMemberBinding="{Binding ProductState}" Header="State"/>
+                                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding Date}" Header="Date"/>
                                 </GridView>
                             </ListView.View>
                         </ListView>
+                        <ListView FontSize="14" x:Name="Interface_Clients_RemovedListView" Visibility="Hidden">
+                            <ListView.Resources>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="FontFamily" Value="Ms PGothic" />
+                                    <Setter Property="FontSize" Value="14" />
+                                    <Setter Property="Foreground" Value="DarkRed" />
+                                </Style>
+                                <Style TargetType="GridViewColumnHeader">
+                                    <Setter Property="FontFamily" Value="Ms PGothic"/>
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="Foreground" Value="Black"/>
+                                </Style>
+                            </ListView.Resources>
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Width="30" DisplayMemberBinding="{Binding IdProduct}" Header="ID"/>
+                                    <GridViewColumn Width="80" DisplayMemberBinding="{Binding Code}" Header="Code"/>
+                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding ProductName}" Header="Product"/>
+                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Category}" Header="Category"/>
+                                    <GridViewColumn Width="50" DisplayMemberBinding="{Binding Stock}" Header="Stock"/>
+                                    <GridViewColumn Width="80" DisplayMemberBinding="{Binding PurchasePrice}" Header="Purchase"/>
+                                    <GridViewColumn Width="80" DisplayMemberBinding="{Binding SellPrice}" Header="Sell"/>
+                                    <GridViewColumn Width="80" DisplayMemberBinding="{Binding ProductState}" Header="State"/>
+                                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding Date}" Header="Date"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <Border BorderBrush="Black" BorderThickness="1"/>
                     </Grid>
                 </Grid>
-                <Grid x:Name="Interface_Clients_ClientsControlPanel" Margin="714,92,10,10">
+                <Grid VerticalAlignment="Top" Height="66" Visibility="Visible" x:Name="Interface_Clients_MainBottom" Margin="10,530,306,0">
+                    <Rectangle Fill="White"/>
+                    <Border BorderBrush="Black" BorderThickness="1"/>
+                    <Button x:Name="Interface_Clients_MainBottom_RemoveBTN" Margin="449,16,10,16" Background="#FF9C4D4D">
+                        <TextBlock Text="Remove Elements" Foreground="#FF3E2323" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                    </Button>
+                    <Button x:Name="Interface_Clients_MainBottom_ExportBTN" Margin="10,16,449,16" Background="LightSlateGray">
+                        <TextBlock Text="Quick Export Excel" Foreground="#FF2E353C" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                    </Button>
+                    <Button x:Name="Interface_Clients?MainBottom_ViewRemovedElemets" Margin="230,16,230,16" Background="LightSlateGray">
+                        <TextBlock Text="View Removed Elements" Foreground="#FF2E3546" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                    </Button>
+                </Grid>
+                <Grid VerticalAlignment="Top" Height="66" Visibility="Hidden" x:Name="Interface_Clients_RemovedBottom" Margin="10,530,306,0">
+                    <Rectangle Fill="White"/>
+                    <Border BorderBrush="Black" BorderThickness="1"/>
+                    <Button x:Name="Interface_Clients_RemovedBottom_RemoveBTN" Margin="449,16,10,16" Background="#FF963737">
+                        <TextBlock Text="True Remove" Foreground="#FF3E2323" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                    </Button>
+                    <Button x:Name="Interface_Clients_RemovedBottom_RecoveryBTN" Margin="230,16,229,16" Background="#FF7A9977">
+                        <TextBlock Text="Recovery Item" Foreground="#FF283328" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                    </Button>
+                    <Button x:Name="Interface_Clients_RemovedBottom_ViewMainElemets" Margin="11,16,449,16" Background="LightSlateGray">
+                        <TextBlock Text="Back" Foreground="#FF2E3546" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                    </Button>
+                </Grid>
+                <Grid x:Name="Interface_Clients_ControlPanel" Margin="680,92,10,10">
                     <Border Padding="10" BorderThickness="1" BorderBrush="Black" Background="White"/>
-                    <TextBlock Margin="10,10,10,0" VerticalAlignment="Top" FontSize="22" HorizontalAlignment="Center" Text="Client Control Panel"/>
-                    <TextBlock Text="ID:" Margin="10,50,10,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" />
+                    <TextBlock Margin="0,10,0,0" VerticalAlignment="Top" FontSize="22" HorizontalAlignment="Center" FontFamily="MS PGothic" FontWeight="Bold" FontStyle="Italic" Width="229" ><Run Language="en-gb" Text="Products"/><Run Text=" Control Panel"/></TextBlock>
+                    <TextBlock Text="Code:" Margin="10,50,10,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="MS PGothic" FontSize="13" />
                     <StackPanel Margin="10,108,10,368">
-                        <TextBox  Tag="FullName" x:Name="Interface_Clients_ClientsControlPanel_FullNameClientField" Height="24" Background="GhostWhite"/>
+                        <TextBox x:Name="Interface_Clients_ControlPanel_NameField" Tag="ProductName" Height="24" Background="GhostWhite" FontFamily="MS PGothic"  VerticalContentAlignment="Center"/>
                     </StackPanel>
-                    <TextBlock Text="Full Name:" Margin="10,93,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" />
+                    <TextBlock Text="Product Name:" Margin="10,93,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="MS PGothic" FontSize="13" />
                     <StackPanel Margin="10,65,10,413">
-                        <TextBox  Tag="Document" x:Name="Interface_Clients_ClientsControlPanel_DocumentClientField" Height="24" Background="GhostWhite"/>
+                        <TextBox x:Name="Interface_Clients_ControlPanel_CodeField" Tag="Code" Height="24" Background="GhostWhite" FontFamily="MS PGothic"  VerticalContentAlignment="Center"/>
                     </StackPanel>
-                    <TextBlock Text="Email:" Margin="10,136,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Height="12" />
-                    <StackPanel Margin="10,151,10,327">
-                        <TextBox  Tag="Email" x:Name="Interface_Clients_ClientsControlPanel_EmailField" Height="23" Background="GhostWhite"/>
+                    <TextBlock Margin="10,136,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="12" FontFamily="MS PGothic" FontSize="13" ><Run Language="en-gb" Text="Description: "/></TextBlock>
+                    <StackPanel Margin="10,151,10,254">
+                        <TextBox x:Name="Interface_Clients_ControlPanel_DescriptionField" Tag="ProductDescription" Height="96" Background="GhostWhite" FontFamily="MS PGothic"  VerticalContentAlignment="Center"/>
                     </StackPanel>
-                    <TextBlock Text="Telephone:" Margin="10,180,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Height="13" />
-                    <StackPanel Margin="10,196,10,282">
-                        <TextBox  Tag="Telephone" x:Name="Interface_Clients_ClientsControlPanel_TelephoneField" Height="23" Background="GhostWhite"/>
-                    </StackPanel>
-                    <TextBlock Text="Client Balance:" Margin="150,222,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Height="12" Width="77" />
-                    <StackPanel Margin="150,237,10,236">
-                        <TextBox  Tag="Balance" x:Name="Interface_Clients_ClientsControlPanel_BalanceField" Height="25" Background="GhostWhite"/>
-                    </StackPanel>
-                    <Button x:Name="Interface_Clients_ClientsControlPanel_AddItem" Margin="10,386,10,83" Background="#FF5ABB51">
-                        <TextBlock Text="Add Item to List" Foreground="#FF005400" FontWeight="Bold" FontSize="16"></TextBlock>
-                    </Button>
-                    <Button x:Name="Interface_Clients_ClientsControlPanel_RemoveItem" Margin="10,424,10,48" Background="#FFC34343">
-                        <TextBlock Text="Remove Elements" Foreground="#FF540000" FontWeight="Bold" FontSize="16"/>
-                    </Button>
-                    <Button x:Name="Interface_Clients_ClientsControlPanel_Export" Margin="10,459,10,13" Background="#FF43B4C3">
-                        <TextBlock Text="Quick Export Excel" Foreground="#FF004754" FontWeight="Bold" FontSize="16"/>
-                    </Button>
-                    <TextBlock Text="Create Account:" Margin="10,222,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Height="15" />
-                    <ComboBox  Tag="Account" x:Name="Interface_Clients_ClientsControlPanel_AccountBox" Margin="10,237,106,240" SelectedIndex="0">
+                    <StackPanel Margin="10,196,10,282"/>
+                    <StackPanel Margin="10,237,10,240"/>
+                    <TextBlock Text="Category:" Margin="10,255,0,0" VerticalAlignment="Top" FontSize="13" HorizontalAlignment="Left" FontFamily="MS PGothic" Height="16" Width="215" />
+                    <ComboBox x:Name="Interface_Clients_ControlPanel_CategoryBox" Tag="Category" Margin="10,271,10,206" SelectedIndex="0" FontFamily="MS PGothic" VerticalContentAlignment="Center">
+                        <ComboBoxItem Content="Active"/>
+                        <ComboBoxItem Content="Inactive"/>
                     </ComboBox>
+                    <TextBlock Text="Purchase Price:" Margin="10,303,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="MS PGothic" FontSize="13" />
+                    <StackPanel Margin="10,321,152,159">
+                        <TextBox x:Name="Interface_Clients_ControlPanel_PurchasePrice" Tag="PurchasePrice" Height="24" Background="GhostWhite" FontFamily="MS PGothic"  VerticalContentAlignment="Center"/>
+                    </StackPanel>
+                    <TextBlock Text="Sell Price:" Margin="152,303,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="MS PGothic" FontSize="13" />
+                    <StackPanel Margin="152,321,10,159">
+                        <TextBox x:Name="Interface_Clients_ControlPanel_SellPrice" Tag="SellPrice" Height="24" Background="GhostWhite" FontFamily="MS PGothic"  VerticalContentAlignment="Center"/>
+                    </StackPanel>
+                    <TextBlock Text="Stock:" Margin="10,350,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="MS PGothic" FontSize="13" />
+                    <StackPanel Margin="10,368,152,110">
+                        <TextBox x:Name="Interface_Clients_ControlPanel_Stock" Tag="Stock" Height="24" Background="GhostWhite" FontFamily="MS PGothic"  VerticalContentAlignment="Center" Width="123"/>
+                    </StackPanel>
+                    <TextBlock Text="Status:" Margin="152,350,0,0" VerticalAlignment="Top" FontSize="13" HorizontalAlignment="Left" FontFamily="MS PGothic" />
+                    <ComboBox x:Name="Interface_Clients_ControlPanel_StatusBox" Tag="ProductState" Margin="152,368,10,110" SelectedIndex="0" FontFamily="MS PGothic" VerticalContentAlignment="Center">
+                        <ComboBoxItem Content="Active"/>
+                        <ComboBoxItem Content="Inactive"/>
+                    </ComboBox>
+                    <Button x:Name="Interface_Clients_ControlPanel_AddBTN" Margin="10,453,10,16" Background="#FF7A9977">
+                        <TextBlock Text="Add Item to List" Foreground="#FF283328" FontSize="17" FontFamily="MS PGothic" FontWeight="Bold" FontStyle="Italic"/>
+                    </Button>
                 </Grid>
             </Grid>
             <Grid x:Name="Interface_Supplier"  HorizontalAlignment="Left" Margin="305,100,0,22" Height="604" Width="975" Visibility="Hidden">
