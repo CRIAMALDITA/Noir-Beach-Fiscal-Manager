@@ -16,7 +16,7 @@ namespace SalesRestaurantSystem
     {
         public List<ClientData> ClientData { get; set; }
 
-        public SearchClientsWindow SearchEntitiesWindow { get; set; }
+        public SearchEntitiesWindow SearchEntitiesWindow { get; set; }
 
 
         public SearchClientsHandler(){}
@@ -50,7 +50,7 @@ namespace SalesRestaurantSystem
         public ClientData OpenSearchWindow(List<ClientData> clientsFinded, string id)
         {
             ClientData clientData = null;
-            SearchEntitiesWindow = new SearchClientsWindow();
+            SearchEntitiesWindow = new SearchEntitiesWindow();
             SearchEntitiesWindow.IDField.Text = id;
             GridView gridView = new GridView();
             gridView.Columns.Add(new GridViewColumn
@@ -82,7 +82,11 @@ namespace SalesRestaurantSystem
             clientsFinded.ForEach(clients.Add);
             SearchEntitiesWindow.ElementsList.View = gridView;
             SearchEntitiesWindow.ElementsList.ItemsSource = clients;
-            SearchEntitiesWindow.CancelBTN.Click += (o, e) => SearchEntitiesWindow.Close();;
+            SearchEntitiesWindow.CancelBTN.Click += (o, e) =>
+            {
+                EntityFinded = false;
+                SearchEntitiesWindow.Close();
+            };
             SearchEntitiesWindow.AcceptBTN.Click += (o, e) => 
             { 
                 clientData = SearchEntitiesWindow.ElementsList.SelectedItem as ClientData;
@@ -96,6 +100,7 @@ namespace SalesRestaurantSystem
                 newData.ForEach(clients.Add);
             };
             SearchEntitiesWindow.ShowDialog();
+            EntityFinded = clientData != null;
             return clientData;
         }
     }

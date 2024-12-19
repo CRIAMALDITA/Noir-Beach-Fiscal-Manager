@@ -86,10 +86,12 @@ namespace SalesRestaurantSystem
         void SetCatalogInformationFields(ListView elementsList, TextBox searchField, Button searchBtn);
         void SetTransactionResumeFields(ListView cartList, TextBox subTotal, TextBox off, TextBox total, TextBox paysWith, TextBox change, Button makeSale);
         void SearchInCatalog(string filter);
+        void UpdateCatalog();
         void SearchCustomer();
         void AddToCart(T[] items);
         bool RemoveFromCart(T[] items);
         void MakeTransaction();
+        void ClearTransaction();
     }
 
     public interface IUIDataViewer<T> : IUIPanel where T : class

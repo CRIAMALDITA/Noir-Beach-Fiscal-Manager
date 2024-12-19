@@ -13,8 +13,6 @@ using System.Windows.Shapes;
 using RestaurantDataManager;
 using RestaurantData.TablesDataClasses;
 using SalesRestaurantSystem.WindowsHandlers;
-using SalesRestaurantSystem.WindowsHandlers;
-using SalesRestaurantSystem.WindowsHandlers;
 
 
 namespace Point_of_sale_for_Restaurant
@@ -34,6 +32,9 @@ namespace Point_of_sale_for_Restaurant
 
         //Sell
         public SalesMakerWindowHandler Sales;
+
+        //Clients
+        public ClientsDataHandlerWindow Clients;
 
         public BackButtonController Interface_BackButton;
 
@@ -83,8 +84,8 @@ namespace Point_of_sale_for_Restaurant
                 (
                     this, ToolBar_Clients,
                     ToolBar_Clients_Shadow,
-                    ToolBar_Clients_Selected, null
-                //() => ActiveUI(Interface_Clients)
+                    ToolBar_Clients_Selected,
+                () => ActiveUI(Clients)
                 );
             options.Add(ClientsOption);
 
@@ -232,11 +233,37 @@ namespace Point_of_sale_for_Restaurant
                     Interface_Sale_Resume_ChangeField,
                     Interface_Sale_Resume_MakeSale
                 );
+            Sales.OnBackButtonPressed(Interface_ToolBar.UnSelectCurrent);
             //-------------------------------------------------------------------------------------------------
 
             //Purchase Grid -----------------------------------------------------------------------------------
+            Clients = new ClientsDataHandlerWindow(this);
+            Clients.SetPanel(Interface_Clients, Interface_BackButton);
+            Clients.SetSearchField(Interface_Clients_SearchField);
+            Clients.SetSearchButton(Interface_Clients_Header_SearchButton);
+            Clients.SetAddItem(Interface_Clients_ControlPanel_AddBTN);
+            Clients.SetRemoveItem(Interface_Clients_MainBottom_RemoveBTN, Interface_Clients_RemovedBottom_RemoveBTN);
+            Clients.SetExportItem(Interface_Clients_MainBottom_ExportBTN);
+            Clients.SetMainListView(Interface_Clients_ListView, Interface_Clients_MainBottom);
+            Clients.SetRecoveryItem(Interface_Clients_RemovedBottom_RecoveryBTN);
+            Clients.SetRemovedListView(Interface_Clients_RemovedListView, Interface_Clients_RemovedBottom);
+            Clients.SetRemoveHistory(Interface_Clients_MainBottom_ViewRemovedElemets, Interface_Clients_RemovedBottom_ViewMainElemets);
+            Clients.SetCategories(Interface_Clients_CategoryBox);
+            Clients.SetFields(
+            [
+                Interface_Clients_ControlPanel_NameField,
+                Interface_Clients_ControlPanel_IDField,
+                Interface_Clients_ControlPanel_EmailField,
+                Interface_Clients_ControlPanel_TelephoneField,
+                Interface_Clients_ControlPanel_BalancePrice,
+                Interface_Clients_ControlPanel_AccountBox,
+                Interface_Clients_ControlPanel_StatusBox
+
+
+            ]);
             //-------------------------------------------------------------------------------------------------
             //Clients Grid ------------------------------------------------------------------------------------
+
             //-------------------------------------------------------------------------------------------------
             //Suppliers Grid ----------------------------------------------------------------------------------
             //-------------------------------------------------------------------------------------------------
@@ -266,7 +293,7 @@ namespace Point_of_sale_for_Restaurant
 
         public void ActiveUI(IUIPanel currentUIActive)
         {
-            if(_currentUIActive != null) _currentUIActive.HideUI();
+            if(_currentUIActive != null) _currentUIActive.GoBack();
             _currentUIActive = currentUIActive;
             _currentUIActive.ShowUI();
         }

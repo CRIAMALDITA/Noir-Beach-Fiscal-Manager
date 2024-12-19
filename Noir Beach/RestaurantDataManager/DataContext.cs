@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using RestaurantData.TablesDataClasses;
+using static RestaurantDataManager.QueryDataContext;
 
 namespace RestaurantDataManager
 {
@@ -48,16 +49,17 @@ namespace RestaurantDataManager
                     throw;
                 }
             }
-            T result = await query.Invoke(context).ConfigureAwait(false);
             try
             {
+                var result = await query.Invoke(context).ConfigureAwait(false);
                 await context.SaveChangesAsync().ConfigureAwait(false);
+                return new QuerieResult<T>(context, result);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException?.Message);
+                Console.WriteLine($"Error al ejecutar la consulta: {ex.InnerException?.Message ?? ex.Message}");
+                throw;
             }
-            return new QuerieResult<T>(context, result);
         }
 
         public void ReleaseContext(DataContext context)
@@ -110,6 +112,8 @@ namespace RestaurantDataManager
             public DbSet<CategoryData> Category { get; set; }
             public DbSet<ProductData> Product { get; set; }
             public DbSet<ClientData> Client { get; set; }
+            public DbSet<SellData> Sell { get; set; }
+            public DbSet<SellDetailsData> SellDetails { get; set; }
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
                 optionsBuilder.UseSqlServer("Data Source=ALISSS;Initial Catalog=BDSALES_RESTAURANT_SYSTEM;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False; MultipleActiveResultSets=True")

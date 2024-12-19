@@ -87,13 +87,19 @@ namespace RestaurantDataManager.Repositories
         {
             try
             {
-                await _context.ExecuteQueriesAsync(async x => 
+                /*await _context.ExecuteQueriesAsync(async x => 
                 {
-                    var result = x.Set<T>();
-                    result.AsNoTracking();
-                    return result.Update(entity);
-                }, true);
-                await _context.ExecuteQueriesAsync(async x => x.SaveChangesAsync()).ConfigureAwait(false);
+                    var dbSet = x.Set<T>();
+                    var entry = x.Entry(entity);
+                    if (entry.State == EntityState.Detached)
+                    {
+                        dbSet.Attach(entity);
+                    }
+
+                    entry.State = EntityState.Modified;
+                    return entity;
+                }, true);*/
+                await _context.ExecuteQueriesAsync(async x => x.Set<T>().Update(entity));
                 return true;
             }
             catch (Exception ex)

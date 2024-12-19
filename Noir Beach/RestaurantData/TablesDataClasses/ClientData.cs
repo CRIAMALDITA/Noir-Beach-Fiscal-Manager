@@ -18,6 +18,7 @@ namespace RestaurantData.TablesDataClasses
         public string Telephone { get; set; } = string.Empty;
         public bool Account { get; set; } = false;
         public decimal AccountBalance { get; set; } = 0;
+        public bool ClientState { get; set; } = false;
         public DateTime CreationDate { get; set; } = DateTime.Now;
     }
 }

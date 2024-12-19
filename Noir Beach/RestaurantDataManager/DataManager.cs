@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using RestaurantData;
 using RestaurantData.TablesDataClasses;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,10 @@ namespace RestaurantDataManager
         public CategoryController Category;
         public ProductsController Product;
         public ClientController Client;
+        public SellDetailsController SellDetails;
+        public SellController Sell;
+        public BussinessController Bussiness;
+        public SupplierController Supplier;
 
         public DataManager()
         {
@@ -30,6 +35,10 @@ namespace RestaurantDataManager
             Category = new(dataContext);
             Product = new(dataContext);
             Client = new(dataContext);
+            SellDetails = new(dataContext);
+            Sell = new(dataContext);
+            Bussiness = new();
+            Supplier = new(dataContext);
         }
 
         public async Task<string> CheckConnection()
@@ -67,6 +76,8 @@ namespace RestaurantDataManager
             if (typeof(T) == Category.GetGenericType()) return Category as DataController<T>;
             if (typeof(T) == Product.GetGenericType()) return Product as DataController<T>;
             if (typeof(T) == Client.GetGenericType()) return Client as DataController<T>;
+            if (typeof(T) == Sell.GetGenericType()) return Sell as DataController<T>;
+            if (typeof(T) == SellDetails.GetGenericType()) return SellDetails as DataController<T>;
             return null;
         }
 

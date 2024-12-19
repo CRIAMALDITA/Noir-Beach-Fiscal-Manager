@@ -87,6 +87,7 @@ namespace SalesRestaurantSystem
         }
         public void SetListData(List<T> values)
         {
+            Items.Clear();
             foreach (var item in values)
             {
                 Items.Add(item);

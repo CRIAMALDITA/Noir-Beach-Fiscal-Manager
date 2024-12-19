@@ -38,6 +38,7 @@ namespace SalesRestaurantSystem
                 row["IdClient"] = item.IdClient;
                 row["Document"] = item.Document;
                 row["FullName"] = item.FullName;
+                row["Email"] = item.Email;
                 row["Tel"] = item.Telephone;
                 row["Account"] = item.Account ? "Active" : "Inactive";
                 row["Balance"] = item.AccountBalance;
@@ -78,11 +79,12 @@ namespace SalesRestaurantSystem
                 {
                     switch (type)
                     {
-                        case "IdClient": if (!item.IdClient.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
+                        case "Account": if (!item.IdClient.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                         case "ID": if (!item.Document.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
-                        case "FullName": if (!item.FullName.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
+                        case "Full Name": if (!item.FullName.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                         case "Email": if (!item.Email.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
-                        case "Tel": if (!item.Telephone.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
+                        case "Telephone": if (!item.Telephone.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
+                        case "Balance": if (!item.AccountBalance.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                         case "CreationDate": if (!item.CreationDate.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                     }
                 }
