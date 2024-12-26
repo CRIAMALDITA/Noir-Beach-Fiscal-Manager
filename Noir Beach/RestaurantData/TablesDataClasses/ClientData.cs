@@ -20,6 +20,5 @@ namespace RestaurantData.TablesDataClasses
         public decimal AccountBalance { get; set; } = 0;
         public bool ClientState { get; set; } = false;
         public DateTime CreationDate { get; set; } = DateTime.Now;
-        public bool ClientState { get; set; } = false;
     }
 }

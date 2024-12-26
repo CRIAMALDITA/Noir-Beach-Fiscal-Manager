@@ -170,15 +170,15 @@ namespace SalesRestaurantSystem.WindowsHandlers
                 MessageBox.ShowEmergentMessage("E_Cart is Empty");
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(selldata.Resume.PaysWith))
+            if (string.IsNullOrWhiteSpace(Purchasedata.Resume.PaysWith))
             {
                 MessageBox.ShowEmergentMessage("E_Payment is empty");
                 return false;
             }
-            decimal paysWith = Convert.ToDecimal(selldata.Resume.PaysWith.Replace("$", "").Trim());
+            decimal paysWith = Convert.ToDecimal(Purchasedata.Resume.PaysWith.Replace("$", "").Trim());
 
-            decimal subTotal = Convert.ToDecimal(selldata.Resume.SubTotal.Replace("$", "").Trim());
-            decimal total = Convert.ToDecimal(selldata.Resume.Total.Replace("$", "").Trim());
+            decimal subTotal = Convert.ToDecimal(Purchasedata.Resume.SubTotal.Replace("$", "").Trim());
+            decimal total = Convert.ToDecimal(Purchasedata.Resume.Total.Replace("$", "").Trim());
 
             if (paysWith < total)
             {
