@@ -10,11 +10,11 @@ namespace RestaurantDataManager
 {
     public class SupplierController : DataController<SupplierData>
     {
-        public SupplierRepository ClientRepository;
+        public SupplierRepository SupplierRepository;
         public SupplierController(QueryDataContext context) : base(context)
         {
-            ClientRepository = new(context);
-            Repository = ClientRepository;
+            SupplierRepository = new(context);
+            Repository = SupplierRepository;
         }
     }
 }

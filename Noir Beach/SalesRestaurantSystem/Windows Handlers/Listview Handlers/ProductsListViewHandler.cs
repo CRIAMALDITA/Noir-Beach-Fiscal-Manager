@@ -67,27 +67,27 @@ namespace SalesRestaurantSystem
             list = Items.ToList();
             if (filter != "")
             {
-                FilterSetted = true;
+                FilterSetted = false;
                 foreach (var item in Items.ToList())
                 {
                     switch (type)
                     {
                         case "ID": if (!item.IdCategory.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                         case "Code": if (!item.Code.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
-                        case "Name": if (!item.ProductName.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
+                        case "Name":    if (!item.ProductName.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                         case "Category": if (!item.CategoryData.CategoryName.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                         case "State": if (!((item.ProductState ? "Active" : "Inactive").ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", "")))) list.Remove(item); break;
                         case "CreationDate": if (!item.CreationDate.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                     }
                 }
             }
-            else FilterSetted = false;
             SearchedItems.Clear();
             for (int i = 0; i < list.Count; i++)
             {
-                int index = i;
+                int index = Items.IndexOf(list[i]);
                 SearchedItems.Add(index);
             };
+            if (SearchedItems.Count > 0) FilterSetted = true;
             RefreshListView();
         }
     }

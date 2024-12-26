@@ -137,16 +137,16 @@ namespace SalesRestaurantSystem.WindowsHandlers
         {
             return new TransactionResume()
             {
-                SubTotal = _subTotalField.Text,
-                Off = _offField.Text,
-                Total = _totalField.Text,
-                PaysWith = _paysWithField.Text,
-                Change = _changeField.Text
+                SubTotal = _subTotalField?.Text,
+                Off = _offField?.Text,
+                Total = _totalField?.Text,
+                PaysWith = _paysWithField?.Text,
+                Change = _changeField?.Text
             };
         }
-        public virtual SellMakerData GetSaleData()
+        public virtual TransactionMakerData GetSaleData()
         {
-            return new SellMakerData()
+            return new TransactionMakerData()
             {
                 Transaction = GetTransactionInformationFields(),
                 Customer = GetCustomerInformationField(),
@@ -165,22 +165,22 @@ namespace SalesRestaurantSystem.WindowsHandlers
         {
             return _cartList.RemoveElements(items);
         }
-        public abstract void MakeTransaction();
+        public abstract void MakeTransaction(); 
 
         public void ClearTransaction()
         {
-            _cartList.CartListViewHandler.Items.Clear();
-            _changeField.Text = string.Empty;
-            _dateField.Text = DateTime.Today.ToString();
-            _nameField.Text = string.Empty;
-            _paysWithField.Text = string.Empty;
-            _idField.Text = string.Empty;
-            _totalField.Text = string.Empty;
-            _searchField.Text = string.Empty;
-            _idField.Text = string.Empty;
-            _subTotalField.Text = string.Empty;
-            _offField.Text = string.Empty;
-            _transactionType.SelectedIndex = 0;        
+            if (_cartList != null) _cartList.CartListViewHandler.Items.Clear();
+            if(_changeField != null) _changeField.Text = string.Empty;
+            if (_dateField != null) _dateField.Text = DateTime.Today.ToString();
+            if (_nameField != null) _nameField.Text = string.Empty;
+            if (_paysWithField != null) _paysWithField.Text = string.Empty;
+            if (_idField != null) _idField.Text = string.Empty;
+            if (_totalField != null) _totalField.Text = string.Empty;
+            if (_searchField != null) _searchField.Text = string.Empty;
+            if (_idField != null) _idField.Text = string.Empty;
+            if (_subTotalField != null) _subTotalField.Text = string.Empty;
+            if (_offField != null) _offField.Text = string.Empty;
+            if (_transactionType != null) _transactionType.SelectedIndex = 0;        
         }
         public struct TransactionInformation 
         {
@@ -204,7 +204,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
             public string Change;
             public string Total;
         }
-        public struct SellMakerData()
+        public struct TransactionMakerData()
         {
             public TransactionInformation Transaction;
             public CustomerInformation Customer;

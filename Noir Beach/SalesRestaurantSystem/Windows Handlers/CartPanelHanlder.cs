@@ -39,26 +39,8 @@ namespace SalesRestaurantSystem.WindowsHandlers
         public abstract List<CartElementData> GenericToCartElements(T[] items);
 
         public void SetFields(TextBox subTotalField, TextBox totalField, TextBox paysWithField, TextBox changeField, TextBox offField)
-        {
-            _subTotalField = subTotalField;
+        {;
             _totalField = totalField;
-            _paysWithField = paysWithField;
-            _changeField = changeField;
-            _offField = offField;
-
-            KeyEventHandler action = (sender, e) =>
-            {
-                if(e.Key == Key.Enter)
-                {
-                    UpdatePrices();
-                }
-            };
-
-            _offField.KeyDown += action;
-            _paysWithField.KeyDown += action;
-
-            _offField.LostFocus += (o, e) => UpdatePrices();
-            _paysWithField.LostFocus += (o, e) => UpdatePrices();
         }
 
         public void UpdatePrices()
@@ -68,42 +50,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
             for (int i = 0; i < CartListViewHandler.Items.Count; i++)
                 price += CartListViewHandler.Items[i].Price * CartListViewHandler.Items[i].Amount;
 
-            _subTotalField.Text = price.ToString("C", new System.Globalization.CultureInfo("en-US"));
-            decimal off = 0;
-            try
-            {
-                string text = _offField.Text;
-                if (decimal.TryParse(text.TrimEnd('%'), out off))
-                {
-                    _offField.Text = (off / 100).ToString("P");
-                }
-                else throw new Exception();
-            }
-            catch
-            {
-                off = 0;
-                _offField.Text = 0.ToString("P");
-            }
-            decimal total = off > 0 ? price - price * off / 100 : price;
-            _totalField.Text = total.ToString("C", new System.Globalization.CultureInfo("en-US"));
-
-            decimal change = 0;
-            try
-            {
-                decimal pays = 0;
-                decimal.TryParse(_paysWithField.Text.TrimStart('$'), out pays);
-                change = total - pays;
-                change = change < 0 ? change * -1 : 0;
-                _paysWithField.Text = decimal.Parse(_paysWithField.Text).ToString("C", new System.Globalization.CultureInfo("en-US"));
-                _changeField.Text = change.ToString("C", new System.Globalization.CultureInfo("en-US"));
-            }
-            catch
-            {
-                off = 0;
-                _changeField.Text = 0.ToString("C", new System.Globalization.CultureInfo("en-US"));
-            }
-
-            _changeField.Text = (change >= 0 ? change : 0).ToString("C", new System.Globalization.CultureInfo("en-US"));
+            _totalField.Text = price.ToString("C", new System.Globalization.CultureInfo("en-US"));
         }
 
         public void SendCartData()

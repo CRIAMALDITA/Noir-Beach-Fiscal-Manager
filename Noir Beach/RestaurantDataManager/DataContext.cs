@@ -112,8 +112,11 @@ namespace RestaurantDataManager
             public DbSet<CategoryData> Category { get; set; }
             public DbSet<ProductData> Product { get; set; }
             public DbSet<ClientData> Client { get; set; }
+            public DbSet<SupplierData> Supplier { get; set; }
             public DbSet<SellData> Sell { get; set; }
             public DbSet<SellDetailsData> SellDetails { get; set; }
+            public DbSet<PurchaseData> Purchase { get; set; }
+            public DbSet<PurchaseDetailsData> PurchaseDetails { get; set; }
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
                 optionsBuilder.UseSqlServer("Data Source=ALISSS;Initial Catalog=BDSALES_RESTAURANT_SYSTEM;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False; MultipleActiveResultSets=True")

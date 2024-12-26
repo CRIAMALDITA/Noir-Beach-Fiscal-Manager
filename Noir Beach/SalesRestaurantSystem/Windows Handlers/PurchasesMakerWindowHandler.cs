@@ -1,4 +1,5 @@
 ﻿using iText.StyledXmlParser.Jsoup.Select;
+using MS.WindowsAPICodePack.Internal;
 using RestaurantData;
 using RestaurantData.TablesDataClasses;
 using RestaurantDataManager;
@@ -9,11 +10,11 @@ using System.Windows.Controls;
 
 namespace SalesRestaurantSystem.WindowsHandlers
 {
-    public class PurhcaseMakerWindowHandler : TransactionsWindowHandler<ProductData>
+    public class PurchaseMakerWindowHandler : TransactionsWindowHandler<ProductData>
     {
         private SearchSupplierHandler _searchSuppliersHandler;
 
-        public PurhcaseMakerWindowHandler(Window win) : base(win)
+        public PurchaseMakerWindowHandler(Window win) : base(win)
         {
             _searchSuppliersHandler = new SearchSupplierHandler();
         }
@@ -56,8 +57,6 @@ namespace SalesRestaurantSystem.WindowsHandlers
                 ProductData item = DataManager.Instance.Product.GetByIdAsync(Convert.ToInt32(row["IdProduct"])).Result;
                 ProductData[] values = { item };
                 var product = _catalogList.Items.First(x => x.IdProduct == item.IdProduct);
-                if (product.Stock <= 0) return;
-                product.Stock--;
                 AddToCart(values);
                 _catalogList.RefreshListView();
             });
@@ -101,37 +100,42 @@ namespace SalesRestaurantSystem.WindowsHandlers
             if(!VerifyFields()) return;
 
 
-            SellMakerData selldata = GetSaleData();
+            TransactionMakerData Purchasedata = GetSaleData();
 
-            SellData sell = GetSellDataFromFields(selldata);
+
+            PurchaseData Purchase = GetPurchaseDataFromFields(Purchasedata);
             try 
             {
-                await DataManager.Instance.Sell.AddAsync(sell);
+                await DataManager.Instance.Purchase.AddAsync(Purchase);
             }
             catch(Exception ex)
             {
-                MessageBox.ShowEmergentMessage("E_Cannot add Purchase on SellData SQL.");
+                MessageBox.ShowEmergentMessage("E_Cannot add Purchase on PurchaseData SQL.");
             }
 
-            LoadingWindow addingSells = new LoadingWindow("Making Sale...",
+            var data = await DataManager.Instance.Purchase.GetAllAsync();
+
+            int purchaseId = data.OrderByDescending(s => s.IdPurchase).FirstOrDefault().IdPurchase;
+
+            LoadingWindow addingPurchases = new LoadingWindow("Making Sale...",
             Task.Run<bool>(async () =>
             {
                 try
                 {
-                    List<SellDetailsData> list = GetSellDetailsDatasFromFields(selldata);
+                    List<PurchaseDetailsData> list = GetPurchaseDetailsDatasFromFields(Purchasedata, purchaseId);
                     for (int i = 0; i < list.Count; i++)
                     {
-                        SellDetailsData item = list[i];
-                        await DataManager.Instance.SellDetails.AddAsync(item);
+                        PurchaseDetailsData item = list[i];
+                        await DataManager.Instance.PurchaseDetails.AddAsync(item);
                         ProductData product = await DataManager.Instance.Product.GetByIdAsync(item.IdProduct);
-                        product.Stock = product.Stock - item.ProductCount;
+                        product.Stock = product.Stock + item.ProductCount;
                         await DataManager.Instance.Product.UpdateAsync(product);
                     }
                     return true;
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.ShowEmergentMessage("E_Cannot add SellDetails on SellDetailsData SQL.");
+                    MessageBox.ShowEmergentMessage("E_Cannot add PurchaseDetails on PurchaseDetailsData SQL.");
                     return false;
                 }
             }),
@@ -141,17 +145,17 @@ namespace SalesRestaurantSystem.WindowsHandlers
                 {
                     UpdateCatalog();
                     ClearTransaction();
-                    MessageBox.ShowEmergentMessage("I_Sale Completed!");
+                    MessageBox.ShowEmergentMessage("I_Purchase Completed!");
                 }
             });
         }
 
         private bool VerifyFields()
         {
-            SellMakerData selldata = GetSaleData();
+            TransactionMakerData Purchasedata = GetSaleData();
             if (_searchSuppliersHandler.EntityFinded == false)
             {
-                MessageBox.ShowEmergentMessage("E_Client is not selected");
+                MessageBox.ShowEmergentMessage("E_Supplier is not selected");
                 return false;
             }
             if (_transactionType.SelectedIndex == -1)
@@ -159,120 +163,46 @@ namespace SalesRestaurantSystem.WindowsHandlers
                 MessageBox.ShowEmergentMessage("E_Transaction type is not selected");
                 return false;
             }
-            if (selldata.Cart.values.Count == 0)
+            if (Purchasedata.Cart.values.Count == 0)
             {
                 MessageBox.ShowEmergentMessage("E_Cart is Empty");
-                return false;
-            }
-            if (string.IsNullOrWhiteSpace(selldata.Resume.PaysWith))
-            {
-                MessageBox.ShowEmergentMessage("E_Payment is empty");
-                return false;
-            }
-            decimal paysWith = Convert.ToDecimal(selldata.Resume.PaysWith.Replace("$", "").Trim());
-
-            decimal subTotal = Convert.ToDecimal(selldata.Resume.SubTotal.Replace("$", "").Trim());
-            decimal total = Convert.ToDecimal(selldata.Resume.Total.Replace("$", "").Trim());
-
-            if (paysWith < total)
-            {
-                MessageBox.ShowEmergentMessage("E_Payment is not enough");
                 return false;
             }
 
             return true;
         }
-        private SellData GetSellDataFromFields(SellMakerData selldata)
+        private PurchaseData GetPurchaseDataFromFields(TransactionMakerData Purchasedata)
         {
-            decimal paysWith = Convert.ToDecimal(selldata.Resume.PaysWith.Replace("$", "").Trim());
-            decimal subTotal = Convert.ToDecimal(selldata.Resume.SubTotal.Replace("$", "").Trim());
-            decimal total = Convert.ToDecimal(selldata.Resume.Total.Replace("$", "").Trim());
-            SellData sell = new SellData();
-            var data = DataManager.Instance.Sell.GetAllAsync().Result;
+            decimal total = Convert.ToDecimal(Purchasedata.Resume.Total.Replace("$", "").Trim());
+            PurchaseData Purchase = new PurchaseData();
 
-            sell.IdUser = DataManager.Instance.User.CurrentUserLogged.IdUser;
-            sell.Total = total;
-            sell.SubTotal = subTotal;
-            sell.Exchange = (total - paysWith) * - 1;
-            sell.IdentificationNumber = DataManager.Instance.User.CurrentUserLogged.Document;
-            sell.IdentificationType = selldata.Transaction.Type;
-            sell.ClientIdentification = selldata.Customer.Id;
-            sell.ClientName = selldata.Customer.Name;
-            sell.CreationDate = Convert.ToDateTime(selldata.Transaction.Date);
-            sell.InvoiceNumber = data.Count;
-            return sell;
+            Purchase.IdUser = DataManager.Instance.User.CurrentUserLogged.IdUser;
+            Purchase.Total = total;
+            Purchase.IdSupplier = DataManager.Instance.Supplier.GetByNameAsync(Purchasedata.Customer.Name).Result.IdSupplier;
+            Purchase.IdentificationNumber = DataManager.Instance.User.CurrentUserLogged.Document;
+            Purchase.IdentificationType = Purchasedata.Transaction.Type;
+            Purchase.IdentificationNumber = Purchasedata.Customer.Id;
+            Purchase.CreationDate = Convert.ToDateTime(Purchasedata.Transaction.Date);
+            return Purchase;
         }
-        private List<SellDetailsData> GetSellDetailsDatasFromFields(SellMakerData selldata)
+        private List<PurchaseDetailsData> GetPurchaseDetailsDatasFromFields(TransactionMakerData Purchasedata, int id)
         {
-            List<SellDetailsData> list = new List<SellDetailsData>();
-            for (int i = 0; i < selldata.Cart.values.Count; i++)
+            List<PurchaseDetailsData> list = new List<PurchaseDetailsData>();
+            for (int i = 0; i < Purchasedata.Cart.values.Count; i++)
             {
-                SellDetailsData item = new SellDetailsData();
-                var result = DataManager.Instance.Sell.GetAllAsync().Result;
-                item.IdSell = result.OrderByDescending(s => s.IdSell).FirstOrDefault().IdSell;
-                item.SubTotal = selldata.Cart.values[i].Subtotal;
-                item.ProductCount = selldata.Cart.values[i].Amount;
-                item.SellPrice = selldata.Cart.values[i].Price;
-                item.IdProduct = DataManager.Instance.Product.GetByNameAsync(selldata.Cart.values[i].Name).Result.IdProduct;
-                item.CreationDate = Convert.ToDateTime(selldata.Transaction.Date);
+                PurchaseDetailsData item = new PurchaseDetailsData();
+                var result = DataManager.Instance.Purchase.GetAllAsync().Result;
+                item.IdPurchase = id;
+                item.SubTotal = Purchasedata.Cart.values[i].Subtotal;
+                item.ProductCount = Purchasedata.Cart.values[i].Amount;
+                item.PurchasePrice = Purchasedata.Cart.values[i].Price;
+                item.IdProduct = DataManager.Instance.Product.GetByNameAsync(Purchasedata.Cart.values[i].Name).Result.IdProduct;
+                item.CreationDate = Convert.ToDateTime(Purchasedata.Transaction.Date);
                 list.Add(item);
             }
             return list;
         }
-        private void MakeReceipt(SellMakerData selldata)
-        {
-            var bussiness = DataManager.Instance.Bussiness.LoadData();
-
-            List<ReceiptData.ReceiptElements> elements = new();
-
-            for(int i = 0; i < selldata.Cart.values.Count; i++)
-            {
-                elements.Add(new ReceiptData.ReceiptElements()
-                {
-                    Count = selldata.Cart.values[i].Amount.ToString(),
-                    Name = selldata.Cart.values[i].Name,
-                    Price = selldata.Cart.values[i].Price.ToString(),
-                    SubTotal = selldata.Cart.values[i].Subtotal.ToString(),
-                });
-            }
-
-            ReceiptData receiptData = new ReceiptData()
-            {
-                Top = new ReceiptData.ReceiptTop()
-                {
-                    Id = bussiness.Tin,
-                    CompanyName = bussiness.BusinessName,
-                    Address = bussiness.Address
-                },
-                Client = new ReceiptData.ReceiptClientData()
-                {
-                    ClientName = selldata.Customer.Name,
-                    ClientId = selldata.Customer.Id,
-                    ClientAddress = DataManager.Instance.Client.GetByNameAsync(selldata.Customer.Name).Result.Telephone,
-                    ClientMail = DataManager.Instance.Client.GetByNameAsync(selldata.Customer.Name).Result.Email,
-                },
-                Invoice = new ReceiptData.ReceiptInvoiceData()
-                {
-                    CreationDate = selldata.Transaction.Date,
-                    InvoiceNum = DataManager.Instance.Sell.GetAllAsync().Result.Count().ToString(),
-                    POS = "0",
-                    Discount = selldata.Resume.Change,
-                    Total = selldata.Resume.Total,
-                    UserName = DataManager.Instance.User.CurrentUserLogged.FullName,
-                    Elements = elements
-                },
-                Pay = new ReceiptData.PayData()
-                {
-                    PaysWith = selldata.Resume.PaysWith,
-                    Change = selldata.Resume.Change,
-                    PayType = "cash",
-                    Total = selldata.Resume.Total,
-                },
-                Messagge = "THX U FOR UR PURCHASE :D"
-            };
-
-            ReceiptController.MakeReceipt(receiptData);
-        }
+        private void MakeReceipt(TransactionMakerData Purchasedata){}
 
     }
 }

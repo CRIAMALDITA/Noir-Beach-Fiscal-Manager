@@ -56,14 +56,14 @@ namespace SalesRestaurantSystem
             gridView.Columns.Add(new GridViewColumn
             {
                 Header = "ID",
-                DisplayMemberBinding = new System.Windows.Data.Binding("ID"),
+                DisplayMemberBinding = new System.Windows.Data.Binding("Document"),
                 Width = 100
             });
 
             gridView.Columns.Add(new GridViewColumn
             {
                 Header = "Fiscal Name",
-                DisplayMemberBinding = new System.Windows.Data.Binding("Fiscal Name"),
+                DisplayMemberBinding = new System.Windows.Data.Binding("FiscalName"),
                 Width = 150
             });
             gridView.Columns.Add(new GridViewColumn
@@ -71,12 +71,6 @@ namespace SalesRestaurantSystem
                 Header = "Tel",
                 DisplayMemberBinding = new System.Windows.Data.Binding("Telephone"),
                 Width = 100
-            });
-            gridView.Columns.Add(new GridViewColumn
-            {
-                Header = "Balance",
-                DisplayMemberBinding = new System.Windows.Data.Binding(""),
-                Width = 80
             });
             ObservableCollection<SupplierData> suppliers = new ObservableCollection<SupplierData>();
             clientsFinded.ForEach(suppliers.Add);

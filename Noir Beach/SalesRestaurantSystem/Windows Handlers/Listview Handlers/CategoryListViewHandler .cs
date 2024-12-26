@@ -74,9 +74,10 @@ namespace SalesRestaurantSystem
             SearchedItems.Clear();
             for (int i = 0; i < list.Count; i++)
             {
-                int index = i;
+                int index = Items.IndexOf(list[i]);
                 SearchedItems.Add(index);
             };
+            if (SearchedItems.Count > 0) FilterSetted = true;
             RefreshListView();
         }
     }

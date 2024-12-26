@@ -17,7 +17,9 @@ namespace RestaurantDataManager.Repositories
         public async override Task<List<ClientData>> GetAllAsync()
         {
             var result = await _context.ExecuteQueriesAsync(async dbContext => dbContext.Set<ClientData>().AsNoTracking());
-            var list = result.Result.ToList();
+            var list = new List<ClientData>();
+            list = result.Result.ToList();
+
             _context.ReleaseContext(result.Context);
             return list;
         }

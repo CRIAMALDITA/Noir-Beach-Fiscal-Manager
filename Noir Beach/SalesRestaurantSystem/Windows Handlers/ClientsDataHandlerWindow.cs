@@ -54,6 +54,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
             _currentCategorySelected = "ID";
             _categorySearch.SelectedIndex = 0;  
             _categorySearch.SelectionChanged += (o, e) => InsertCategory();
+            categoriesAreEmpty = false;
         }
 
 
@@ -96,13 +97,12 @@ namespace SalesRestaurantSystem.WindowsHandlers
             _clientStatus.ItemsSource = new List<string>() { "Active", "Inactive" };
             _clientStatus.SelectedIndex = 0;
 
-            BuildCategoryCombBox();
+            if(categoriesAreEmpty) BuildCategoryCombBox();
         }
 
 
         public void BuildCategoryCombBox()
         {
-            //User Role ComboBox Building
             _categorySearch.ItemsSource = null;
             _categorySearch.Items.Clear();
             List<string> categoryNames = new List<string>();
@@ -126,6 +126,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
             string fullName = string.Empty;
             string email = string.Empty;
             string telephone = string.Empty;
+            bool status = false;
             bool account = false;
             string balance = string.Empty;
             DateTime creationDate = DateTime.Now;
@@ -144,6 +145,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
                 return false;
             }
             account = _createAccount.SelectedItem.ToString() == "Active" ? true : false;
+            status = _clientStatus.SelectedItem.ToString() == "Active" ? true : false;
 
 
             _currentItemGenerated = new ClientData()
@@ -155,6 +157,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
                 Account = account,
                 AccountBalance = decimal.Parse(balance),
                 CreationDate = creationDate,
+                ClientState = status,
             };
             return true;
         }
@@ -163,10 +166,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
             base.ShowUI();
             if (categoriesAreEmpty) BuildCategoryCombBox();
             List<ClientData> clients = new List<ClientData>();
-            Task.Run(async () =>
-            {
-                clients = await DataManager.Instance.Client.GetAllAsync().ConfigureAwait(false);
-            }).Wait();
+            clients = DataManager.Instance.Client.GetAllAsync().Result;
             var clientsInactive = clients.Where(x => !x.ClientState).ToList();
             var clientsActive = clients.Where(x => x.ClientState).ToList();
             MainListViewPanel.SetListData(clientsActive);

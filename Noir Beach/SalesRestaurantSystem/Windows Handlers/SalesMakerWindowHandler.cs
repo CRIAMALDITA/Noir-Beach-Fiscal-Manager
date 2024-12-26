@@ -101,7 +101,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
             if(!VerifyFields()) return;
 
 
-            SellMakerData selldata = GetSaleData();
+            TransactionMakerData selldata = GetSaleData();
 
             SellData sell = GetSellDataFromFields(selldata);
             try 
@@ -149,7 +149,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
 
         private bool VerifyFields()
         {
-            SellMakerData selldata = GetSaleData();
+            TransactionMakerData selldata = GetSaleData();
             if (_searchClientsHandler.EntityFinded == false)
             {
                 MessageBox.ShowEmergentMessage("E_Client is not selected");
@@ -183,7 +183,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
 
             return true;
         }
-        private SellData GetSellDataFromFields(SellMakerData selldata)
+        private SellData GetSellDataFromFields(TransactionMakerData selldata)
         {
             decimal paysWith = Convert.ToDecimal(selldata.Resume.PaysWith.Replace("$", "").Trim());
             decimal subTotal = Convert.ToDecimal(selldata.Resume.SubTotal.Replace("$", "").Trim());
@@ -203,7 +203,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
             sell.InvoiceNumber = data.Count;
             return sell;
         }
-        private List<SellDetailsData> GetSellDetailsDatasFromFields(SellMakerData selldata)
+        private List<SellDetailsData> GetSellDetailsDatasFromFields(TransactionMakerData selldata)
         {
             List<SellDetailsData> list = new List<SellDetailsData>();
             for (int i = 0; i < selldata.Cart.values.Count; i++)
@@ -220,7 +220,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
             }
             return list;
         }
-        private void MakeReceipt(SellMakerData selldata)
+        private void MakeReceipt(TransactionMakerData selldata)
         {
             var bussiness = DataManager.Instance.Bussiness.LoadData();
 

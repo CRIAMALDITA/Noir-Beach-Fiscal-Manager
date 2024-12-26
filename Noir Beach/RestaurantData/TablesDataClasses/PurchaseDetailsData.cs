@@ -11,13 +11,13 @@ namespace RestaurantData.TablesDataClasses
     [Table("PURCHASE_DETAILS")]
     public class PurchaseDetailsData
     {
-        [SQLKey(KeyType.PK, typeof(CategoryData))][Key][DatabaseGenerated(DatabaseGeneratedOption.Identity)] public int IdSellDetails { get; set; }
-        [SQLKey(KeyType.FK, typeof(RoleData))] public int IdSell { get; set; }
-        [SQLKey(KeyType.FK, typeof(RoleData))] public int IdProduct { get; set; }
-        [ForeignKey("IdSell")] public virtual SellData Sell { get; set; }
+        [SQLKey(KeyType.PK, typeof(CategoryData))][Key][DatabaseGenerated(DatabaseGeneratedOption.Identity)] public int IdPurchaseDetails { get; set; }
+        [SQLKey(KeyType.FK, typeof(PurchaseData))] public int IdPurchase { get; set; }
+        [SQLKey(KeyType.FK, typeof(ProductData))] public int IdProduct { get; set; }
+        [ForeignKey("IdPurchase")] public virtual PurchaseData Purchase { get; set; }
         [ForeignKey("IdProduct")] public virtual ProductData Product { get; set; }
 
-        public decimal SellPrice { get; set; }
+        public decimal PurchasePrice { get; set; }
         public int ProductCount { get; set; }
         public decimal SubTotal { get; set; }
         public DateTime CreationDate { get; set; } = DateTime.Now;

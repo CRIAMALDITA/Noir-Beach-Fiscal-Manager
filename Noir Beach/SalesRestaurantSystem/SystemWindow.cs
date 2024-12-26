@@ -29,12 +29,17 @@ namespace Point_of_sale_for_Restaurant
         public ProductDataHandlerWindow Maintenance_ProductConfigWindow;
         public CategoryDataHandlerWindow Maintenance_CategoryConfigWindow;
         public BusinessDetaillsWindowHandler Maintenance_BusinessConfigWindow;
-
         //Sell
         public SalesMakerWindowHandler Sales;
 
+        //Purchase
+        public PurchaseMakerWindowHandler Purchases;
+
         //Clients
         public ClientsDataHandlerWindow Clients;
+
+        //Suppliers
+        public SuppliersDataHandlerWindow Suppliers;
 
         public BackButtonController Interface_BackButton;
 
@@ -75,8 +80,8 @@ namespace Point_of_sale_for_Restaurant
                 (
                     this, ToolBar_Purchase,
                     ToolBar_Purchase_Shadow,
-                    ToolBar_Purchase_Selected, null
-                //() => ActiveUI(Interface_Purchase)
+                    ToolBar_Purchase_Selected,
+                () => ActiveUI(Purchases)
                 );
             options.Add(PurchaseOption);
 
@@ -93,8 +98,8 @@ namespace Point_of_sale_for_Restaurant
                 (
                     this, ToolBar_Suppliers,
                     ToolBar_Suppliers_Shadow,
-                    ToolBar_Suppliers_Selected, null
-                //() => ActiveUI(Interface_Supplier)
+                    ToolBar_Suppliers_Selected,
+                    () => ActiveUI(Suppliers)
                 );
             options.Add(SuppliersOption);
 
@@ -237,6 +242,25 @@ namespace Point_of_sale_for_Restaurant
             //-------------------------------------------------------------------------------------------------
 
             //Purchase Grid -----------------------------------------------------------------------------------
+            Purchases = new PurchaseMakerWindowHandler(this);
+            Purchases.SetPanel(Interface_Purchase, Interface_BackButton);
+            Purchases.SetTransactionInformationFields(Interface_Purchase_DateField, Interface_Purchase_TypeBox);
+            Purchases.SetCustomerInformationFields(Interface_Purchase_Search_IDField, Interface_Purchase_Search_SearchBTN, Interface_Purchase_Search_FullName);
+            Purchases.SetCatalogInformationFields(Interface_Purchase_Products_ProductList, Interface_Purchase_Products_SearchField, Interface_Purchase_Products_SearchBtn);
+            Purchases.SetTransactionResumeFields
+                (
+                    Interface_Purchase_Resume_Listview,
+                    null,
+                    null,
+                    Interface_Purchase_Resume_TotalField,
+                    null,
+                    null,
+                    Interface_Purchase_Resume_MakePurchase
+                );
+            Purchases.OnBackButtonPressed(Interface_ToolBar.UnSelectCurrent);
+            //-------------------------------------------------------------------------------------------------
+
+            //Clients Grid ------------------------------------------------------------------------------------
             Clients = new ClientsDataHandlerWindow(this);
             Clients.SetPanel(Interface_Clients, Interface_BackButton);
             Clients.SetSearchField(Interface_Clients_SearchField);
@@ -262,11 +286,32 @@ namespace Point_of_sale_for_Restaurant
 
             ]);
             //-------------------------------------------------------------------------------------------------
-            //Clients Grid ------------------------------------------------------------------------------------
 
-            //-------------------------------------------------------------------------------------------------
             //Suppliers Grid ----------------------------------------------------------------------------------
+            Suppliers = new SuppliersDataHandlerWindow(this);
+            Suppliers.SetPanel(Interface_Supplier, Interface_BackButton);
+            Suppliers.SetSearchField(Interface_Supplier_SearchField);
+            Suppliers.SetSearchButton(Interface_Supplier_Header_SearchButton);
+            Suppliers.SetAddItem(Interface_Supplier_ControlPanel_AddBTN);
+            Suppliers.SetRemoveItem(Interface_Supplier_MainBottom_RemoveBTN, Interface_Supplier_RemovedBottom_RemoveBTN);
+            Suppliers.SetExportItem(Interface_Supplier_MainBottom_ExportBTN);
+            Suppliers.SetMainListView(Interface_Supplier_ListView, Interface_Supplier_MainBottom);
+            Suppliers.SetRecoveryItem(Interface_Supplier_RemovedBottom_RecoveryBTN);
+            Suppliers.SetRemovedListView(Interface_Supplier_RemovedListView, Interface_Supplier_RemovedBottom);
+            Suppliers.SetRemoveHistory(Interface_Supplier_MainBottom_ViewRemovedElemets, Interface_Supplier_RemovedBottom_ViewMainElemets);
+            Suppliers.SetCategories(Interface_Supplier_CategoryBox);
+            Suppliers.SetFields(
+            [
+                Interface_Supplier_ControlPanel_FiscalNameField,
+                Interface_Supplier_ControlPanel_IDField,
+                Interface_Supplier_ControlPanel_EmailField,
+                Interface_Supplier_ControlPanel_TelephoneField,
+                Interface_Supplier_ControlPanel_StatusBox
+
+
+            ]);
             //-------------------------------------------------------------------------------------------------
+
             //Reports Multi Window ----------------------------------------------------------------------------
             //-------------------------------------------------------------------------------------------------
             //Sales History -----------------------------------------------------------------------------------

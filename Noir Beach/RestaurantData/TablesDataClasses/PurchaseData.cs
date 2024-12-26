@@ -10,21 +10,16 @@ using System.Numerics;
 namespace RestaurantData.TablesDataClasses
 {
     [Table("PURCHASE")]
-    public class PurhcaseData
+    public class PurchaseData
     {
         [SQLKey(KeyType.PK, typeof(CategoryData))][Key][DatabaseGenerated(DatabaseGeneratedOption.Identity)] public int IdPurchase { get; set; }
-        [SQLKey(KeyType.FK, typeof(RoleData))] public int IdUser { get; set; }
+        [SQLKey(KeyType.FK, typeof(UserData))] public int IdUser { get; set; }
         [ForeignKey("IdUser")] public virtual UserData User { get; set; }
-        [SQLKey(KeyType.FK, typeof(RoleData))] public int IdSupplier { get; set; }
-        /*[ForeignKey("IdUser")] public virtual UserData Supplier { get; set; }*/
+        [SQLKey(KeyType.FK, typeof(SupplierData))] public int IdSupplier { get; set; }
+        [ForeignKey("IdUser")] public virtual SupplierData Supplier { get; set; }
         public string IdentificationType { get; set; }
         public string IdentificationNumber { get; set; }
-        public string ClientIdentification { get; set; }
-        public string ClientName { get; set; }
-        public decimal SubTotal { get; set; }
-        public decimal Exchange { get; set; }
         public decimal Total { get; set; }
         public DateTime CreationDate { get; set; } = DateTime.Now;
-        public int InvoiceNumber { get; set; }
     }
 }

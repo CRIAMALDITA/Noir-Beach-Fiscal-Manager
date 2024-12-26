@@ -678,7 +678,7 @@
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid Name="Interface_Purchase" Margin="305,100,0,0"  Visibility="Hidden">
+            <Grid Name="Interface_Purchase" Margin="305,100,0,0"  Visibility="Visible">
                 <Grid  HorizontalAlignment="Center" Margin="0,0,0,-1" Width="975">
                     <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
                     <Grid Margin="10">
@@ -787,26 +787,14 @@
                                     <ColumnDefinition Width="139*"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Text=" Purchase " Background="White" Foreground="Black" FontSize="14" Margin="-1,-19,369,418" FontFamily="MS PGothic" Grid.ColumnSpan="2"/>
-                                <TextBlock Text="SubTotal:" Margin="0,324,386,73" FontSize="11" FontFamily="MS PGothic" Grid.ColumnSpan="2"/>
-                                <StackPanel Margin="0,340,355,49" Grid.ColumnSpan="2">
-                                    <TextBox x:Name="Interface_Purchase_Resume_SubTotalField" Height="24" Background="GhostWhite" Width="77" IsReadOnly="True"/>
-                                </StackPanel>
-                                <TextBlock Text="OFF:" Margin="67,324,296,73" FontSize="11" FontFamily="MS PGothic" Grid.Column="1"/>
-                                <StackPanel Margin="67,340,273,45" Grid.Column="1">
-                                    <TextBox x:Name="Interface_Purchase_Resume_OffField" Height="24" Background="GhostWhite"/>
-                                </StackPanel>
-                                <TextBlock Text="Total:" Margin="149,324,220,73" FontSize="11" FontFamily="MS PGothic" Grid.Column="1"/>
-                                <StackPanel Margin="149,340,191,47" Grid.Column="1">
+                                <StackPanel Margin="0,340,355,49" Grid.ColumnSpan="2"/>
+                                <StackPanel Margin="67,340,273,45" Grid.Column="1"/>
+                                <TextBlock Text="Total:" Margin="330,326,39,71" FontSize="11" FontFamily="MS PGothic" Grid.Column="1"/>
+                                <StackPanel Margin="330,339,10,48" Grid.Column="1">
                                     <TextBox x:Name="Interface_Purchase_Resume_TotalField" Height="24" Background="GhostWhite" IsReadOnly="True"/>
                                 </StackPanel>
-                                <TextBlock Text="Pays with:" Margin="248,324,116,77" FontSize="11" FontFamily="MS PGothic" Grid.Column="1"/>
-                                <StackPanel Margin="248,340,92,46" Grid.Column="1">
-                                    <TextBox x:Name="Interface_Purchase_Resume_PaysWithField" Height="24" Background="GhostWhite"/>
-                                </StackPanel>
-                                <TextBlock Text="Change:" Margin="330,324,49,77" FontSize="11" FontFamily="MS PGothic" Grid.Column="1"/>
-                                <StackPanel Margin="330,340,10,46" Grid.Column="1">
-                                    <TextBox x:Name="Interface_Purchase_Resume_ChangeField" Height="24" Background="GhostWhite" IsReadOnly="True"/>
-                                </StackPanel>
+                                <StackPanel Margin="248,340,92,46" Grid.Column="1"/>
+                                <StackPanel Margin="330,340,10,46" Grid.Column="1"/>
                                 <Button x:Name="Interface_Purchase_Resume_MakePurchase" Margin="-1,372,0,10" Background="#FF262A2D" Grid.ColumnSpan="2">
                                     <TextBlock Text="Make Purchase" Width="402" HorizontalAlignment="Center" TextAlignment="Center" Foreground="#FFBBBBBB" FontSize="20" FontFamily="Tahoma"/>
                                 </Button>
@@ -968,7 +956,6 @@
                                     <GridViewColumn Width="100" DisplayMemberBinding="{Binding FullName}" Header="FullName"/>
                                     <GridViewColumn Width="100" DisplayMemberBinding="{Binding Email}" Header="Email"/>
                                     <GridViewColumn Width="100" DisplayMemberBinding="{Binding Tel}" Header="Telephone"/>
-                                    <GridViewColumn Width="60" DisplayMemberBinding="{Binding Account}" Header="Account"/>
                                     <GridViewColumn Width="100" DisplayMemberBinding="{Binding Balance}" Header="Balance"/>
                                     <GridViewColumn Width="100" DisplayMemberBinding="{Binding Date}" Header="Date"/>
                                 </GridView>
@@ -993,7 +980,6 @@
                                     <GridViewColumn Width="100" DisplayMemberBinding="{Binding FullName}" Header="FullName"/>
                                     <GridViewColumn Width="100" DisplayMemberBinding="{Binding Email}" Header="Email"/>
                                     <GridViewColumn Width="100" DisplayMemberBinding="{Binding Tel}" Header="Telephone"/>
-                                    <GridViewColumn Width="60" DisplayMemberBinding="{Binding Account}" Header="Account"/>
                                     <GridViewColumn Width="100" DisplayMemberBinding="{Binding Balance}" Header="Balance"/>
                                     <GridViewColumn Width="100" DisplayMemberBinding="{Binding Date}" Header="Date"/>
                                 </GridView>
@@ -1069,72 +1055,127 @@
                     </Button>
                 </Grid>
             </Grid>
-            <Grid x:Name="Interface_Supplier"  HorizontalAlignment="Left" Margin="305,100,0,22" Height="604" Width="975" Visibility="Hidden">
+            <Grid x:Name="Interface_Supplier"  HorizontalAlignment="Left" Margin="305,99,0,21" Width="975" Visibility="Hidden">
                 <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
-                <Grid VerticalAlignment="Top" Height="70" Visibility="Visible" x:Name="Interface_Supplier_Header" Margin="10,10,10,0">
+                <Grid VerticalAlignment="Top" Height="71" Visibility="Visible" x:Name="Interface_Supplier_Header" Margin="10,10,10,0">
                     <Rectangle Fill="Black"/>
                     <Rectangle Fill="White" Margin="2,2,2,2"/>
-                    <TextBlock VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="35" Margin="22,0,0,0" Height="50" Text="Supplier List:"/>
-                    <StackPanel Margin="668,20,47,20">
-                        <TextBox x:Name="SupplierClientField" Height="30" Background="GhostWhite"/>
-                    </StackPanel>
-                    <Button Margin="913,20,10,20" Background="Transparent">
-                        <Image Source="Images/Search.png" Height="20"/>
-                    </Button>
-                    <TextBlock Text="Search By" Margin="334,24,546,24" FontSize="15"/>
-                    <ComboBox Margin="414,20,292,20">
-                    </ComboBox>
-                </Grid>
-                <Grid Margin="10,92,266,10">
-                    <Rectangle Fill="Black"/>
-                    <Rectangle Fill="White" Margin="2,2,2,2"/>
-                    <Grid>
-                        <ListView ItemsSource="{Binding DataCollection}" FontSize="14" x:Name="SupplierListViewReference">
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding ID}" Header="ID"/>
-                                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding Name}" Header="Company Name"/>
-                                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding Email}" Header="Email"/>
-                                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding Role}" Header="Cellphone"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Status}" Header="Status"/>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                    </Grid>
-                </Grid>
-                <Grid x:Name="SupplierControlPanel" Margin="714,92,10,10">
-                    <Border Padding="10" BorderThickness="1" BorderBrush="Black" Background="White"/>
-                    <TextBlock Margin="10,10,10,0" VerticalAlignment="Top" FontSize="22" HorizontalAlignment="Center" Text="Supplier Control Panel"/>
-                    <TextBlock Text="ID:" Margin="10,50,10,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" />
-                    <StackPanel Margin="10,108,10,368">
-                        <TextBox x:Name="CodeSupplierField" Height="24" Background="GhostWhite"/>
-                    </StackPanel>
-                    <TextBlock Text="Company Name:" Margin="10,93,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" />
-                    <StackPanel Margin="10,65,10,413">
-                        <TextBox x:Name="NameSupplierField" Height="24" Background="GhostWhite"/>
-                    </StackPanel>
-                    <TextBlock Text="Email:" Margin="10,136,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Height="12" />
-                    <StackPanel Margin="10,151,10,327">
-                        <TextBox x:Name="SupplierField" Height="23" Background="GhostWhite"/>
-                    </StackPanel>
-                    <TextBlock Text="Telephone:" Margin="10,180,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Height="13" />
-                    <StackPanel Margin="10,196,10,282">
-                        <TextBox x:Name="SupplierPasswordField" Height="23" Background="GhostWhite"/>
-                    </StackPanel>
-
-                    <TextBlock Text="Status:" Margin="10,338,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" />
-                    <ComboBox Margin="10,353,10,125" SelectedIndex="0">
+                    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="35" Margin="22,18,0,0" Height="32" FontFamily="MS PGothic" FontStyle="Italic" Width="272"><Run Language="en-gb" Text="SUPPLIERS"/><Run Text=" LIST"/><Run Text=":"/></TextBlock>
+                    <ComboBox x:Name="Interface_Supplier_CategoryBox" Margin="483,24,328,24" SelectedIndex="0"  VerticalContentAlignment="Center" FontFamily="MS PGothic" >
                         <ComboBoxItem Content="Active"/>
                         <ComboBoxItem Content="Inactive"/>
                     </ComboBox>
-                    <Button Margin="10,386,10,83" Background="#FF5ABB51">
-                        <TextBlock Text="Add Item to List" Foreground="#FF005400" FontWeight="Bold" FontSize="16"></TextBlock>
+                    <TextBlock Text="Search by:" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" Margin="408,0,0,0" Height="17" Width="70" FontStyle="Italic" FontFamily="MS PGothic"/>
+                    <StackPanel Margin="632,20,47,20">
+                        <TextBox Padding="5,0,0,0" x:Name="Interface_Supplier_SearchField" Height="30" Background="GhostWhite" VerticalContentAlignment="Center" FontSize="15" Margin="0,0,-1,0" FontFamily="MS PGothic"/>
+                    </StackPanel>
+                    <Button Margin="913,20,10,20" Background="Transparent" x:Name="Interface_Supplier_Header_SearchButton">
+                        <Image Source="Images/Search.png" Height="20"/>
                     </Button>
-                    <Button Margin="10,424,10,48" Background="#FFC34343">
-                        <TextBlock Text="Remove Elements" Foreground="#FF540000" FontWeight="Bold" FontSize="16"/>
+                </Grid>
+                <Grid Margin="10,92,306,81">
+                    <Grid>
+                        <ListView FontSize="14" x:Name="Interface_Supplier_ListView">
+                            <ListView.Resources>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="FontFamily" Value="Ms PGothic" />
+                                    <Setter Property="FontSize" Value="14" />
+                                </Style>
+                                <Style TargetType="GridViewColumnHeader">
+                                    <Setter Property="FontFamily" Value="Ms PGothic"/>
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="Foreground" Value="Black"/>
+                                </Style>
+                            </ListView.Resources>
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Width="90" DisplayMemberBinding="{Binding Document}" Header="ID"/>
+                                    <GridViewColumn Width="200" DisplayMemberBinding="{Binding FiscalName}" Header="Fiscal Name"/>
+                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Email}" Header="Email"/>
+                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Tel}" Header="Telephone"/>
+                                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding Date}" Header="Date"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <ListView FontSize="14" x:Name="Interface_Supplier_RemovedListView" Visibility="Hidden">
+                            <ListView.Resources>
+                                <Style TargetType="ListViewItem">
+                                    <Setter Property="FontFamily" Value="Ms PGothic" />
+                                    <Setter Property="FontSize" Value="14" />
+                                    <Setter Property="Foreground" Value="DarkRed" />
+                                </Style>
+                                <Style TargetType="GridViewColumnHeader">
+                                    <Setter Property="FontFamily" Value="Ms PGothic"/>
+                                    <Setter Property="FontSize" Value="14"/>
+                                    <Setter Property="Foreground" Value="Black"/>
+                                </Style>
+                            </ListView.Resources>
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn Width="90" DisplayMemberBinding="{Binding Document}" Header="ID"/>
+                                    <GridViewColumn Width="200" DisplayMemberBinding="{Binding FiscalName}" Header="Fiscal Name"/>
+                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Email}" Header="Email"/>
+                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Tel}" Header="Telephone"/>
+                                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding Date}" Header="Date"/>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                        <Border BorderBrush="Black" BorderThickness="1"/>
+                    </Grid>
+                </Grid>
+                <Grid VerticalAlignment="Top" Height="66" Visibility="Visible" x:Name="Interface_Supplier_MainBottom" Margin="10,530,306,0">
+                    <Rectangle Fill="White"/>
+                    <Border BorderBrush="Black" BorderThickness="1"/>
+                    <Button x:Name="Interface_Supplier_MainBottom_RemoveBTN" Margin="449,16,10,16" Background="#FF9C4D4D">
+                        <TextBlock Text="Remove Elements" Foreground="#FF3E2323" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
                     </Button>
-                    <Button Margin="10,459,10,13" Background="#FF43B4C3">
-                        <TextBlock Text="Quick Export Excel" Foreground="#FF004754" FontWeight="Bold" FontSize="16"/>
+                    <Button x:Name="Interface_Supplier_MainBottom_ExportBTN" Margin="10,16,449,16" Background="LightSlateGray">
+                        <TextBlock Text="Quick Export Excel" Foreground="#FF2E353C" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                    </Button>
+                    <Button x:Name="Interface_Supplier_MainBottom_ViewRemovedElemets" Margin="230,16,230,16" Background="LightSlateGray">
+                        <TextBlock Text="View Removed Elements" Foreground="#FF2E3546" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                    </Button>
+                </Grid>
+                <Grid VerticalAlignment="Top" Height="66" Visibility="Hidden" x:Name="Interface_Supplier_RemovedBottom" Margin="10,530,306,0">
+                    <Rectangle Fill="White"/>
+                    <Border BorderBrush="Black" BorderThickness="1"/>
+                    <Button x:Name="Interface_Supplier_RemovedBottom_RemoveBTN" Margin="449,16,10,16" Background="#FF963737">
+                        <TextBlock Text="True Remove" Foreground="#FF3E2323" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                    </Button>
+                    <Button x:Name="Interface_Supplier_RemovedBottom_RecoveryBTN" Margin="230,16,229,16" Background="#FF7A9977">
+                        <TextBlock Text="Recovery Item" Foreground="#FF283328" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                    </Button>
+                    <Button x:Name="Interface_Supplier_RemovedBottom_ViewMainElemets" Margin="11,16,449,16" Background="LightSlateGray">
+                        <TextBlock Text="Back" Foreground="#FF2E3546" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                    </Button>
+                </Grid>
+                <Grid x:Name="Interface_Supplier_ControlPanel" Margin="680,92,10,10">
+                    <Border Padding="10" BorderThickness="1" BorderBrush="Black" Background="White"/>
+                    <TextBlock Margin="0,10,0,0" VerticalAlignment="Top" FontSize="22" HorizontalAlignment="Center" FontFamily="MS PGothic" FontWeight="Bold" FontStyle="Italic" Width="229" ><Run Language="en-gb" Text="Suppliers"/><Run Text=" Control Panel"/></TextBlock>
+                    <TextBlock Margin="10,50,10,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="MS PGothic" FontSize="13" ><Run Language="en-gb" Text="ID:"/></TextBlock>
+                    <StackPanel Margin="10,108,10,368">
+                        <TextBox x:Name="Interface_Supplier_ControlPanel_FiscalNameField" Tag="FiscalName" Height="24" Background="GhostWhite" FontFamily="MS PGothic"  VerticalContentAlignment="Center"/>
+                    </StackPanel>
+                    <TextBlock Margin="10,141,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="MS PGothic" FontSize="13" ><Run Language="en-gb" Text="Email"/><Run Text=":"/></TextBlock>
+                    <StackPanel Margin="10,159,10,317">
+                        <TextBox x:Name="Interface_Supplier_ControlPanel_EmailField" Tag="Email" Height="24" Background="GhostWhite" FontFamily="MS PGothic"  VerticalContentAlignment="Center"/>
+                    </StackPanel>
+                    <TextBlock Margin="11,189,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="MS PGothic" FontSize="13" ><Run Language="en-gb" Text="Telephone"/><Run Text=":"/></TextBlock>
+                    <StackPanel Margin="10,207,10,269">
+                        <TextBox x:Name="Interface_Supplier_ControlPanel_TelephoneField" Tag="Telephone" Height="24" Background="GhostWhite" FontFamily="MS PGothic"  VerticalContentAlignment="Center"/>
+                    </StackPanel>
+                    <TextBlock Margin="10,93,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="MS PGothic" FontSize="13" ><Run Text="F"/><Run Language="en-gb" Text="iscal"/><Run Text=" Name:"/></TextBlock>
+
+                    <StackPanel Margin="10,65,10,413">
+                        <TextBox x:Name="Interface_Supplier_ControlPanel_IDField" Tag="Document" Height="24" Background="GhostWhite" FontFamily="MS PGothic"  VerticalContentAlignment="Center"/>
+                    </StackPanel>
+                    <TextBlock Text="Status:" Margin="10,391,0,0" VerticalAlignment="Top" FontSize="13" HorizontalAlignment="Left" FontFamily="MS PGothic" />
+                    <ComboBox x:Name="Interface_Supplier_ControlPanel_StatusBox" Tag="SupplierState" Margin="11,409,10,69" SelectedIndex="0" FontFamily="MS PGothic" VerticalContentAlignment="Center">
+                        <ComboBoxItem Content="Active"/>
+                        <ComboBoxItem Content="Inactive"/>
+                    </ComboBox>
+                    <Button x:Name="Interface_Supplier_ControlPanel_AddBTN" Margin="10,453,10,16" Background="#FF7A9977">
+                        <TextBlock Text="Add Item to List" Foreground="#FF283328" FontSize="17" FontFamily="MS PGothic" FontWeight="Bold" FontStyle="Italic"/>
                     </Button>
                 </Grid>
             </Grid>

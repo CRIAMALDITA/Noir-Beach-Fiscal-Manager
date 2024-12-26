@@ -24,6 +24,8 @@ namespace RestaurantDataManager
         public ClientController Client;
         public SellDetailsController SellDetails;
         public SellController Sell;
+        public PurchaseDetailsController PurchaseDetails;
+        public PurchaseController Purchase;
         public BussinessController Bussiness;
         public SupplierController Supplier;
 
@@ -37,6 +39,8 @@ namespace RestaurantDataManager
             Client = new(dataContext);
             SellDetails = new(dataContext);
             Sell = new(dataContext);
+            PurchaseDetails = new(dataContext);
+            Purchase = new(dataContext);
             Bussiness = new();
             Supplier = new(dataContext);
         }
@@ -74,10 +78,13 @@ namespace RestaurantDataManager
             if (typeof(T) == Permission.GetGenericType()) return Permission as DataController<T>;
             if (typeof(T) == Role.GetGenericType()) return Role as DataController<T>;
             if (typeof(T) == Category.GetGenericType()) return Category as DataController<T>;
+            if (typeof(T) == Supplier.GetGenericType()) return Supplier as DataController<T>;
             if (typeof(T) == Product.GetGenericType()) return Product as DataController<T>;
             if (typeof(T) == Client.GetGenericType()) return Client as DataController<T>;
             if (typeof(T) == Sell.GetGenericType()) return Sell as DataController<T>;
             if (typeof(T) == SellDetails.GetGenericType()) return SellDetails as DataController<T>;
+            if (typeof(T) == Purchase.GetGenericType()) return Purchase as DataController<T>;
+            if (typeof(T) == PurchaseDetails.GetGenericType()) return PurchaseDetails as DataController<T>;
             return null;
         }
 
