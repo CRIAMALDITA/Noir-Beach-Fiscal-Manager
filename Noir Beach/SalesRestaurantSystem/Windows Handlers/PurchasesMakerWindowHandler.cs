@@ -57,6 +57,8 @@ namespace SalesRestaurantSystem.WindowsHandlers
                 ProductData item = DataManager.Instance.Product.GetByIdAsync(Convert.ToInt32(row["IdProduct"])).Result;
                 ProductData[] values = { item };
                 var product = _catalogList.Items.First(x => x.IdProduct == item.IdProduct);
+                if (product.Stock <= 0) return;
+                product.Stock--;
                 AddToCart(values);
                 _catalogList.RefreshListView();
             });
@@ -166,6 +168,21 @@ namespace SalesRestaurantSystem.WindowsHandlers
             if (Purchasedata.Cart.values.Count == 0)
             {
                 MessageBox.ShowEmergentMessage("E_Cart is Empty");
+                return false;
+            }
+            if (string.IsNullOrWhiteSpace(selldata.Resume.PaysWith))
+            {
+                MessageBox.ShowEmergentMessage("E_Payment is empty");
+                return false;
+            }
+            decimal paysWith = Convert.ToDecimal(selldata.Resume.PaysWith.Replace("$", "").Trim());
+
+            decimal subTotal = Convert.ToDecimal(selldata.Resume.SubTotal.Replace("$", "").Trim());
+            decimal total = Convert.ToDecimal(selldata.Resume.Total.Replace("$", "").Trim());
+
+            if (paysWith < total)
+            {
+                MessageBox.ShowEmergentMessage("E_Payment is not enough");
                 return false;
             }
 

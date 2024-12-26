@@ -1,0 +1,318 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SalesRestaurantSystem.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\RestaurantDataManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\RestaurantDataManager.csproj",
+        "projectName": "RestaurantDataManager",
+        "projectPath": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\RestaurantDataManager.csproj",
+        "packagesPath": "C:\\Users\\Penit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Penit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj": {
+                "projectPath": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Azure.Identity": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.Identity.Client": {
+              "target": "Package",
+              "version": "[4.64.0, )"
+            },
+            "Microsoft.Office.Interop.Word": {
+              "target": "Package",
+              "version": "[15.0.4797.1004, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj",
+        "projectName": "RestaurantData",
+        "projectPath": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj",
+        "packagesPath": "C:\\Users\\Penit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Penit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Azure.Identity": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.Identity.Client": {
+              "target": "Package",
+              "version": "[4.64.0, )"
+            },
+            "Microsoft.Office.Interop.Word": {
+              "target": "Package",
+              "version": "[15.0.4797.1004, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SalesRestaurantSystem.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SalesRestaurantSystem.csproj",
+        "projectName": "SalesRestaurantSystem",
+        "projectPath": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\SalesRestaurantSystem.csproj",
+        "packagesPath": "C:\\Users\\Penit\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\SalesRestaurantSystem\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Penit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {
+              "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\RestaurantDataManager.csproj": {
+                "projectPath": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantDataManager\\RestaurantDataManager.csproj"
+              },
+              "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj": {
+                "projectPath": "C:\\Users\\Penit\\Documents\\GitHub\\Noir-Beach-Fiscal-Manager\\Noir Beach\\RestaurantData\\RestaurantData.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "BouncyCastle.Cryptography": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.Office.Interop.Word": {
+              "target": "Package",
+              "version": "[15.0.4797.1004, )"
+            },
+            "WindowsAPICodePack-Shell": {
+              "target": "Package",
+              "version": "[1.1.1, )"
+            },
+            "Xceed.Words.NET": {
+              "target": "Package",
+              "version": "[3.0.24152.1219, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

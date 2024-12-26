@@ -19,7 +19,12 @@ namespace RestaurantData.TablesDataClasses
         [ForeignKey("IdUser")] public virtual SupplierData Supplier { get; set; }
         public string IdentificationType { get; set; }
         public string IdentificationNumber { get; set; }
+        public string ClientIdentification { get; set; }
+        public string ClientName { get; set; }
+        public decimal SubTotal { get; set; }
+        public decimal Exchange { get; set; }
         public decimal Total { get; set; }
         public DateTime CreationDate { get; set; } = DateTime.Now;
+        public int InvoiceNumber { get; set; }
     }
 }
