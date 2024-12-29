@@ -16,7 +16,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace SalesRestaurantSystem
 {
-    public abstract class DataHandlerWindow<T> : Window, IUIPanel, IUISearchBar<T>, IUIElementsHandler<T>, IUIDataHandler<T> where T : class
+    public abstract class HistoryHandlerWindow<T> : Window, IUIPanel, IUISearchBar<T>, IUIDataHandler<T> where T : class
     {
         protected Window _currentWindow;
 
@@ -49,7 +49,7 @@ namespace SalesRestaurantSystem
         protected Button _recoveryItemBtn;
         protected Button _exportItemBtn;
 
-        public DataHandlerWindow(Window currentWindow)
+        public HistoryHandlerWindow(Window currentWindow)
         {
             this._currentWindow = currentWindow;
         }
@@ -77,11 +77,6 @@ namespace SalesRestaurantSystem
         public abstract void SetCategories(ComboBox box);
 
         public abstract void SetFields(Control[] fields);
-        public virtual void SetAddItem(Button btn)
-        {
-            _addItemBtn = btn;
-            _addItemBtn.Click += (o, e) => AddData();
-        }
         public virtual void SetMainListView(ListView mainListView, Grid bottom) 
         {
             MainListViewPanel.SetListViewer(mainListView, bottom);
@@ -153,35 +148,7 @@ namespace SalesRestaurantSystem
 
         public abstract void InsertCategory();
         public abstract void Search(string category, string filter);
-        public async virtual void AddData()
-        {
-            this.Dispatcher.Invoke(() =>
-            {
-                    if (!SetParameters())
-                    {
-                        MessageBox.ShowEmergentMessage($"E_Error: Data handler couldn't verify setted parameters");
-                        return;
-                    }
-                    LoadingWindow addingBar = new LoadingWindow("Adding", Task.Run<bool>(async () =>
-                    {
-                        bool AddedSuccessfullyawait = await DataManager.Instance.GenericController<T>().AddAsync(_currentItemGenerated);
-                        if (!AddedSuccessfullyawait) MessageBox.ShowEmergentMessage($"E_Error: Data handler couldn't add Item");
-                        return AddedSuccessfullyawait;
-                    }), false, complete =>
-                    {
-                        if (complete)
-                        {
-                            MessageBox.ShowEmergentMessage($"I_Items Added successfullly!");
-                            MainListViewPanel.AddItemToList(_currentItemGenerated);
-                            ClearFields();
-                        }
-                        RefreshPanel();
-                    });
-
-            });
-
-
-        }
+        
         public virtual void RemoveData(T[] items)
         {
             if (items.Length == 0)
@@ -224,28 +191,6 @@ namespace SalesRestaurantSystem
 
         public abstract Task<string> GetPKByName(Type dataType, string name);
 
-        public void ClearFields()
-        {
-            foreach (var item in _fields)
-            {
-                if (item is TextBox textBox)
-                {
-                    textBox.Text = "";
-                }
-                else if (item is PasswordBox pass)
-                {
-                    pass.Password = "";
-                }
-                else if (item is ComboBox comboBox)
-                {
-                    comboBox.SelectedIndex = 0;
-                }
-                else if (item is CheckBox checkBox)
-                {
-                    checkBox.IsChecked = false;
-                }
-            }
-        }
 
         public void TrueRemoveData(T[] items)
         {

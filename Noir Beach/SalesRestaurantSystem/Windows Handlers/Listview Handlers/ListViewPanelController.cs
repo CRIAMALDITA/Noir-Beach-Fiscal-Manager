@@ -178,6 +178,8 @@ namespace SalesRestaurantSystem
             return _listView.ItemContainerGenerator.ContainerFromItem(item) as ListViewItem;
         }
 
+        public abstract void DobleClick() { }
+
         public struct ListButtonElement
         {
             public T Value { get; set; }

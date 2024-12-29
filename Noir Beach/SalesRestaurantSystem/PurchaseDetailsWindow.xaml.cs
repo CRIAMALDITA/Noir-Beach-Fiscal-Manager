@@ -1,4 +1,5 @@
-﻿using SalesRestaurantSystem;
+﻿using RestaurantData.TablesDataClasses;
+using SalesRestaurantSystem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,16 +16,22 @@ using System.Windows.Shapes;
 
 namespace Point_of_sale_for_Restaurant
 {
-    /// <summary>
-    /// Interaction logic for Window1.xaml
-    /// </summary>
     public partial class PurchaseDetailsWindow : Window
     {
-        public PurchaseDetailsWindow()
+        private PurchaseData _purchaseData;
+
+        public PurchaseDetailsWindow(PurchaseData data)
         {
             InitializeComponent();
             Show();
             WindowUtilities.CenterWindowOnScreen(this);
+            _purchaseData = data;
+            Date.Text = _purchaseData.CreationDate.ToString();
+            Supplier.Text = _purchaseData.Supplier.FiscalName;
+            ID.Text = _purchaseData.Supplier.Document;
+            Total.Text = _purchaseData.Total.ToString();
+            IdType.Text = _purchaseData.IdentificationType.ToString();
+            User.Text = _purchaseData.User.FullName.ToString();
         }
     }
 }

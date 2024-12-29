@@ -64,19 +64,24 @@ namespace SalesRestaurantSystem
     public interface IUIDataHandler<T> where T : class
     {
         void SetFields(Control[] fields);
-        void SetAddItem(Button btn);
         void SetRemoveItem(Button btn, Button trueRmbBtn);
         void SetRemoveHistory(Button btn, Button back);
         void SetExportItem(Button btn);
         void SetRecoveryItem(Button btn);
         void ShowRemoveHistory(bool show);
         Task<string> GetPKByName(Type dataType, string name);
-        void AddData();
         void TrueRemoveData(T[] items);
         void RecoveryItems(T[] items);
         void RemoveData(T[] items);
-        void ClearFields();
         void ExcelExport();
+    }
+
+    public interface IUIElementsHandler<T> where T : class
+    {
+        void SetAddItem(Button btn);
+        void AddData();
+        void ClearFields();
+
     }
 
     public interface IUITransactionsHandler<T> where T : class
@@ -99,6 +104,7 @@ namespace SalesRestaurantSystem
         void SetListViewer(ListView content, Grid bottomOptions);
         void SetListData(List<T> values);
         void Search(string type, string filter);
+        void DobleClick();
         void AddItemToList(T value);
         void RemoveItemToList(T value);
         ListViewItem GetRowElementData(int index);

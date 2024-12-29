@@ -823,6 +823,221 @@
                     </Grid>
                 </Grid>
             </Grid>
+            <Grid x:Name="Interface_Reports" Margin="305,100,0,0" Visibility="Visible">
+                <Grid x:Name="Interface_Reports_Options"  HorizontalAlignment="Center" Margin="0,0,0,22" Height="604" Width="983" Visibility="Visible">
+                    <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
+                    <Grid x:Name="ReportsControlPanel" Margin="300,104,300,196">
+                        <Border Padding="10" BorderThickness="1" BorderBrush="Black" Background="White" Margin="0,0,0,67"/>
+                        <TextBlock Text="Sale Options" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"/>
+                        <Button Margin="10,99,10,152" Background="LightSlateGray">
+                            <TextBlock Foreground="#FF2E353C" FontWeight="Bold" FontSize="16" Text="Pruchase History"/>
+                        </Button>
+                        <Button Margin="10,157,10,99" Background="LightSlateGray">
+                            <TextBlock Foreground="#FF2E353C" FontWeight="Bold" FontSize="16"><Run Language="en-gb" Text="Sales History"/></TextBlock>
+                        </Button>
+                    </Grid>
+                </Grid>
+                <Grid x:Name="Interface_Reports_Purchase"  HorizontalAlignment="Left" Margin="10,0,0,21" Width="973" Visibility="Hidden">
+                    <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
+                    <Grid VerticalAlignment="Top" Height="71" Visibility="Visible" x:Name="Interface_Reports_Purchase_Header" Margin="10,10,10,0">
+                        <Rectangle Fill="Black"/>
+                        <Rectangle Fill="White" Margin="2,2,2,2"/>
+                        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="35" Margin="22,18,0,0" Height="32" FontFamily="MS PGothic" FontStyle="Italic" Width="425"><Run Text="PURCHASE"/><Run Text=" "/><Run Language="en-gb" Text="REPORTS"/><Run Text=":"/></TextBlock>
+                        <ComboBox x:Name="Interface_Reports_Purchase_CategoryBox" Margin="483,24,328,24" SelectedIndex="0"  VerticalContentAlignment="Center" FontFamily="MS PGothic" >
+                            <ComboBoxItem Content="Active"/>
+                            <ComboBoxItem Content="Inactive"/>
+                        </ComboBox>
+                        <TextBlock Text="Search by:" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" Margin="408,0,0,0" Height="17" Width="70" FontStyle="Italic" FontFamily="MS PGothic"/>
+                        <StackPanel Margin="632,20,47,20">
+                            <TextBox Padding="5,0,0,0" x:Name="Interface_Reports_Purchase_SearchField" Height="30" Background="GhostWhite" VerticalContentAlignment="Center" FontSize="15" Margin="0,0,-1,0" FontFamily="MS PGothic"/>
+                        </StackPanel>
+                        <Button Margin="913,20,10,20" Background="Transparent" x:Name="Interface_Reports_Purchase_Header_SearchButton">
+                            <Image Source="Images/Search.png" Height="20"/>
+                        </Button>
+                    </Grid>
+                    <Grid Margin="10,92,306,81">
+                        <Grid Margin="0,0,-295,0">
+                            <ListView FontSize="14" x:Name="Interface_Reports_Purchase_ListView">
+                                <ListView.Resources>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="FontFamily" Value="Ms PGothic" />
+                                        <Setter Property="FontSize" Value="14" />
+                                    </Style>
+                                    <Style TargetType="GridViewColumnHeader">
+                                        <Setter Property="FontFamily" Value="Ms PGothic"/>
+                                        <Setter Property="FontSize" Value="14"/>
+                                        <Setter Property="Foreground" Value="Black"/>
+                                    </Style>
+                                </ListView.Resources>
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Width="50" DisplayMemberBinding="{Binding IdPurchase}" Header="DB ID"/>
+                                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding UserName}" Header="User"/>
+                                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding Supplier}" Header="Supplier"/>
+                                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding IdType}" Header="ID Type"/>
+                                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding IdNum}" Header="ID Number"/>
+                                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding Total}" Header="Total"/>
+                                        <GridViewColumn Width="200" DisplayMemberBinding="{Binding Date}" Header="Date"/>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                            <ListView FontSize="14" x:Name="Interface_Reports_Purchase_RemovedListView" Visibility="Hidden">
+                                <ListView.Resources>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="FontFamily" Value="Ms PGothic" />
+                                        <Setter Property="FontSize" Value="14" />
+                                        <Setter Property="Foreground" Value="DarkRed" />
+                                    </Style>
+                                    <Style TargetType="GridViewColumnHeader">
+                                        <Setter Property="FontFamily" Value="Ms PGothic"/>
+                                        <Setter Property="FontSize" Value="14"/>
+                                        <Setter Property="Foreground" Value="Black"/>
+                                    </Style>
+                                </ListView.Resources>
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Width="50" DisplayMemberBinding="{Binding IdPurchase}" Header="DB ID"/>
+                                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding UserName}" Header="User"/>
+                                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding Supplier}" Header="Supplier"/>
+                                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding IdType}" Header="ID Type"/>
+                                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding IdNum}" Header="ID Number"/>
+                                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding Total}" Header="Total"/>
+                                        <GridViewColumn Width="200" DisplayMemberBinding="{Binding Date}" Header="Date"/>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                            <Border BorderBrush="Black" BorderThickness="1"/>
+                        </Grid>
+                    </Grid>
+                    <Grid VerticalAlignment="Top" Height="66" Visibility="Visible" x:Name="Interface_Reports_Purchase_MainBottom" Margin="10,530,10,0">
+                        <Rectangle Fill="White"/>
+                        <Border BorderBrush="Black" BorderThickness="1"/>
+                        <Button x:Name="Interface_Reports_Purchase_MainBottom_RemoveBTN" Margin="636,16,10,16" Background="#FF9C4D4D">
+                            <TextBlock Text="Remove Elements" Foreground="#FF3E2323" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                        </Button>
+                        <Button x:Name="Interface_Reports_Purchase_MainBottom_ExportBTN" Margin="10,16,0,16" Background="LightSlateGray" HorizontalAlignment="Left" Width="308">
+                            <TextBlock Text="Quick Export Excel" Foreground="#FF2E353C" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                        </Button>
+                        <Button x:Name="Interface_Reports_Purchase_MainBottom_ViewRemovedElemets" Margin="323,16,324,16" Background="LightSlateGray">
+                            <TextBlock Text="View Removed Elements" Foreground="#FF2E3546" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                        </Button>
+                    </Grid>
+                    <Grid VerticalAlignment="Top" Height="66" Visibility="Hidden" x:Name="Interface_Reports_Purchase_RemovedBottom" Margin="10,530,10,0">
+                        <Rectangle Fill="White"/>
+                        <Border BorderBrush="Black" BorderThickness="1"/>
+                        <Button x:Name="Interface_Reports_RemovedBottom_RemoveBTN" Margin="637,16,10,16" Background="#FF963737">
+                            <TextBlock Text="True Remove" Foreground="#FF3E2323" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                        </Button>
+                        <Button x:Name="Interface_Reports_Purchase_RemovedBottom_RecoveryBTN" Margin="324,16,323,16" Background="#FF7A9977">
+                            <TextBlock Text="Recovery Item" Foreground="#FF283328" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                        </Button>
+                        <Button x:Name="Interface_Reports_Purchase_RemovedBottom_ViewMainElemets" Margin="11,16,636,16" Background="LightSlateGray">
+                            <TextBlock Text="Back" Foreground="#FF2E3546" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                        </Button>
+                    </Grid>
+                </Grid>
+                <Grid x:Name="Interface_Reports_Sele"  HorizontalAlignment="Left" Margin="10,0,0,21" Width="973" Visibility="Visible">
+                    <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
+                    <Grid VerticalAlignment="Top" Height="71" Visibility="Visible" x:Name="Interface_Reports_Sele_Header" Margin="10,10,10,0">
+                        <Rectangle Fill="Black"/>
+                        <Rectangle Fill="White" Margin="2,2,2,2"/>
+                        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="35" Margin="22,18,0,0" Height="32" FontFamily="MS PGothic" FontStyle="Italic" Width="279"><Run Language="en-gb" Text="SALES REPORTS"/><Run Text=":"/></TextBlock>
+                        <ComboBox x:Name="Interface_Reports_Sele_CategoryBox" Margin="483,24,328,24" SelectedIndex="0"  VerticalContentAlignment="Center" FontFamily="MS PGothic" >
+                            <ComboBoxItem Content="Active"/>
+                            <ComboBoxItem Content="Inactive"/>
+                        </ComboBox>
+                        <TextBlock Text="Search by:" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" Margin="408,0,0,0" Height="17" Width="70" FontStyle="Italic" FontFamily="MS PGothic"/>
+                        <StackPanel Margin="632,20,47,20">
+                            <TextBox Padding="5,0,0,0" x:Name="Interface_Reports_Sele_SearchField" Height="30" Background="GhostWhite" VerticalContentAlignment="Center" FontSize="15" Margin="0,0,-1,0" FontFamily="MS PGothic"/>
+                        </StackPanel>
+                        <Button Margin="913,20,10,20" Background="Transparent" x:Name="Interface_Reports_Sele_Header_SearchButton">
+                            <Image Source="Images/Search.png" Height="20"/>
+                        </Button>
+                    </Grid>
+                    <Grid Margin="10,92,306,81">
+                        <Grid Margin="0,0,-295,0">
+                            <ListView FontSize="14" x:Name="Interface_Reports_Sele_ListView">
+                                <ListView.Resources>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="FontFamily" Value="Ms PGothic" />
+                                        <Setter Property="FontSize" Value="14" />
+                                    </Style>
+                                    <Style TargetType="GridViewColumnHeader">
+                                        <Setter Property="FontFamily" Value="Ms PGothic"/>
+                                        <Setter Property="FontSize" Value="14"/>
+                                        <Setter Property="Foreground" Value="Black"/>
+                                    </Style>
+                                </ListView.Resources>
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Width="50" DisplayMemberBinding="{Binding IdSele}" Header="DB ID"/>
+                                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding UserName}" Header="User"/>
+                                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding IdType}" Header="User ID Type"/>
+                                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding IdNum}" Header="User ID Number"/>
+                                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding ClientName}" Header="Client Name"/>
+                                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding ClientID}" Header="Client ID"/>
+                                        <GridViewColumn Width="100" DisplayMemberBinding="{Binding Total}" Header="Total"/>
+                                        <GridViewColumn Width="200" DisplayMemberBinding="{Binding Date}" Header="Date"/>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                            <ListView FontSize="14" x:Name="Interface_Reports_Sele_RemovedListView" Visibility="Hidden">
+                                <ListView.Resources>
+                                    <Style TargetType="ListViewItem">
+                                        <Setter Property="FontFamily" Value="Ms PGothic" />
+                                        <Setter Property="FontSize" Value="14" />
+                                        <Setter Property="Foreground" Value="DarkRed" />
+                                    </Style>
+                                    <Style TargetType="GridViewColumnHeader">
+                                        <Setter Property="FontFamily" Value="Ms PGothic"/>
+                                        <Setter Property="FontSize" Value="14"/>
+                                        <Setter Property="Foreground" Value="Black"/>
+                                    </Style>
+                                </ListView.Resources>
+                                <ListView.View>
+                                    <GridView>
+                                        <GridViewColumn Width="50" DisplayMemberBinding="{Binding IdSele}" Header="DB ID"/>
+                                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding UserName}" Header="User"/>
+                                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding IdType}" Header="User ID Type"/>
+                                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding IdNum}" Header="User ID Number"/>
+                                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding ClientName}" Header="Client Name"/>
+                                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding ClientID}" Header="Client ID"/>
+                                        <GridViewColumn Width="100" DisplayMemberBinding="{Binding Total}" Header="Total"/>
+                                        <GridViewColumn Width="200" DisplayMemberBinding="{Binding Date}" Header="Date"/>
+                                    </GridView>
+                                </ListView.View>
+                            </ListView>
+                            <Border BorderBrush="Black" BorderThickness="1"/>
+                        </Grid>
+                    </Grid>
+                    <Grid VerticalAlignment="Top" Height="66" Visibility="Visible" x:Name="Interface_Reports_Sele_MainBottom" Margin="10,530,10,0">
+                        <Rectangle Fill="White"/>
+                        <Border BorderBrush="Black" BorderThickness="1"/>
+                        <Button x:Name="Interface_Reports_Sele_MainBottom_RemoveBTN" Margin="636,16,10,16" Background="#FF9C4D4D">
+                            <TextBlock Text="Remove Elements" Foreground="#FF3E2323" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                        </Button>
+                        <Button x:Name="Interface_Reports_Sele_MainBottom_ExportBTN" Margin="10,16,0,16" Background="LightSlateGray" HorizontalAlignment="Left" Width="308">
+                            <TextBlock Text="Quick Export Excel" Foreground="#FF2E353C" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                        </Button>
+                        <Button x:Name="Interface_Reports_Sale_MainBottom_ViewRemovedElemets" Margin="323,16,324,16" Background="LightSlateGray">
+                            <TextBlock Text="View Removed Elements" Foreground="#FF2E3546" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                        </Button>
+                    </Grid>
+                    <Grid VerticalAlignment="Top" Height="66" Visibility="Hidden" x:Name="Interface_Reports_Sale_RemovedBottom" Margin="10,530,10,0">
+                        <Rectangle Fill="White"/>
+                        <Border BorderBrush="Black" BorderThickness="1"/>
+                        <Button x:Name="Interface_Reports_Sale_RemovedBottom_RemoveBTN" Margin="637,16,10,16" Background="#FF963737">
+                            <TextBlock Text="True Remove" Foreground="#FF3E2323" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                        </Button>
+                        <Button x:Name="Interface_Reports_Sale_RemovedBottom_RecoveryBTN" Margin="324,16,323,16" Background="#FF7A9977">
+                            <TextBlock Text="Recovery Item" Foreground="#FF283328" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                        </Button>
+                        <Button x:Name="Interface_Reports_Sale_RemovedBottom_ViewMainElemets" Margin="11,16,636,16" Background="LightSlateGray">
+                            <TextBlock Text="Back" Foreground="#FF2E3546" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Grid>
             <Grid x:Name="Interface_Clients"  HorizontalAlignment="Left" Margin="305,99,0,21" Width="975" Visibility="Hidden">
                 <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
                 <Grid VerticalAlignment="Top" Height="71" Visibility="Visible" x:Name="Interface_Clients_Header" Margin="10,10,10,0">
@@ -957,103 +1172,6 @@
                     </ComboBox>
                     <Button x:Name="Interface_Clients_ControlPanel_AddBTN" Margin="10,453,10,16" Background="#FF7A9977">
                         <TextBlock Text="Add Item to List" Foreground="#FF283328" FontSize="17" FontFamily="MS PGothic" FontWeight="Bold" FontStyle="Italic"/>
-                    </Button>
-                </Grid>
-            </Grid>
-            <Grid x:Name="Interface_Reports"  HorizontalAlignment="Left" Margin="305,99,0,21" Width="975" Visibility="Visible">
-                <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
-                <Grid VerticalAlignment="Top" Height="71" Visibility="Visible" x:Name="Interface_Reports_Header" Margin="10,10,10,0">
-                    <Rectangle Fill="Black"/>
-                    <Rectangle Fill="White" Margin="2,2,2,2"/>
-                    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="35" Margin="22,18,0,0" Height="32" FontFamily="MS PGothic" FontStyle="Italic" Width="272"><Run Text="R"/><Run Language="en-gb" Text="EPORTS"/><Run Text=" LIST"/><Run Text=":"/></TextBlock>
-                    <ComboBox x:Name="Interface_Reports_CategoryBox" Margin="483,24,328,24" SelectedIndex="0"  VerticalContentAlignment="Center" FontFamily="MS PGothic" >
-                        <ComboBoxItem Content="Active"/>
-                        <ComboBoxItem Content="Inactive"/>
-                    </ComboBox>
-                    <TextBlock Text="Search by:" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" Margin="408,0,0,0" Height="17" Width="70" FontStyle="Italic" FontFamily="MS PGothic"/>
-                    <StackPanel Margin="632,20,47,20">
-                        <TextBox Padding="5,0,0,0" x:Name="Interface_Reports_SearchField" Height="30" Background="GhostWhite" VerticalContentAlignment="Center" FontSize="15" Margin="0,0,-1,0" FontFamily="MS PGothic"/>
-                    </StackPanel>
-                    <Button Margin="913,20,10,20" Background="Transparent" x:Name="Interface_Reports_Header_SearchButton">
-                        <Image Source="Images/Search.png" Height="20"/>
-                    </Button>
-                </Grid>
-                <Grid Margin="10,92,306,81">
-                    <Grid Margin="0,0,-295,0">
-                        <ListView FontSize="14" x:Name="Interface_Reports_ListView">
-                            <ListView.Resources>
-                                <Style TargetType="ListViewItem">
-                                    <Setter Property="FontFamily" Value="Ms PGothic" />
-                                    <Setter Property="FontSize" Value="14" />
-                                </Style>
-                                <Style TargetType="GridViewColumnHeader">
-                                    <Setter Property="FontFamily" Value="Ms PGothic"/>
-                                    <Setter Property="FontSize" Value="14"/>
-                                    <Setter Property="Foreground" Value="Black"/>
-                                </Style>
-                            </ListView.Resources>
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn Width="90" DisplayMemberBinding="{Binding Document}" Header="ID"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding FullName}" Header="FullName"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Email}" Header="Email"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Tel}" Header="Telephone"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Balance}" Header="Balance"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Date}" Header="Date"/>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                        <ListView FontSize="14" x:Name="Interface_Reports_RemovedListView" Visibility="Hidden">
-                            <ListView.Resources>
-                                <Style TargetType="ListViewItem">
-                                    <Setter Property="FontFamily" Value="Ms PGothic" />
-                                    <Setter Property="FontSize" Value="14" />
-                                    <Setter Property="Foreground" Value="DarkRed" />
-                                </Style>
-                                <Style TargetType="GridViewColumnHeader">
-                                    <Setter Property="FontFamily" Value="Ms PGothic"/>
-                                    <Setter Property="FontSize" Value="14"/>
-                                    <Setter Property="Foreground" Value="Black"/>
-                                </Style>
-                            </ListView.Resources>
-                            <ListView.View>
-                                <GridView>
-                                    <GridViewColumn Width="90" DisplayMemberBinding="{Binding Document}" Header="ID"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding FullName}" Header="FullName"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Email}" Header="Email"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Tel}" Header="Telephone"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Balance}" Header="Balance"/>
-                                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Date}" Header="Date"/>
-                                </GridView>
-                            </ListView.View>
-                        </ListView>
-                        <Border BorderBrush="Black" BorderThickness="1"/>
-                    </Grid>
-                </Grid>
-                <Grid VerticalAlignment="Top" Height="66" Visibility="Visible" x:Name="Interface_Reports_MainBottom" Margin="10,530,10,0">
-                    <Rectangle Fill="White"/>
-                    <Border BorderBrush="Black" BorderThickness="1"/>
-                    <Button x:Name="Interface_Reports_MainBottom_RemoveBTN" Margin="636,16,10,16" Background="#FF9C4D4D">
-                        <TextBlock Text="Remove Elements" Foreground="#FF3E2323" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
-                    </Button>
-                    <Button x:Name="Interface_Reports_MainBottom_ExportBTN" Margin="10,16,0,16" Background="LightSlateGray" HorizontalAlignment="Left" Width="308">
-                        <TextBlock Text="Quick Export Excel" Foreground="#FF2E353C" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
-                    </Button>
-                    <Button x:Name="Interface_Reports_MainBottom_ViewRemovedElemets" Margin="323,16,324,16" Background="LightSlateGray">
-                        <TextBlock Text="View Removed Elements" Foreground="#FF2E3546" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
-                    </Button>
-                </Grid>
-                <Grid VerticalAlignment="Top" Height="66" Visibility="Hidden" x:Name="Interface_Reports_RemovedBottom" Margin="10,530,10,0">
-                    <Rectangle Fill="White"/>
-                    <Border BorderBrush="Black" BorderThickness="1"/>
-                    <Button x:Name="Interface_Reports_RemovedBottom_RemoveBTN" Margin="637,16,10,16" Background="#FF963737">
-                        <TextBlock Text="True Remove" Foreground="#FF3E2323" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
-                    </Button>
-                    <Button x:Name="Interface_Reports_RemovedBottom_RecoveryBTN" Margin="324,16,323,16" Background="#FF7A9977">
-                        <TextBlock Text="Recovery Item" Foreground="#FF283328" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
-                    </Button>
-                    <Button x:Name="Interface_Reports_RemovedBottom_ViewMainElemets" Margin="11,16,636,16" Background="LightSlateGray">
-                        <TextBlock Text="Back" Foreground="#FF2E3546" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
                     </Button>
                 </Grid>
             </Grid>
