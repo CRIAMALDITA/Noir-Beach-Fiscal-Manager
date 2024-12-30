@@ -527,7 +527,7 @@
             </Grid>
             <Grid Name="Interface_Sales" Margin="305,100,0,0"  Visibility="Hidden">
                 <Grid x:Name="Interface_Sale"  HorizontalAlignment="Center" Margin="0,0,0,-1" Width="975">
-                    <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
+                    <Rectangle Fill="LightGray" Margin="-4,0,0,0"/>
                     <Grid Margin="10">
                         <Border Padding="10" BorderThickness="1" BorderBrush="Black" Background="White" Margin="0,0,0,0"/>
                         <TextBlock Text="Make a Sale" FontSize="30" Foreground="Black" Margin="10,10,772,557" FontFamily="MS PGothic"/>
@@ -680,7 +680,7 @@
             </Grid>
             <Grid Name="Interface_Purchase" Margin="305,100,0,0"  Visibility="Hidden">
                 <Grid  HorizontalAlignment="Center" Margin="0,0,0,-1" Width="975">
-                    <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
+                    <Rectangle Fill="LightGray" Margin="-7,0,0,0"/>
                     <Grid Margin="10">
                         <Border Padding="10" BorderThickness="1" BorderBrush="Black" Background="White" Margin="0,0,0,0"/>
                         <TextBlock Text="Make a Purchase" FontSize="30" Foreground="Black" Margin="10,10,724,557" FontFamily="MS PGothic"/>
