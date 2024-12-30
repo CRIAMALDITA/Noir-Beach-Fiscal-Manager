@@ -12,8 +12,8 @@ namespace RestaurantData.TablesDataClasses
     [Table("SELL")]
     public class SellData
     {
-        [SQLKey(KeyType.PK, typeof(CategoryData))][Key][DatabaseGenerated(DatabaseGeneratedOption.Identity)] public int IdSell { get; set; }
-        [SQLKey(KeyType.FK, typeof(RoleData))] public int IdUser { get; set; }
+        [SQLKey(KeyType.PK, typeof(SellData))][Key][DatabaseGenerated(DatabaseGeneratedOption.Identity)] public int IdSell { get; set; }
+        [SQLKey(KeyType.FK, typeof(UserData))] public int IdUser { get; set; }
         [ForeignKey("IdUser")] public virtual UserData User { get; set; }
         public string IdentificationType { get; set; }
         public string IdentificationNumber { get; set; }
@@ -22,6 +22,7 @@ namespace RestaurantData.TablesDataClasses
         public decimal SubTotal { get; set; }
         public decimal Exchange { get; set; }
         public decimal Total { get; set; }
+        public bool SaleState { get; set; }
         public DateTime CreationDate { get; set; } = DateTime.Now;
         public int InvoiceNumber { get; set; }
     }

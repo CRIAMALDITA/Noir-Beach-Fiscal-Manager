@@ -1,4 +1,5 @@
 ﻿using RestaurantData.TablesDataClasses;
+using RestaurantDataManager;
 using SalesRestaurantSystem;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,10 @@ namespace Point_of_sale_for_Restaurant
             Total.Text = _purchaseData.Total.ToString();
             IdType.Text = _purchaseData.IdentificationType.ToString();
             User.Text = _purchaseData.User.FullName.ToString();
+            PurchaseDetailsListViewHandler productList = new(this);
+            productList.SetListViewer(ListViewer, null);
+            List<PurchaseDetailsData> details = DataManager.Instance.PurchaseDetails.GetAllAsync().Result.Where(x => x.IdPurchase == _purchaseData.IdPurchase).ToList();
+            productList.AddItemsToList(details);
         }
     }
 }

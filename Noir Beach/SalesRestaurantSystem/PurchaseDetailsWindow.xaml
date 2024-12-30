@@ -7,50 +7,60 @@
         mc:Ignorable="d"
         Title="Purchase Details" Height="450" Width="600" MinHeight="450" MaxHeight="450" MinWidth="600" MaxWidth="600">
     <Grid>
-        <Border Padding="10" BorderThickness="1" BorderBrush="Gray" Margin="10,10,10,298">
-            <Grid Margin="0,0,0,-37">
-                <Grid Margin="10,57,444,59">
-                    <TextBlock Text="Date: " Margin="0,-16,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Width="26" Height="16" />
-                    <TextBlock x:Name="Date" Foreground="Black" Background="LightGray"/>
-                    <Border BorderBrush="Gray" BorderThickness="1"/>
+        <Viewbox>
+        <Grid Height="434" Width="595">
+            <Border Padding="10" BorderThickness="1" BorderBrush="Gray" Margin="10,10,10,298">
+                <Grid Margin="0,0,0,-37">
+                    <Grid Margin="10,57,376,59">
+                        <TextBlock Text="Date: " Margin="0,-16,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Width="26" Height="16" />
+                            <Rectangle Fill="LightGray"/>
+                            <TextBlock VerticalAlignment="Center" Text="aaaa" x:Name="Date" Foreground="Black" Background="LightGray" Margin="6,0,0,0"/>
+                            <Border BorderBrush="Gray" BorderThickness="1"/>
+                    </Grid>
+                    <Grid Margin="10,10,376,106">
+                        <TextBlock Text="Supplier:" Margin="0,-16,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Width="81" Height="16" />
+                            <Rectangle Fill="LightGray"/>
+                            <TextBlock VerticalAlignment="Center"  x:Name="Supplier" Foreground="Black" Background="LightGray" Margin="6,0,0,0"/>
+                            <Border BorderBrush="Gray" BorderThickness="1"/>
+                    </Grid>
+                    <Grid Margin="187,10,212,106">
+                            <Rectangle Fill="LightGray"/>
+                            <TextBlock Text="Supplier ID: " Margin="0,-16,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Width="81" Height="16" />
+                            <TextBlock VerticalAlignment="Center"  x:Name="ID" Foreground="Black" Background="LightGray" Margin="6,0,0,0"/>
+                            <Border BorderBrush="Gray" BorderThickness="1"/>
+                    </Grid>
+                    <Grid Margin="458,81,10,35">
+                        <TextBlock Text="Total: " Margin="0,-16,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Width="81" Height="16" />
+                            <Rectangle Fill="LightGray"/>
+                            <TextBlock VerticalAlignment="Center"  x:Name="Total" Foreground="Black" Background="LightGray" Margin="6,0,0,0"/>
+                            <Border BorderBrush="Gray" BorderThickness="1"/>
+                    </Grid>
+                    <Grid Margin="187,57,211,59">
+                        <TextBlock Text="ID Type: " Margin="0,-16,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Width="81" Height="16" />
+                            <Rectangle Fill="LightGray"/>
+                            <TextBlock VerticalAlignment="Center"  x:Name="IdType" Foreground="Black" Background="LightGray" Margin="6,0,0,0"/>
+                            <Border BorderBrush="Gray" BorderThickness="1"/>
+                    </Grid>
+                    <Grid Margin="351,10,10,105">
+                        <TextBlock Text="User: " Margin="0,-16,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Width="81" Height="16" />
+                            <Rectangle Fill="LightGray"/>
+                            <TextBlock VerticalAlignment="Center"  x:Name="User" Foreground="Black" Margin="6,0,0,0"/>
+                            <Border BorderBrush="Gray" BorderThickness="1"/>
+                    </Grid>
                 </Grid>
-                <Grid Margin="10,10,376,106">
-                    <TextBlock Text="Supplier:" Margin="0,-16,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Width="81" Height="16" />
-                    <TextBlock x:Name="Supplier" Foreground="Black" Background="LightGray"/>
-                    <Border BorderBrush="Gray" BorderThickness="1"/>
-                </Grid>
-                <Grid Margin="187,10,212,106">
-                    <TextBlock Text="Supplier ID: " Margin="0,-16,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Width="81" Height="16" />
-                    <TextBlock x:Name="ID" Foreground="Black" Background="LightGray"/>
-                    <Border BorderBrush="Gray" BorderThickness="1"/>
-                </Grid>
-                <Grid Margin="458,81,10,35">
-                    <TextBlock Text="Total: " Margin="0,-16,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Width="81" Height="16" />
-                    <TextBlock x:Name="Total" Foreground="Black" Background="LightGray"/>
-                    <Border BorderBrush="Gray" BorderThickness="1"/>
-                </Grid>
-                <Grid Margin="119,57,279,59">
-                    <TextBlock Text="ID Type: " Margin="0,-16,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Width="81" Height="16" />
-                    <TextBlock x:Name="IdType" Foreground="Black" Background="LightGray"/>
-                    <Border BorderBrush="Gray" BorderThickness="1"/>
-                </Grid>
-                <Grid Margin="351,10,10,105">
-                    <TextBlock Text="User: " Margin="0,-16,0,0" VerticalAlignment="Top" FontSize="11" HorizontalAlignment="Left" Width="81" Height="16" />
-                    <TextBlock x:Name="User" Foreground="Black" Background="LightGray"/>
-                    <Border BorderBrush="Gray" BorderThickness="1"/>
-                </Grid>
-            </Grid>
-        </Border>
-        <ListView ItemsSource="{Binding DataCollection}" FontSize="14" x:Name="ProductsHistoryViewReferenceSellMaker" Margin="10,141,10,10">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Width="100" DisplayMemberBinding="{Binding Code}" Header="Code"/>
-                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding Name}" Header="Product"/>
-                    <GridViewColumn Width="115" DisplayMemberBinding="{Binding Stock}" Header="Price"/>
-                    <GridViewColumn Width="60" DisplayMemberBinding="{Binding SellPrice}" Header="Amount"/>
-                    <GridViewColumn Width="150" DisplayMemberBinding="{Binding SellPrice}" Header="Sub Total"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+            </Border>
+                <ListView ItemsSource="{Binding DataCollection}" FontSize="14" x:Name="ListViewer" Margin="10,141,10,10">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="100" DisplayMemberBinding="{Binding Code}" Header="Code"/>
+                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding Product}" Header="Product"/>
+                        <GridViewColumn Width="115" DisplayMemberBinding="{Binding Price}" Header="Price"/>
+                        <GridViewColumn Width="60" DisplayMemberBinding="{Binding Amount}" Header="Amount"/>
+                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding Subtotal}" Header="Sub Total"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
+        </Viewbox>
     </Grid>
 </Window>

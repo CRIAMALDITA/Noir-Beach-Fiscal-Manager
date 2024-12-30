@@ -20,5 +20,9 @@ namespace SalesRestaurantSystem.WindowsHandlers.Listview_Handlers
             List<ProductData> currentData = db.Where(x => Items.Any(y => y.Name == x.ProductName)).ToList();
             return currentData;
         }
+
+        public override void DobleClick()
+        {
+        }
     }
 }

@@ -124,7 +124,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
                         SellDetailsData item = list[i];
                         await DataManager.Instance.SellDetails.AddAsync(item);
                         ProductData product = await DataManager.Instance.Product.GetByIdAsync(item.IdProduct);
-                        product.Stock = product.Stock - item.ProductCount;
+                        product.Stock = product.Stock - item.ProductsCount;
                         await DataManager.Instance.Product.UpdateAsync(product);
                     }
                     return true;
@@ -200,6 +200,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
             sell.ClientIdentification = selldata.Customer.Id;
             sell.ClientName = selldata.Customer.Name;
             sell.CreationDate = Convert.ToDateTime(selldata.Transaction.Date);
+            sell.SaleState = true;
             sell.InvoiceNumber = data.Count;
             return sell;
         }
@@ -212,7 +213,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
                 var result = DataManager.Instance.Sell.GetAllAsync().Result;
                 item.IdSell = result.OrderByDescending(s => s.IdSell).FirstOrDefault().IdSell;
                 item.SubTotal = selldata.Cart.values[i].Subtotal;
-                item.ProductCount = selldata.Cart.values[i].Amount;
+                item.ProductsCount = selldata.Cart.values[i].Amount;
                 item.SellPrice = selldata.Cart.values[i].Price;
                 item.IdProduct = DataManager.Instance.Product.GetByNameAsync(selldata.Cart.values[i].Name).Result.IdProduct;
                 item.CreationDate = Convert.ToDateTime(selldata.Transaction.Date);

@@ -41,6 +41,11 @@ namespace Point_of_sale_for_Restaurant
         //Suppliers
         public SuppliersDataHandlerWindow Suppliers;
 
+        //Reports
+        public MultiWindowHandlerWindow Reports_OptionsWindow;
+        public PurchaseDataHandlerWindow Reports_PurchasesWindow;
+        public SellDataHandlerWindow Reports_SaleWindow;
+
         public BackButtonController Interface_BackButton;
 
         public SystemWindow(UserData user)
@@ -107,8 +112,8 @@ namespace Point_of_sale_for_Restaurant
                 (
                     this, ToolBar_Reports,
                     ToolBar_Reports_Shadow,
-                    ToolBar_Reports_Selected, null
-                //() => { ActiveUI(Interface_Reports); }
+                    ToolBar_Reports_Selected, 
+                () => { ActiveUI(Reports_OptionsWindow); }
                 );
             options.Add(ReportsOption);
 
@@ -312,12 +317,50 @@ namespace Point_of_sale_for_Restaurant
             ]);
             //-------------------------------------------------------------------------------------------------
 
-            //Reports Multi Window ----------------------------------------------------------------------------
-            //-------------------------------------------------------------------------------------------------
             //Sales History -----------------------------------------------------------------------------------
+            Reports_SaleWindow = new SellDataHandlerWindow(this);
+            Reports_SaleWindow.SetPanel(Interface_Reports_Sale, Interface_BackButton);
+            Reports_SaleWindow.SetSearchField(Interface_Reports_Sale_SearchField);
+            Reports_SaleWindow.SetSearchButton(Interface_Reports_Sale_Header_SearchButton);
+            Reports_SaleWindow.SetMainListView(Interface_Reports_Sale_ListView, Interface_Reports_Sale_MainBottom);
+            Reports_SaleWindow.SetRecoveryItem(Interface_Reports_Sale_RemovedBottom_RecoveryBTN);
+            Reports_SaleWindow.SetCategories(Interface_Reports_Sale_CategoryBox);
+            Reports_SaleWindow.SetFields(
+            [
+                Interface_Reports_Sale_CategoryBox,
+            ]);
             //-------------------------------------------------------------------------------------------------
+
             //Purchase History --------------------------------------------------------------------------------
+            Reports_PurchasesWindow = new PurchaseDataHandlerWindow(this);
+            Reports_PurchasesWindow.SetPanel(Interface_Reports_Purchase, Interface_BackButton);
+            Reports_PurchasesWindow.SetSearchField(Interface_Reports_Purchase_SearchField);
+            Reports_PurchasesWindow.SetSearchButton(Interface_Reports_Purchase_Header_SearchButton);
+            Reports_PurchasesWindow.SetMainListView(Interface_Reports_Purchase_ListView, Interface_Reports_Purchase_MainBottom);
+            Reports_PurchasesWindow.SetRecoveryItem(Interface_Reports_Purchase_RemovedBottom_RecoveryBTN); 
+            Reports_PurchasesWindow.SetCategories(Interface_Reports_Purchase_CategoryBox);
+            Reports_PurchasesWindow.SetFields(
+            [
+                Interface_Reports_Purchase_CategoryBox,
+            ]);
             //-------------------------------------------------------------------------------------------------
+
+            //Reports Multi Window ----------------------------------------------------------------------------
+            Reports_OptionsWindow = new MultiWindowHandlerWindow(this, Interface_Reports);
+            Reports_OptionsWindow.SetPanel(Interface_Reports_Options, Interface_BackButton);
+            Reports_OptionsWindow.SetOptions(
+            [
+                Interface_Reports_Options_1,
+                Interface_Reports_Options_2,
+            ]);
+            Reports_OptionsWindow.SetWindows(
+            [
+                Reports_PurchasesWindow,
+                Reports_SaleWindow,
+            ]);
+            Reports_OptionsWindow.OnBackButtonPressed(Interface_ToolBar.UnSelectCurrent);
+            //-------------------------------------------------------------------------------------------------
+
         }
 
 

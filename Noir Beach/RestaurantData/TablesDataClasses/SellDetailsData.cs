@@ -18,7 +18,7 @@ namespace RestaurantData.TablesDataClasses
         [ForeignKey("IdProduct")] public virtual ProductData Product { get; set; }
 
         public decimal SellPrice { get; set; }
-        public int ProductCount { get; set; }
+        public int ProductsCount { get; set; }
         public decimal SubTotal { get; set; }
         public DateTime CreationDate { get; set; } = DateTime.Now;
 

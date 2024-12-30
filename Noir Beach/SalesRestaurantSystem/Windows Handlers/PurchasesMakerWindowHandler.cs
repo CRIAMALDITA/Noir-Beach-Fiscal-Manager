@@ -57,8 +57,6 @@ namespace SalesRestaurantSystem.WindowsHandlers
                 ProductData item = DataManager.Instance.Product.GetByIdAsync(Convert.ToInt32(row["IdProduct"])).Result;
                 ProductData[] values = { item };
                 var product = _catalogList.Items.First(x => x.IdProduct == item.IdProduct);
-                if (product.Stock <= 0) return;
-                product.Stock--;
                 AddToCart(values);
                 _catalogList.RefreshListView();
             });
@@ -117,7 +115,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
 
             var data = await DataManager.Instance.Purchase.GetAllAsync();
 
-            int purchaseId = data.OrderByDescending(s => s.IdPurchase).FirstOrDefault().IdPurchase;
+            int purchaseId = data.Count == 0 ? 0 : data.OrderByDescending(s => s.IdPurchase).FirstOrDefault().IdPurchase;
 
             LoadingWindow addingPurchases = new LoadingWindow("Making Sale...",
             Task.Run<bool>(async () =>
@@ -170,21 +168,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
                 MessageBox.ShowEmergentMessage("E_Cart is Empty");
                 return false;
             }
-            if (string.IsNullOrWhiteSpace(Purchasedata.Resume.PaysWith))
-            {
-                MessageBox.ShowEmergentMessage("E_Payment is empty");
-                return false;
-            }
-            decimal paysWith = Convert.ToDecimal(Purchasedata.Resume.PaysWith.Replace("$", "").Trim());
-
-            decimal subTotal = Convert.ToDecimal(Purchasedata.Resume.SubTotal.Replace("$", "").Trim());
             decimal total = Convert.ToDecimal(Purchasedata.Resume.Total.Replace("$", "").Trim());
-
-            if (paysWith < total)
-            {
-                MessageBox.ShowEmergentMessage("E_Payment is not enough");
-                return false;
-            }
 
             return true;
         }
@@ -200,6 +184,7 @@ namespace SalesRestaurantSystem.WindowsHandlers
             Purchase.IdentificationType = Purchasedata.Transaction.Type;
             Purchase.IdentificationNumber = Purchasedata.Customer.Id;
             Purchase.CreationDate = Convert.ToDateTime(Purchasedata.Transaction.Date);
+            Purchase.PurchaseState = true;
             return Purchase;
         }
         private List<PurchaseDetailsData> GetPurchaseDetailsDatasFromFields(TransactionMakerData Purchasedata, int id)

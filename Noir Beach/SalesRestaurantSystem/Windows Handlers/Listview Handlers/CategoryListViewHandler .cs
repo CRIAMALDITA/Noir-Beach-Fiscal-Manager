@@ -80,5 +80,9 @@ namespace SalesRestaurantSystem
             if (SearchedItems.Count > 0) FilterSetted = true;
             RefreshListView();
         }
+
+        public override void DobleClick()
+        {
+        }
     }
 }

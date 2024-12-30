@@ -1,4 +1,5 @@
-﻿using RestaurantData.TablesDataClasses;
+﻿using Point_of_sale_for_Restaurant;
+using RestaurantData.TablesDataClasses;
 using RestaurantDataManager;
 using SalesRestaurantSystem.WindowsHandlers;
 using System;
@@ -12,9 +13,9 @@ using System.Windows.Input;
 
 namespace SalesRestaurantSystem
 {
-    internal class PUrchaseListViewHandler : ListViewPanelController<PurchaseData>
+    internal class PurchaseListViewHandler : ListViewPanelController<PurchaseData>
     {
-        public PUrchaseListViewHandler(Window win) : base(win) { }
+        public PurchaseListViewHandler(Window win) : base(win) { }
 
         public override void RemoveItemToList(PurchaseData value)
         {
@@ -85,6 +86,12 @@ namespace SalesRestaurantSystem
             };
             if (SearchedItems.Count > 0) FilterSetted = true;
             RefreshListView();
+        }
+
+        public override void DobleClick()
+        {
+            PurchaseDetailsWindow win = new PurchaseDetailsWindow(Items[_listView.SelectedIndex]);
+            win.Show();
         }
     }
 }

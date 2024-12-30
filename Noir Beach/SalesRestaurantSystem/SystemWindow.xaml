@@ -823,17 +823,17 @@
                     </Grid>
                 </Grid>
             </Grid>
-            <Grid x:Name="Interface_Reports" Margin="305,100,0,0" Visibility="Visible">
+            <Grid x:Name="Interface_Reports" Margin="305,100,0,0" Visibility="Hidden">
                 <Grid x:Name="Interface_Reports_Options"  HorizontalAlignment="Center" Margin="0,0,0,22" Height="604" Width="983" Visibility="Visible">
                     <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
                     <Grid x:Name="ReportsControlPanel" Margin="300,104,300,196">
                         <Border Padding="10" BorderThickness="1" BorderBrush="Black" Background="White" Margin="0,0,0,67"/>
-                        <TextBlock Text="Sale Options" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,25,0,0"/>
-                        <Button Margin="10,99,10,152" Background="LightSlateGray">
-                            <TextBlock Foreground="#FF2E353C" FontWeight="Bold" FontSize="16" Text="Pruchase History"/>
+                        <TextBlock Text="Reports Options" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,34,0,0"  FontFamily="MS PGothic" FontWeight="Bold"/>
+                        <Button x:Name="Interface_Reports_Options_1" Margin="10,99,10,152" Background="LightSlateGray">
+                            <TextBlock Foreground="White" FontWeight="Bold" FontSize="16" Text="Pruchase History"  FontFamily="MS PGothic"/>
                         </Button>
-                        <Button Margin="10,157,10,99" Background="LightSlateGray">
-                            <TextBlock Foreground="#FF2E353C" FontWeight="Bold" FontSize="16"><Run Language="en-gb" Text="Sales History"/></TextBlock>
+                        <Button x:Name="Interface_Reports_Options_2" Margin="10,157,10,99" Background="LightSlateGray">
+                            <TextBlock Foreground="White" FontWeight="Bold" FontSize="16"><Run Language="en-gb" Text="Sales History"  FontFamily="MS PGothic"/></TextBlock>
                         </Button>
                     </Grid>
                 </Grid>
@@ -843,7 +843,7 @@
                         <Rectangle Fill="Black"/>
                         <Rectangle Fill="White" Margin="2,2,2,2"/>
                         <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="35" Margin="22,18,0,0" Height="32" FontFamily="MS PGothic" FontStyle="Italic" Width="425"><Run Text="PURCHASE"/><Run Text=" "/><Run Language="en-gb" Text="REPORTS"/><Run Text=":"/></TextBlock>
-                        <ComboBox x:Name="Interface_Reports_Purchase_CategoryBox" Margin="483,24,328,24" SelectedIndex="0"  VerticalContentAlignment="Center" FontFamily="MS PGothic" >
+                        <ComboBox x:Name="Interface_Reports_Purchase_CategoryBox" Margin="483,24,328,24" SelectedIndex="0"  VerticalContentAlignment="Center" FontFamily="MS PGothic" Tag="Category">
                             <ComboBoxItem Content="Active"/>
                             <ComboBoxItem Content="Inactive"/>
                         </ComboBox>
@@ -936,27 +936,27 @@
                         </Button>
                     </Grid>
                 </Grid>
-                <Grid x:Name="Interface_Reports_Sele"  HorizontalAlignment="Left" Margin="10,0,0,21" Width="973" Visibility="Visible">
+                <Grid x:Name="Interface_Reports_Sale"  HorizontalAlignment="Left" Margin="10,0,0,21" Width="973" Visibility="Hidden">
                     <Rectangle Fill="LightGray" Margin="0,0,0,0"/>
-                    <Grid VerticalAlignment="Top" Height="71" Visibility="Visible" x:Name="Interface_Reports_Sele_Header" Margin="10,10,10,0">
+                    <Grid VerticalAlignment="Top" Height="71" Visibility="Visible" x:Name="Interface_Reports_Sale_Header" Margin="10,10,10,0">
                         <Rectangle Fill="Black"/>
                         <Rectangle Fill="White" Margin="2,2,2,2"/>
                         <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="35" Margin="22,18,0,0" Height="32" FontFamily="MS PGothic" FontStyle="Italic" Width="279"><Run Language="en-gb" Text="SALES REPORTS"/><Run Text=":"/></TextBlock>
-                        <ComboBox x:Name="Interface_Reports_Sele_CategoryBox" Margin="483,24,328,24" SelectedIndex="0"  VerticalContentAlignment="Center" FontFamily="MS PGothic" >
+                        <ComboBox Tag="Category"  x:Name="Interface_Reports_Sale_CategoryBox" Margin="483,24,328,24" VerticalContentAlignment="Center" FontFamily="MS PGothic" >
                             <ComboBoxItem Content="Active"/>
                             <ComboBoxItem Content="Inactive"/>
                         </ComboBox>
                         <TextBlock Text="Search by:" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="15" Margin="408,0,0,0" Height="17" Width="70" FontStyle="Italic" FontFamily="MS PGothic"/>
                         <StackPanel Margin="632,20,47,20">
-                            <TextBox Padding="5,0,0,0" x:Name="Interface_Reports_Sele_SearchField" Height="30" Background="GhostWhite" VerticalContentAlignment="Center" FontSize="15" Margin="0,0,-1,0" FontFamily="MS PGothic"/>
+                            <TextBox Padding="5,0,0,0" x:Name="Interface_Reports_Sale_SearchField" Height="30" Background="GhostWhite" VerticalContentAlignment="Center" FontSize="15" Margin="0,0,-1,0" FontFamily="MS PGothic"/>
                         </StackPanel>
-                        <Button Margin="913,20,10,20" Background="Transparent" x:Name="Interface_Reports_Sele_Header_SearchButton">
+                        <Button Margin="913,20,10,20" Background="Transparent" x:Name="Interface_Reports_Sale_Header_SearchButton">
                             <Image Source="Images/Search.png" Height="20"/>
                         </Button>
                     </Grid>
                     <Grid Margin="10,92,306,81">
                         <Grid Margin="0,0,-295,0">
-                            <ListView FontSize="14" x:Name="Interface_Reports_Sele_ListView">
+                            <ListView FontSize="14" x:Name="Interface_Reports_Sale_ListView">
                                 <ListView.Resources>
                                     <Style TargetType="ListViewItem">
                                         <Setter Property="FontFamily" Value="Ms PGothic" />
@@ -970,18 +970,18 @@
                                 </ListView.Resources>
                                 <ListView.View>
                                     <GridView>
-                                        <GridViewColumn Width="50" DisplayMemberBinding="{Binding IdSele}" Header="DB ID"/>
+                                        <GridViewColumn Width="50" DisplayMemberBinding="{Binding IdSell}" Header="DB ID"/>
+                                        <GridViewColumn Width="80" DisplayMemberBinding="{Binding InvoiceNumber}" Header="Invoice Num"/>
                                         <GridViewColumn Width="150" DisplayMemberBinding="{Binding UserName}" Header="User"/>
-                                        <GridViewColumn Width="120" DisplayMemberBinding="{Binding IdType}" Header="User ID Type"/>
                                         <GridViewColumn Width="120" DisplayMemberBinding="{Binding IdNum}" Header="User ID Number"/>
                                         <GridViewColumn Width="150" DisplayMemberBinding="{Binding ClientName}" Header="Client Name"/>
-                                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding ClientID}" Header="Client ID"/>
+                                        <GridViewColumn Width="150" DisplayMemberBinding="{Binding ClientId}" Header="Client ID"/>
                                         <GridViewColumn Width="100" DisplayMemberBinding="{Binding Total}" Header="Total"/>
                                         <GridViewColumn Width="200" DisplayMemberBinding="{Binding Date}" Header="Date"/>
                                     </GridView>
                                 </ListView.View>
                             </ListView>
-                            <ListView FontSize="14" x:Name="Interface_Reports_Sele_RemovedListView" Visibility="Hidden">
+                            <ListView FontSize="14" x:Name="Interface_Reports_Sale_RemovedListView" Visibility="Hidden">
                                 <ListView.Resources>
                                     <Style TargetType="ListViewItem">
                                         <Setter Property="FontFamily" Value="Ms PGothic" />
@@ -996,7 +996,7 @@
                                 </ListView.Resources>
                                 <ListView.View>
                                     <GridView>
-                                        <GridViewColumn Width="50" DisplayMemberBinding="{Binding IdSele}" Header="DB ID"/>
+                                        <GridViewColumn Width="50" DisplayMemberBinding="{Binding IdSale}" Header="DB ID"/>
                                         <GridViewColumn Width="150" DisplayMemberBinding="{Binding UserName}" Header="User"/>
                                         <GridViewColumn Width="120" DisplayMemberBinding="{Binding IdType}" Header="User ID Type"/>
                                         <GridViewColumn Width="120" DisplayMemberBinding="{Binding IdNum}" Header="User ID Number"/>
@@ -1010,13 +1010,13 @@
                             <Border BorderBrush="Black" BorderThickness="1"/>
                         </Grid>
                     </Grid>
-                    <Grid VerticalAlignment="Top" Height="66" Visibility="Visible" x:Name="Interface_Reports_Sele_MainBottom" Margin="10,530,10,0">
+                    <Grid VerticalAlignment="Top" Height="66" Visibility="Visible" x:Name="Interface_Reports_Sale_MainBottom" Margin="10,530,10,0">
                         <Rectangle Fill="White"/>
                         <Border BorderBrush="Black" BorderThickness="1"/>
-                        <Button x:Name="Interface_Reports_Sele_MainBottom_RemoveBTN" Margin="636,16,10,16" Background="#FF9C4D4D">
+                        <Button x:Name="Interface_Reports_Sale_MainBottom_RemoveBTN" Margin="636,16,10,16" Background="#FF9C4D4D">
                             <TextBlock Text="Remove Elements" Foreground="#FF3E2323" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
                         </Button>
-                        <Button x:Name="Interface_Reports_Sele_MainBottom_ExportBTN" Margin="10,16,0,16" Background="LightSlateGray" HorizontalAlignment="Left" Width="308">
+                        <Button x:Name="Interface_Reports_Sale_MainBottom_ExportBTN" Margin="10,16,0,16" Background="LightSlateGray" HorizontalAlignment="Left" Width="308">
                             <TextBlock Text="Quick Export Excel" Foreground="#FF2E353C" FontWeight="Bold" FontSize="17" FontFamily="MS PGothic" FontStyle="Italic"/>
                         </Button>
                         <Button x:Name="Interface_Reports_Sale_MainBottom_ViewRemovedElemets" Margin="323,16,324,16" Background="LightSlateGray">

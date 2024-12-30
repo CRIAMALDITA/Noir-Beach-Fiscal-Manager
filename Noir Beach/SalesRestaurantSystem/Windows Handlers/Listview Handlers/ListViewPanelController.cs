@@ -65,6 +65,7 @@ namespace SalesRestaurantSystem
                 int index = i;
                 SearchedItems.Add(index);
             }
+            content.MouseDoubleClick += (o, e) => DobleClick();
             RefreshListView();
 
         }
@@ -178,7 +179,7 @@ namespace SalesRestaurantSystem
             return _listView.ItemContainerGenerator.ContainerFromItem(item) as ListViewItem;
         }
 
-        public abstract void DobleClick() { }
+        public abstract void DobleClick();
 
         public struct ListButtonElement
         {

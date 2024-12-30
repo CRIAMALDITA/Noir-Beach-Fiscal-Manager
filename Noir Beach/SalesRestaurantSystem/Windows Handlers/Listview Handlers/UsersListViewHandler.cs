@@ -80,10 +80,10 @@ namespace SalesRestaurantSystem
                     switch (type)
                     {
                         case "IdUser": if (!item.IdUser.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
-                        case "ID": if (!item.Document.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
+                        case "Document": if (!item.Document.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                         case "FullName": if (!item.FullName.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                         case "Email": if (!item.Email.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
-                        case "IdRole": if (!item.IdRol.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
+                        case "IdRol": if (!item.IdRol.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                         case "IdPermission": if (!item.IdPermission.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                         case "CreationDate": if (!item.CreationDate.ToString().ToLower().Replace(" ", "").Contains(filter.ToLower().Replace(" ", ""))) list.Remove(item); break;
                     }
@@ -97,6 +97,10 @@ namespace SalesRestaurantSystem
             };
             if (SearchedItems.Count > 0) FilterSetted = true;
             RefreshListView();
+        }
+
+        public override void DobleClick()
+        {
         }
     }
 }
