@@ -46,8 +46,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RestaurantDataManager\RestaurantDataManager.csproj" />
-    <ProjectReference Include="..\RestaurantData\RestaurantData.csproj" />
+    <ProjectReference Include="..\RestaurantDataManager\SalesSystemDataManager.csproj" />
+    <ProjectReference Include="..\RestaurantData\SalesSystemData.csproj" />
   </ItemGroup>
 
   <ItemGroup>

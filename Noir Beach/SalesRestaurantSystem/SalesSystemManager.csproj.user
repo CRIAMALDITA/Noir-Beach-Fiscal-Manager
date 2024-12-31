@@ -7,27 +7,27 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="ConfirmPasswordMessageBox.xaml.cs">
+    <Compile Update="Windows\ConfirmPasswordMessageBox.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="LoadingWindow.xaml.cs">
+    <Compile Update="Windows\LoadingWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="SearchEntitiesWindow.xaml.cs">
+    <Compile Update="Windows\SearchEntitiesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="ConfirmPasswordMessageBox.xaml">
+    <Page Update="Windows\ConfirmPasswordMessageBox.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="LoadingWindow.xaml">
+    <Page Update="Windows\LoadingWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Windows\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="SearchEntitiesWindow.xaml">
+    <Page Update="Windows\SearchEntitiesWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

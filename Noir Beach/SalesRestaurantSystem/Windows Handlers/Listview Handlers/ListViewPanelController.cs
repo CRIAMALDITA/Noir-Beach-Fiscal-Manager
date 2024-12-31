@@ -91,9 +91,8 @@ namespace SalesRestaurantSystem
             Items.Clear();
             foreach (var item in values)
             {
-                Items.Add(item);
-            }; 
-            OnItemAdded?.Invoke();
+                AddItemToList(item);
+            };
         }
         public void OnItemSelected(object sender, EventArgs e)
         {
@@ -124,8 +123,37 @@ namespace SalesRestaurantSystem
         }
         public virtual void AddItemToList(T value)
         {
-            if (Items.FirstOrDefault(value) != null) Items.Add(value);
-            OnItemAdded?.Invoke();
+            if (value == null) return;
+            if (Items.FirstOrDefault(value) != null)
+            {
+                var members = typeof(T).GetMembers(BindingFlags.Public | BindingFlags.Instance)
+                .Where(m => m.MemberType == MemberTypes.Property || m.MemberType == MemberTypes.Field);
+                bool containsState = false;
+
+                foreach (var member in members)
+                {
+                    var memberName = member.Name.Replace(" ", "").ToLower();
+                    if (memberName.IndexOf("State", StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        containsState = true;
+                        object memberValue = null;
+                        if (member is PropertyInfo property)
+                        {
+                            memberValue = property.GetValue(value);
+                        }
+                        else if (member is FieldInfo field)
+                        {
+                            memberValue = field.GetValue(value);
+                        }
+                        if (memberValue is bool && (bool)memberValue)
+                        {
+                            Items.Add(value);
+                        }
+                    }
+                }
+                if(!containsState) Items.Add(value);
+                OnItemAdded?.Invoke();
+            }
         }
         public void RemoveItemsToList(List<T> items)
         {

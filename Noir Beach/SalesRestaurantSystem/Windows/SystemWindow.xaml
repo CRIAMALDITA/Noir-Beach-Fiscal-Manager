@@ -123,7 +123,7 @@
                         <StackPanel Margin="632,20,47,20">
                             <TextBox Padding="5,0,0,0" x:Name="Interface_Maintenance_Products_SearchField" Height="30" Background="GhostWhite" VerticalContentAlignment="Center" FontSize="15" Margin="0,0,-1,0" FontFamily="MS PGothic"/>
                         </StackPanel>
-                        <Button Margin="913,20,10,20" Background="Transparent" x:Name="Interface_Maintenance_Products_Header_SearchButton">
+                        <Button  Margin="913,20,10,20"  Background="#FF262A2D" x:Name="Interface_Maintenance_Products_Header_SearchButton">
                             <Image Source="Images/Search.png" Height="20"/>
                         </Button>
                     </Grid>
@@ -224,7 +224,7 @@
                         </StackPanel>
                         <TextBlock Margin="10,136,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="12" FontFamily="MS PGothic" FontSize="13" ><Run Language="en-gb" Text="Description: "/></TextBlock>
                         <StackPanel Margin="10,151,10,254">
-                            <TextBox x:Name="Interface_Maintenance_Products_ControlPanel_DescriptionField" Tag="ProductDescription" Height="96" Background="GhostWhite" FontFamily="MS PGothic"  VerticalContentAlignment="Center"/>
+                            <TextBox TextWrapping="Wrap" x:Name="Interface_Maintenance_Products_ControlPanel_DescriptionField" Tag="ProductDescription" Height="96" Background="GhostWhite" FontFamily="MS PGothic"  VerticalContentAlignment="Top"/>
                         </StackPanel>
                         <StackPanel Margin="10,196,10,282"/>
                         <StackPanel Margin="10,237,10,240"/>
@@ -269,7 +269,7 @@
                         <StackPanel Margin="632,20,47,20">
                             <TextBox Padding="5,0,0,0" x:Name="Interface_Maintenance_User_SearchField" Height="30" Background="GhostWhite" VerticalContentAlignment="Center" FontSize="15" Margin="0,0,-1,0" FontFamily="MS PGothic"/>
                         </StackPanel>
-                        <Button Margin="913,20,10,20" Background="Transparent" x:Name="Interface_Maintenance_User_Header_SearchButton">
+                        <Button Margin="913,20,10,20"  Background="#FF262A2D" x:Name="Interface_Maintenance_User_Header_SearchButton">
                             <Image Source="Images/Search.png" Height="20"/>
                         </Button>
                     </Grid>
@@ -406,7 +406,7 @@
                         <StackPanel Margin="632,20,47,20">
                             <TextBox Padding="5,0,0,0" x:Name="Interface_Maintenance_Category_SearchField" Height="30" Background="GhostWhite" VerticalContentAlignment="Center" FontSize="15" Margin="0,0,-1,0" FontFamily="MS PGothic"/>
                         </StackPanel>
-                        <Button Margin="913,20,10,20" Background="Transparent" x:Name="Interface_Maintenance_Category_Header_SearchButton">
+                        <Button Margin="913,20,10,20"  Background="#FF262A2D" x:Name="Interface_Maintenance_Category_Header_SearchButton">
                             <Image Source="Images/Search.png" Height="20"/>
                         </Button>
                     </Grid>
@@ -524,8 +524,8 @@
                         <Button x:Name="Interface_Maintenance_Business_SaveBtn" Margin="21,202,246,70" Background="#FF5ABB51">
                             <TextBlock Foreground="#FF005400" FontWeight="Bold" FontSize="16"><Run Language="en-gb" Text="Save Changes"/></TextBlock>
                         </Button>
-                        <Button x:Name="Interface_Maintenance_Business_Upload" Margin="375,202,50,70" Background="Gainsboro">
-                            <TextBlock Foreground="Black" FontSize="16"><Run Language="en-gb" Text="Upload"/></TextBlock>
+                        <Button x:Name="Interface_Maintenance_Business_Upload" Margin="375,202,50,70" Background="#FF262A2D">
+                            <TextBlock Foreground="LightGray" FontSize="16"><Run Language="en-gb" Text="Upload"/></TextBlock>
                         </Button>
                     </Grid>
                 </Grid>
@@ -570,7 +570,7 @@
                                 <StackPanel Margin="254,18,10,10">
                                     <TextBox x:Name="Interface_Sale_Search_FullName" Tag="FullNameFied" Height="24" Background="GhostWhite"/>
                                 </StackPanel>
-                                <Button x:Name="Interface_Sale_Search_SearchBTN" Tag="SearchBtn" Margin="201,18,282,10" Background="Transparent">
+                                <Button  x:Name="Interface_Sale_Search_SearchBTN" Tag="SearchBtn" Margin="201,18,282,10"  Background="#FF262A2D">
                                     <Image Source="Images/Search.png" Height="20"/>
                                 </Button>
 
@@ -727,7 +727,7 @@
                                 <StackPanel Margin="219,18,10,10" Grid.Column="1">
                                     <TextBox x:Name="Interface_Purchase_Search_FullName" Tag="FullNameFied" Height="24" Background="GhostWhite"/>
                                 </StackPanel>
-                                <Button x:Name="Interface_Purchase_Search_SearchBTN" Tag="SearchBtn" Margin="166,18,282,10" Background="Transparent" Grid.Column="1">
+                                <Button x:Name="Interface_Purchase_Search_SearchBTN" Tag="SearchBtn" Margin="166,18,282,10"  Background="#FF262A2D" Grid.Column="1">
                                     <Image Source="Images/Search.png" Height="20"/>
                                 </Button>
 
@@ -856,7 +856,7 @@
                         <StackPanel Margin="632,20,47,20">
                             <TextBox Padding="5,0,0,0" x:Name="Interface_Reports_Purchase_SearchField" Height="30" Background="GhostWhite" VerticalContentAlignment="Center" FontSize="15" Margin="0,0,-1,0" FontFamily="MS PGothic"/>
                         </StackPanel>
-                        <Button Margin="913,20,10,20" Background="Transparent" x:Name="Interface_Reports_Purchase_Header_SearchButton">
+                        <Button Margin="913,20,10,20"  Background="#FF262A2D" x:Name="Interface_Reports_Purchase_Header_SearchButton">
                             <Image Source="Images/Search.png" Height="20"/>
                         </Button>
                     </Grid>
@@ -955,7 +955,7 @@
                         <StackPanel Margin="632,20,47,20">
                             <TextBox Padding="5,0,0,0" x:Name="Interface_Reports_Sale_SearchField" Height="30" Background="GhostWhite" VerticalContentAlignment="Center" FontSize="15" Margin="0,0,-1,0" FontFamily="MS PGothic"/>
                         </StackPanel>
-                        <Button Margin="913,20,10,20" Background="Transparent" x:Name="Interface_Reports_Sale_Header_SearchButton">
+                        <Button Margin="913,20,10,20"  Background="#FF262A2D" x:Name="Interface_Reports_Sale_Header_SearchButton">
                             <Image Source="Images/Search.png" Height="20"/>
                         </Button>
                     </Grid>
@@ -1057,7 +1057,7 @@
                     <StackPanel Margin="632,20,47,20">
                         <TextBox Padding="5,0,0,0" x:Name="Interface_Clients_SearchField" Height="30" Background="GhostWhite" VerticalContentAlignment="Center" FontSize="15" Margin="0,0,-1,0" FontFamily="MS PGothic"/>
                     </StackPanel>
-                    <Button Margin="913,20,10,20" Background="Transparent" x:Name="Interface_Clients_Header_SearchButton">
+                    <Button Margin="913,20,10,20"  Background="#FF262A2D" x:Name="Interface_Clients_Header_SearchButton">
                         <Image Source="Images/Search.png" Height="20"/>
                     </Button>
                 </Grid>
@@ -1194,7 +1194,7 @@
                     <StackPanel Margin="632,20,47,20">
                         <TextBox Padding="5,0,0,0" x:Name="Interface_Supplier_SearchField" Height="30" Background="GhostWhite" VerticalContentAlignment="Center" FontSize="15" Margin="0,0,-1,0" FontFamily="MS PGothic"/>
                     </StackPanel>
-                    <Button Margin="913,20,10,20" Background="Transparent" x:Name="Interface_Supplier_Header_SearchButton">
+                    <Button Margin="913,20,10,20"  Background="#FF262A2D" x:Name="Interface_Supplier_Header_SearchButton">
                         <Image Source="Images/Search.png" Height="20"/>
                     </Button>
                 </Grid>
