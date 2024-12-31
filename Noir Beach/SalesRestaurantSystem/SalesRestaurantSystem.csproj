@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\BtnBlocked.png" />
     <None Remove="Images\Business.png" />
     <None Remove="Images\Clients.png" />
     <None Remove="Images\Exit.png" />
@@ -50,6 +51,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\BtnBlocked.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Clients.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>

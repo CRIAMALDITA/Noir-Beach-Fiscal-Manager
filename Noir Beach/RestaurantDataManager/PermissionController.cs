@@ -29,6 +29,18 @@ namespace RestaurantDataManager
                     CreationDate = DateTime.Now
 
                 }).ConfigureAwait(false);
+                await AddAsync(new PermissionData()
+                {
+                    PermissionName = "Owner",
+                    CreationDate = DateTime.Now
+
+                }).ConfigureAwait(false);
+                await AddAsync(new PermissionData()
+                {
+                    PermissionName = "Standar",
+                    CreationDate = DateTime.Now
+
+                }).ConfigureAwait(false);
 
 
                 return firstUserCreated;

@@ -119,7 +119,7 @@ namespace RestaurantDataManager
             public DbSet<PurchaseDetailsData> PurchaseDetails { get; set; }
             protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
-                optionsBuilder.UseSqlServer("Data Source=ALISSS;Initial Catalog=BDSALES_RESTAURANT_SYSTEM;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False; MultipleActiveResultSets=True")
+                optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=DbTemplate;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False; MultipleActiveResultSets=True")
                     .EnableSensitiveDataLogging()  // Registra datos sensibles en los logs
                     .LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information);  // Habilita un nivel de logging más detallado
             }

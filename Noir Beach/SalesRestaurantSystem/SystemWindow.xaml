@@ -40,6 +40,7 @@
                     <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Left" Margin="128,0,0,0" VerticalAlignment="Center" x:Name="UserBlock_DNI_Text" FontFamily="MS PGothic" FontStyle="Italic" FontSize="14"><Run Language="en-gb" Text="44782265"/></TextBlock>
                     <TextBlock Foreground="White" TextWrapping="Wrap" TextAlignment="Left" Margin="128,62,0,0" VerticalAlignment="Top" x:Name="UserBlock_Permission_Text" FontFamily="MS PGothic" FontStyle="Italic" FontSize="14" Height="16"><Run Text="ADMINISTRATO"/><Run Language="en-gb" Text="R"/><LineBreak/><Run Language="en-gb"/></TextBlock>
                     <Rectangle Fill="White" VerticalAlignment="Bottom" Height="2"/>
+                    <Button x:Name="LogOutBtn" Background="Transparent"/>
                 </Grid>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Height="100" Width="305" Visibility="Visible" x:Name="ToolBar_MaintenanceGrid" Margin="0,100,0,0">
                     <Rectangle Fill="Transparent" Visibility="Visible" x:Name="ToolBar_Maintenance_Shadow" />
@@ -47,6 +48,7 @@
                     <Image Width="50" Height="50" Source="Images/Maintenence.png" Margin="53,25,202,25"/>
                     <TextBlock Text="Maintenance" Foreground="White" TextWrapping="Wrap" TextAlignment="Left" Margin="124,36,34,36" FontSize="25" FontFamily="MS PGothic" FontStyle="Italic" FontWeight="Bold"/>
                     <Button Opacity="0" Visibility="Visible" Tag="Maintenance" x:Name="ToolBar_Maintenance"/>
+                    <Image Visibility="Hidden" x:Name="ToolBar_MaintenanceGrid_Block" Source="Images/BtnBlocked.png" Margin="-2,0,-2,-6"/>
                 </Grid>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Height="100" Width="305" Visibility="Visible" x:Name="ToolBar_SaleGrid" Margin="0,200,0,0">
                     <Rectangle Fill="Transparent" Visibility="Visible" x:Name="ToolBar_Sale_Shadow"/>
@@ -54,6 +56,7 @@
                     <Image Width="50" Height="50" Source="Images/Sale.png" Margin="52,25,203,25"/>
                     <TextBlock Text="Sale" Foreground="White" TextWrapping="Wrap" TextAlignment="Left" Margin="124,37,34,37" FontSize="25" FontFamily="MS PGothic" FontStyle="Italic" FontWeight="Bold"/>
                     <Button Opacity="0" Visibility="Visible" Tag="Sale Options" x:Name="ToolBar_Sale"/>
+
                 </Grid>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Height="100" Width="305" Visibility="Visible" x:Name="ToolBar_PurchaseGrid" Margin="0,300,0,0">
                     <Rectangle Fill="Transparent" Visibility="Visible" x:Name="ToolBar_Purchase_Shadow"/>
@@ -61,6 +64,7 @@
                     <Image Width="50" Height="50" Source="Images/Purchase.png" Margin="53,25,202,25"/>
                     <TextBlock Text="Purchase" Foreground="White" TextWrapping="Wrap" TextAlignment="Left" Margin="124,36,34,36" FontSize="25" FontFamily="MS PGothic" FontStyle="Italic" FontWeight="Bold"/>
                     <Button Opacity="0" Visibility="Visible" Tag="Purchase Options" x:Name="ToolBar_Purchase"/>
+                    <Image Visibility="Hidden" x:Name="ToolBar_PurchaseGrid_Block" Source="Images/BtnBlocked.png" Margin="-2,0,-2,-6"/>
                 </Grid>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Height="100" Width="305" Visibility="Visible" x:Name="ToolBar_ClientsGrid" Margin="0,400,0,0">
                     <Rectangle Fill="Transparent" Visibility="Visible" x:Name="ToolBar_Clients_Shadow"/>
@@ -75,6 +79,7 @@
                     <Image Width="50" Height="50" Source="Images/Supplier.png" Margin="51,25,204,25"/>
                     <TextBlock Text="Suppliers" Foreground="White" TextWrapping="Wrap" TextAlignment="Left" Margin="124,37,71,37" FontSize="25" FontFamily="MS PGothic" FontStyle="Italic" FontWeight="Bold"/>
                     <Button Opacity="0" Visibility="Visible" Tag="Suppliers Options" x:Name="ToolBar_Suppliers"/>
+                    <Image Visibility="Hidden" x:Name="ToolBar_SupplierGrid_Block" Source="Images/BtnBlocked.png" Margin="-2,0,-2,-6"/>
                 </Grid>
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Top" Height="100" Width="305" Visibility="Visible" x:Name="ToolBar_ReportsGrid" Margin="0,600,0,0">
                     <Rectangle Fill="Transparent" Visibility="Visible" x:Name="ToolBar_Reports_Shadow"/>

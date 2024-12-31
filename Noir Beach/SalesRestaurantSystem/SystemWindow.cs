@@ -68,6 +68,7 @@ namespace Point_of_sale_for_Restaurant
                     this, ToolBar_Maintenance,
                     ToolBar_Maintenance_Shadow,
                     ToolBar_Maintenance_Selected,
+                    ToolBar_MaintenanceGrid_Block,
                     () => { ActiveUI(Maintenance_OptionsWindow); }
                 );
             options.Add(MaintenanceOption);
@@ -77,6 +78,7 @@ namespace Point_of_sale_for_Restaurant
                     this, ToolBar_Sale,
                     ToolBar_Sale_Shadow,
                     ToolBar_Sale_Selected,
+                    ToolBar_MaintenanceGrid_Block,
                 () => ActiveUI(Sales)
                 );
             options.Add(SaleOption);
@@ -86,6 +88,7 @@ namespace Point_of_sale_for_Restaurant
                     this, ToolBar_Purchase,
                     ToolBar_Purchase_Shadow,
                     ToolBar_Purchase_Selected,
+                    ToolBar_PurchaseGrid_Block,
                 () => ActiveUI(Purchases)
                 );
             options.Add(PurchaseOption);
@@ -95,6 +98,7 @@ namespace Point_of_sale_for_Restaurant
                     this, ToolBar_Clients,
                     ToolBar_Clients_Shadow,
                     ToolBar_Clients_Selected,
+                    ToolBar_PurchaseGrid_Block,
                 () => ActiveUI(Clients)
                 );
             options.Add(ClientsOption);
@@ -104,6 +108,7 @@ namespace Point_of_sale_for_Restaurant
                     this, ToolBar_Suppliers,
                     ToolBar_Suppliers_Shadow,
                     ToolBar_Suppliers_Selected,
+                    ToolBar_SupplierGrid_Block,
                     () => ActiveUI(Suppliers)
                 );
             options.Add(SuppliersOption);
@@ -112,7 +117,8 @@ namespace Point_of_sale_for_Restaurant
                 (
                     this, ToolBar_Reports,
                     ToolBar_Reports_Shadow,
-                    ToolBar_Reports_Selected, 
+                    ToolBar_Reports_Selected,
+                    ToolBar_SupplierGrid_Block,
                 () => { ActiveUI(Reports_OptionsWindow); }
                 );
             options.Add(ReportsOption);
@@ -361,6 +367,13 @@ namespace Point_of_sale_for_Restaurant
             Reports_OptionsWindow.OnBackButtonPressed(Interface_ToolBar.UnSelectCurrent);
             //-------------------------------------------------------------------------------------------------
 
+            bool isAdmin = DataManager.Instance.User.CurrentUserLogged.PermissionData.PermissionName == "ADMINISTRATOR";
+            if (!isAdmin)
+            {
+                Interface_ToolBar.BlockByIndex(0, true);
+                Interface_ToolBar.BlockByIndex(2, true);
+                Interface_ToolBar.BlockByIndex(4, true);
+            }
         }
 
 

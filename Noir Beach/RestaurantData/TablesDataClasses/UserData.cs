@@ -12,13 +12,13 @@ namespace RestaurantData.TablesDataClasses
     public class UserData
     {
         [SQLKey(KeyType.PK, typeof(UserData))][Key][DatabaseGenerated(DatabaseGeneratedOption.Identity)] public int IdUser { get; set; }
-        public string Document { get; set; } = string.Empty;
-        public string FullName { get; set; } = string.Empty;
-        public string Email { get; set; } = string.Empty;
-        public string UserPassword { get; set; } = string.Empty;
-        public bool UserState { get; set; }
-        [SQLKey(KeyType.FK, typeof(RoleData))] public int IdRol { get; set; }
-        [SQLKey(KeyType.FK, typeof(PermissionData))] public int IdPermission { get; set; }
+        [Required][MaxLength(50)] public string Document { get; set; } = string.Empty;
+        [Required][MaxLength(50)] public string FullName { get; set; } = string.Empty;
+        [Required][MaxLength(50)] public string Email { get; set; } = string.Empty;
+        [Required][MaxLength(50)] public string UserPassword { get; set; } = string.Empty;
+        [Required] public bool UserState { get; set; }
+        [Required][SQLKey(KeyType.FK, typeof(RoleData))] public int IdRol { get; set; }
+        [Required][SQLKey(KeyType.FK, typeof(PermissionData))] public int IdPermission { get; set; }
         public DateTime CreationDate { get; set; } = DateTime.Now;
         [ForeignKey("IdRol")] public virtual RoleData RoleData { get; set; }
         [ForeignKey("IdPermission")] public virtual PermissionData PermissionData { get; set; }

@@ -129,7 +129,7 @@ namespace SalesRestaurantSystem
             _userPermission.Items.Clear();
             List<string> permissionsName = new List<string>();
             DataManager.Instance.Permission.GetAllAsync().Result.ForEach(x => permissionsName.Add(x.PermissionName));
-            _userPermission.ItemsSource = rolesNames;
+            _userPermission.ItemsSource = permissionsName;
 
         }
         public override bool SetParameters()

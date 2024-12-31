@@ -25,6 +25,12 @@ namespace RestaurantDataManager
             {
                 var firstUserCreated = await AddAsync(new RoleData()
                 {
+                    RolName = "Employee",
+                    CreationDate = DateTime.Now
+
+                }).ConfigureAwait(false);
+                await AddAsync(new RoleData()
+                {
                     RolName = "ADMINISTRATOR",
                     CreationDate = DateTime.Now
 

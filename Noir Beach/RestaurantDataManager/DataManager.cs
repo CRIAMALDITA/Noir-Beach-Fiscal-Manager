@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static RestaurantDataManager.QueryDataContext;
 
 namespace RestaurantDataManager
 {
@@ -48,7 +49,7 @@ namespace RestaurantDataManager
         public async Task<string> CheckConnection()
         {
             try
-            {
+                {
                 await User.GetData().ConfigureAwait(false);
                 return "I_Base Data Connection Successfully!";
             }
@@ -66,7 +67,7 @@ namespace RestaurantDataManager
         {
             if (!await Permission.InitialCheck().ConfigureAwait(false)) return false;
             if (!await Role.InitialCheck().ConfigureAwait(false)) return false;
-            User.ADMIN_PERMISSION_ID = await Permission.GetByNameAsync("ADMINISTRATOR").ConfigureAwait(false);
+                User.ADMIN_PERMISSION_ID = await Permission.GetByNameAsync("ADMINISTRATOR").ConfigureAwait(false);
             User.ADMIN_ROLE_ID = await Role.GetByNameAsync("ADMINISTRATOR").ConfigureAwait(false);
             if (!await User.InitialCheck().ConfigureAwait(false)) return false;
             return true;

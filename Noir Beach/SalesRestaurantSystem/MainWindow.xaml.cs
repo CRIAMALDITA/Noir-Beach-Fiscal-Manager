@@ -33,7 +33,15 @@ namespace SalesRestaurantSystem
                 LoadingWindow _sqlServerConnect = new LoadingWindow("Connecting on Data Base", Task.Run<string>(async () =>
                 {
                     string _msg = string.Empty;
-                    _msg = await DataManager.Instance.CheckConnection().ConfigureAwait(false);
+                    try
+                    {
+                        _msg = await DataManager.Instance.CheckConnection().ConfigureAwait(false);
+                    }
+                    catch (Exception ex) 
+                    {
+                        
+                    }
+
                     return _msg;
                 }), false, _successfully =>
                 {

@@ -14,10 +14,17 @@ namespace RestaurantDataManager.Repositories
 
         public async override Task<List<UserData>> GetAllAsync()
         {
-            var result = await _context.ExecuteQueriesAsync(async dbContext => dbContext.Set<UserData>().AsNoTracking().Include(u => u.RoleData).Include(u => u.PermissionData));
-            var list = result.Result.ToList();
-            _context.ReleaseContext(result.Context);
-            return list;
+            try
+            {
+                var result = await _context.ExecuteQueriesAsync(async dbContext => dbContext.Set<UserData>().AsNoTracking().Include(u => u.RoleData).Include(u => u.PermissionData));
+                var list = result.Result.ToList();
+                _context.ReleaseContext(result.Context);
+                return list;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
 
         public async override Task<UserData> GetByIdAsync(int id)

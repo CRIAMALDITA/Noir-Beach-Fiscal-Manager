@@ -43,6 +43,10 @@ namespace SalesRestaurantSystem
             _optionSelected.SelectOption(false);
             //_optionSelected = null;
         }
+        public void BlockByIndex(int index, bool block)
+        {
+            _options[index].SetBlock(block);
+        }
     }
     public class ToolBarOption
     {
@@ -50,20 +54,23 @@ namespace SalesRestaurantSystem
 
         public Rectangle _shadow;
         public Rectangle _selected;
+        public Image _blocked;
 
         public RoutedEventHandler onClick;
         public MouseEventHandler onMouseEnter;
         public MouseEventHandler onMouseLeave;
 
         private bool _isSelected;
+        private bool _isBlocked;
         private Window _window;
 
-        public ToolBarOption(Window window, Button button, Rectangle shadow, Rectangle selected, Action OnClicked)
+        public ToolBarOption(Window window, Button button, Rectangle shadow, Rectangle selected, Image blocked, Action OnClicked)
         {
             _window = window;
             this._button = button;
             _shadow = shadow;
             _selected = selected;
+            _blocked = blocked;
 
             _button.MouseEnter += (o, e) => FocusOption(true);
             _button.MouseLeave += (o, e) => FocusOption(false);
@@ -110,6 +117,12 @@ namespace SalesRestaurantSystem
                     onComplete?.Invoke();
                 });
             });
+        }
+
+        public void SetBlock(bool block)
+        {
+            _isBlocked = block;
+            _blocked.Visibility = _isBlocked ? Visibility.Visible : Visibility.Hidden;
         }
 
     }
