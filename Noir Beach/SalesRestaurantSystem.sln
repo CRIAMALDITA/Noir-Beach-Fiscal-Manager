@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalesRestaurantSystem", "SalesRestaurantSystem\SalesRestaurantSystem.csproj", "{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point_of_sale_for_Restaurant", "SalesRestaurantSystem\Point_of_sale_for_Restaurant.csproj", "{2F56D895-E7C0-4C1B-B8F1-7E8B13FFE8A8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestaurantDataManager", "RestaurantDataManager\RestaurantDataManager.csproj", "{C2C3469E-16F8-4A22-8F2F-5FB11B51EE5F}"
 EndProject
